@@ -99,7 +99,7 @@ img.emoji {
 
 				<div class="entry-content">
 			<p><img src="../blogfiles/images/simplix.welcome-small.png" style="width:130px;height:100px;float:left;border:1px solid #bbb;padding:0;margin-right:10px;"></p>
-<p>Some of you may remember <a href="index.html?p=10" title="Introducing Simplix, an Operating System Anybody Can Understand">this post</a> about <a href="../simplix/index.html" title="Simplix source code browser">Simplix</a>, my hobby operating system. The first version, published in Sept. 2007, was not able to do much and was really buggy. Over the next 9 months, as I was studying the inner workings of modern operating systems, I also wanted to experiment with some of the concepts and ideas I was learning. I decided to apply my newly acquired knowledge to a new version of Simplix I was secretly working on. This new version contains a lot of improvements:</p>
+<p>Some of you may remember <a href="index.html?p=10" title="Introducing Simplix, an Operating System Anybody Can Understand">this post</a> about <a href="https://github.com/jlecomte/simplix" title="Simplix source code browser">Simplix</a>, my hobby operating system. The first version, published in Sept. 2007, was not able to do much and was really buggy. Over the next 9 months, as I was studying the inner workings of modern operating systems, I also wanted to experiment with some of the concepts and ideas I was learning. I decided to apply my newly acquired knowledge to a new version of Simplix I was secretly working on. This new version contains a lot of improvements:</p>
 <div style="clear:both;"></div>
 <ul>
 <li>Greatly improved the performance of the page allocator.</li>
@@ -118,7 +118,7 @@ img.emoji {
 <li>A kernel thread that prints live information about the system.</li>
 <li>A program that creates a lot of user space tasks, each of them sleeps for one second before exiting.</li>
 </ul>
-<p>You can already take a look at the <a href="../simplix/index.html">complete and up-to-date source code</a>, and even <a href="../simplix/simplix.tar.gz">download it</a>. Compiling Simplix requires a not-too-ancient version of GCC, make, and a few basic command line tools available on almost all Unix systems (objcopy, dd, etc.) If you don&#8217;t feel like trying it out yourself, I put together a very short Flash video showing the system booting and running inside <a href="http://bochs.sourceforge.net/">Bochs</a>. You can also put the kernel binary on a floppy and try it on a real PC with a floppy drive. Cheers!</p>
+<p>You can already take a look at the <a href="https://github.com/jlecomte/simplix">complete and up-to-date source code</a>, and even <a href="../simplix/simplix.tar.gz">download it</a>. Compiling Simplix requires a not-too-ancient version of GCC, make, and a few basic command line tools available on almost all Unix systems (objcopy, dd, etc.) If you don&#8217;t feel like trying it out yourself, I put together a very short Flash video showing the system booting and running inside <a href="http://bochs.sourceforge.net/">Bochs</a>. You can also put the kernel binary on a floppy and try it on a real PC with a floppy drive. Cheers!</p>
 <p><strong>Note:</strong> If you can&#8217;t see the video below, it&#8217;s probably because you are reading this article using a news reader. If that&#8217;s the case, <a href="index.html?p=47">open this article in a web browser</a> to view the video.</p>
 <p>
 <div id="video0" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>

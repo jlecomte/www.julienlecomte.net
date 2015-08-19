@@ -471,7 +471,7 @@ public class Bootstrap
 
 				<div class="entry-content">
 			<p>Over the past couple of weeks, I have been working on an IDE hard disk driver for my hobby operating system <a href="../../index.html?p=10">Simplix</a>. This driver probes for existing IDE controllers, identifies the IDE devices connected to these controllers, and allows for reading/writing contiguous sectors from/to these devices. It communicates with IDE devices in PIO mode (no DMA) and does not support ATAPI devices (i.e. it does not offer any support for CD-ROM or DVD-ROM drives) At the same time, I also wrote a RAM disk driver, a simple block device interface, and a test program in the form of a kernel thread. This test program reads the first sector of the master IDE device connected to the primary IDE controller, and displays the last two bytes of this sector. These are usually 0x55aa (boot record signature)</p>
-<p>Go ahead and take a look at the <a href="../../../simplix/index.html">source code</a> online. You can also <a href="../../../simplix/simplix.tar.gz">download</a> the Simplix distribution, compile it and run it either in Bochs/QEMU, or on a real PC. Below is a screen shot of Simplix running inside Bochs. Cheers!</p>
+<p>Go ahead and take a look at the <a href="https://github.com/jlecomte/simplix">source code</a> online. You can also <a href="../../../simplix/simplix.tar.gz">download</a> the Simplix distribution, compile it and run it either in Bochs/QEMU, or on a real PC. Below is a screen shot of Simplix running inside Bochs. Cheers!</p>
 <p><img src="../../../blogfiles/images/simplix-20080708-screenshot.png" style="width:560px;height:350px;border:none;"></p>
 					</div><!-- .entry-content -->
 		

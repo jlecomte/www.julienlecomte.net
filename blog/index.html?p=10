@@ -115,7 +115,7 @@ img.emoji {
 </ul>
 <p>Here is a screenshot showing Simplix running inside the <a href="http://bochs.sourceforge.net/" target="_blank">Bochs emulator</a>:</p>
 <p><img src="../blogfiles/images/simplix.thumbnail.png" style="width:450px;height:297px;border:none;"></p>
-<p>Over the next few months, I will be posting several articles on this blog in an attempt to explain how Simplix works, so please stay tuned! In the meantime, you can already take a look at the <a href="../simplix/index.html" target="_blank">complete up to date source code</a> and even <a href="../simplix/simplix.tar.gz">download it</a>. Also, if you are interested in the topic of operating system development, I warmly recommend reading the bible of system programming: <a href="http://minix1.woodhull.com/osdi2/" target="_blank">Operating Systems: Design and Implementation (Second Edition)</a> by Andrew S. Tanenbaum and Albert S. Woodhull. I got mine used on Amazon.com for $8&#8230; Cheers!</p>
+<p>Over the next few months, I will be posting several articles on this blog in an attempt to explain how Simplix works, so please stay tuned! In the meantime, you can already take a look at the <a href="https://github.com/jlecomte/simplix" target="_blank">complete up to date source code</a> and even <a href="../simplix/simplix.tar.gz">download it</a>. Also, if you are interested in the topic of operating system development, I warmly recommend reading the bible of system programming: <a href="http://minix1.woodhull.com/osdi2/" target="_blank">Operating Systems: Design and Implementation (Second Edition)</a> by Andrew S. Tanenbaum and Albert S. Woodhull. I got mine used on Amazon.com for $8&#8230; Cheers!</p>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
