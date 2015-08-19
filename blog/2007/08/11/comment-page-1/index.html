@@ -108,7 +108,7 @@ img.emoji {
 <h4>How does it work?</h4>
 <p>The YUI Compressor is written in <a href="http://java.sun.com/" target="_blank">Java</a> (requires Java >= 1.4) and relies on <a href="http://www.mozilla.org/rhino/" target="_blank">Rhino</a> to tokenize the source JavaScript file. It starts by analyzing the source JavaScript file to understand how it is structured. It then prints out the token stream, replacing all local symbols by a 1 (or 2, or 3) letter symbol wherever such a substitution is appropriate (in the face of <a href="http://www.jslint.com/lint.html" target="_blank">evil features</a> such as <code>eval</code> or <code>with</code>, the YUI Compressor takes a defensive approach by not obfuscating any of the scopes containing the evil statement). The YUI Compressor is open-source, so don&#8217;t hesitate to look at the code to understand exactly how it works.</p>
 <h4>Where can I get it?</h4>
-<p>An archive containing both source and binary is available for <a href="http://www.julienlecomte.net/yuicompressor/" target="_blank">download</a> on this site.</p>
+<p>An archive containing both source and binary is available for <a href="http://yui.github.io/yuicompressor/" target="_blank">download</a> on this site.</p>
 <h4>How do I run it?</h4>
 <pre>
 java -jar yuicompressor-1.0.jar

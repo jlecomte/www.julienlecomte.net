@@ -136,7 +136,7 @@ java -jar yuicompressor-2.2.jar -o output.js input.js
 </pre>
 <p>Note that the presence of a conditional comment inside a function (i.e. not in the global scope) will reduce the level of compression for the same reason  the use of <code>eval</code> or <code>with</code> reduces the level of compression (conditional comments, which do not get parsed, may refer to local variables, which get obfuscated) In any case, the use of Internet Explorer&#8217;s conditional comments is to be avoided.</p>
 <p>Finally, a few improvements have been made to the CSS compressor.</p>
-<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.2 of the YUI Compressor</a></p>
+<p style="margin:30px 0;text-align:center;"><a href="http://yui.github.io/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.2 of the YUI Compressor</a></p>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
@@ -238,7 +238,7 @@ function myFunction(arg) {
 </pre>
 <p>Just a word of caution here: make sure you use the UNIX EOL character before preprocessing your files. Otherwise, you&#8217;ll have some issues with multi-line macros. You may use the <code>fixcrlf</code> Ant task to automatically fix that for you.</p>
 <h4>Minify your JavaScript and CSS files</h4>
-<p>Minifying your JavaScript and CSS files will help make your application faster <a href="http://developer.yahoo.com/performance/rules.html#minify" target="_blank">according to Yahoo!&#8217;s Exceptional Performance team</a>. I warmly recommend you use the YUI Compressor, available for <a href="http://www.julienlecomte.net/yuicompressor/" target="_blank">download</a> on this site. There are two ways to call the YUI Compressor from Ant. Here is the first one using the <code>java</code> task:</p>
+<p>Minifying your JavaScript and CSS files will help make your application faster <a href="http://developer.yahoo.com/performance/rules.html#minify" target="_blank">according to Yahoo!&#8217;s Exceptional Performance team</a>. I warmly recommend you use the YUI Compressor, available for <a href="http://yui.github.io/yuicompressor/" target="_blank">download</a> on this site. There are two ways to call the YUI Compressor from Ant. Here is the first one using the <code>java</code> task:</p>
 <pre class="prettyprint">
 &#60;target name="js.minify" depends="js.preprocess"&#62;
     &#60;java jar="yuicompressor.jar" fork="true"&#62;
@@ -452,7 +452,7 @@ var url = "http://www.flickr.com/services/rest/<span class="cr">&crarr;</span>
 &#038;api_key=02b6a73df2c4a33c282f3d02fe5724e3&#038;callback=jsonCallback";
 </pre>
 <p>Also, note that, from now on, all YUI Compressor-related downloads will be done from a separate download page and not directly from this blog.</p>
-<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.1 of the YUI Compressor</a></p>
+<p style="margin:30px 0;text-align:center;"><a href="http://yui.github.io/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.1 of the YUI Compressor</a></p>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
@@ -469,7 +469,7 @@ var url = "http://www.flickr.com/services/rest/<span class="cr">&crarr;</span>
 
 				<div class="entry-content">
 			<p>I am very pleased to announce the release of version 2.0 of the YUI Compressor. In addition to fixing several bugs and implementing a few enhancements suggested by the community, I also integrated <a href="http://foohack.com/" target="_blank">Isaac Schlueter</a>&#8216;s regular expression based CSS minifier. Therefore, the YUI Compressor is now able to compress both JavaScript and CSS files (see the <a href="http://www.julienlecomte.net/blogfiles/yuicompressor/CHANGELOG" target="_blank">CHANGELOG</a> for a full list of changes) And as always, keep the feedback coming!</p>
-<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.0 of the YUI Compressor</a></p>
+<p style="margin:30px 0;text-align:center;"><a href="http://yui.github.io/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.0 of the YUI Compressor</a></p>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
@@ -538,7 +538,7 @@ var url = "http://www.flickr.com/services/rest/<span class="cr">&crarr;</span>
 
 				<div class="entry-content">
 			<p>The release of the <a href="../../../../2007/08/13/introducing-the-yui-compressor/index.html" target="_blank">YUI Compressor</a> last week has generated a lot of buzz and excitement throughout the web development community. Actually, after receiving so much great feedback, I felt compelled to issue a minor update as soon as possible to fix the most important items that were brought to my attention (see the <a href="http://www.julienlecomte.net/blogfiles/yuicompressor/CHANGELOG" target="_blank">CHANGELOG</a> file for a full list of changes) And please, keep the feedback coming!</p>
-<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 1.1 of the YUI Compressor</a></p>
+<p style="margin:30px 0;text-align:center;"><a href="http://yui.github.io/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 1.1 of the YUI Compressor</a></p>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
@@ -563,7 +563,7 @@ var url = "http://www.flickr.com/services/rest/<span class="cr">&crarr;</span>
 <h4>How does it work?</h4>
 <p>The YUI Compressor is written in <a href="http://java.sun.com/" target="_blank">Java</a> (requires Java >= 1.4) and relies on <a href="http://www.mozilla.org/rhino/" target="_blank">Rhino</a> to tokenize the source JavaScript file. It starts by analyzing the source JavaScript file to understand how it is structured. It then prints out the token stream, replacing all local symbols by a 1 (or 2, or 3) letter symbol wherever such a substitution is appropriate (in the face of <a href="http://www.jslint.com/lint.html" target="_blank">evil features</a> such as <code>eval</code> or <code>with</code>, the YUI Compressor takes a defensive approach by not obfuscating any of the scopes containing the evil statement). The YUI Compressor is open-source, so don&#8217;t hesitate to look at the code to understand exactly how it works.</p>
 <h4>Where can I get it?</h4>
-<p>An archive containing both source and binary is available for <a href="http://www.julienlecomte.net/yuicompressor/" target="_blank">download</a> on this site.</p>
+<p>An archive containing both source and binary is available for <a href="http://yui.github.io/yuicompressor/" target="_blank">download</a> on this site.</p>
 <h4>How do I run it?</h4>
 <pre>
 java -jar yuicompressor-1.0.jar

@@ -101,7 +101,7 @@ img.emoji {
 				<div class="entry-content">
 			<p>The <a href="../../../../index.html?p=11">YUI Compressor</a> uses a slightly modified version of the parser used in the <a href="http://www.mozilla.org/rhino/">Rhino</a> JavaScript engine. The reason for modifying the parser came from the need to support JScript conditional comments, unescaped forward slashes in regular expressions &#8212; which all browsers support and many people use &#8212; and a few micro optimizations. The problem is that many users had the original Rhino Jar file somewhere on their system, either in their classpath, or in their JRE extension directory (&lt;JRE_HOME&gt;/lib/ext) This caused many headaches because the wrong classes were being loaded, leading to many weird bugs.</p>
 <p>Today, I finally decided to do something about it. This meant writing a custom class loader to load the modified classes directly from the YUI Compressor Jar file. You can download the source and binary package here:</p>
-<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.4 of the YUI Compressor</a></p>
+<p style="margin:30px 0;text-align:center;"><a href="http://yui.github.io/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.4 of the YUI Compressor</a></p>
 <p>The skeleton of the custom class loader is pretty straightforward:</p>
 <pre class="prettyprint">
 package com.yahoo.platform.yui.compressor;

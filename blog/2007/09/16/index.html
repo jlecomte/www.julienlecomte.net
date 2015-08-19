@@ -185,7 +185,7 @@ function myFunction(arg) {
 </pre>
 <p>Just a word of caution here: make sure you use the UNIX EOL character before preprocessing your files. Otherwise, you&#8217;ll have some issues with multi-line macros. You may use the <code>fixcrlf</code> Ant task to automatically fix that for you.</p>
 <h4>Minify your JavaScript and CSS files</h4>
-<p>Minifying your JavaScript and CSS files will help make your application faster <a href="http://developer.yahoo.com/performance/rules.html#minify" target="_blank">according to Yahoo!&#8217;s Exceptional Performance team</a>. I warmly recommend you use the YUI Compressor, available for <a href="http://www.julienlecomte.net/yuicompressor/" target="_blank">download</a> on this site. There are two ways to call the YUI Compressor from Ant. Here is the first one using the <code>java</code> task:</p>
+<p>Minifying your JavaScript and CSS files will help make your application faster <a href="http://developer.yahoo.com/performance/rules.html#minify" target="_blank">according to Yahoo!&#8217;s Exceptional Performance team</a>. I warmly recommend you use the YUI Compressor, available for <a href="http://yui.github.io/yuicompressor/" target="_blank">download</a> on this site. There are two ways to call the YUI Compressor from Ant. Here is the first one using the <code>java</code> task:</p>
 <pre class="prettyprint">
 &#60;target name="js.minify" depends="js.preprocess"&#62;
     &#60;java jar="yuicompressor.jar" fork="true"&#62;
