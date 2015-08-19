@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title> YUI Compressor Version 2.1 Now Available | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; YUI Compressor Version 2.1 Now Available Comments Feed" href="2007/08/15/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='YUI Compressor Version 2.0 Now Available' href='index.html?p=14' />
+<link rel='next' title='The Planets Of The Solar System' href='index.html?p=17' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html?p=15' />
+<link rel='shortlink' href='index.html?p=15' />
+	<link href="wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-15 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html?p=15#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../index.html">Home</a></li><li class="page_item page-item-36"><a href="index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-15" class="post-15 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">YUI Compressor Version 2.1 Now Available</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>This new version of the compressor fixes a few bugs and optimizes string concatenations. You can now keep your code nicely formatted by concatenating string literals, but not suffer any performance hit. For example, the following code:</p>
+<pre class="prettyprint">
+var url = "http://www.flickr.com/services/rest/"
+    + "?method=flickr.test.echo"
+    + "&#038;format=json"
+    + "&#038;api_key=02b6a73df2c4a33c282f3d02fe5724e3"
+    + "&#038;callback=jsonCallback";
+</pre>
+<p>will become (<span class="cr">&crarr;</span> marks a line continuation)</p>
+<pre class="prettyprint">
+var url = "http://www.flickr.com/services/rest/<span class="cr">&crarr;</span>
+?method=flickr.test.echo&#038;format=json<span class="cr">&crarr;</span>
+&#038;api_key=02b6a73df2c4a33c282f3d02fe5724e3&#038;callback=jsonCallback";
+</pre>
+<p>Also, note that, from now on, all YUI Compressor-related downloads will be done from a separate download page and not directly from this blog.</p>
+<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.1 of the YUI Compressor</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="category/web-development/index.html" rel="category tag">Web Development</a> on <a href="index.html?p=15" title="12:34 pm" rel="bookmark"><time class="entry-date" datetime="2007-08-29T12:34:51+00:00">August 29, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="index.html?p=14" rel="prev"><span class="meta-nav">&larr;</span> YUI Compressor Version 2.0 Now Available</a></span>
+					<span class="nav-next"><a href="index.html?p=17" rel="next">The Planets Of The Solar System <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			29 thoughts on &ldquo;<span>YUI Compressor Version 2.1 Now Available</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-150">
+		<article id="comment-150" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/fb54c81512b503eca785cd78062524be?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/fb54c81512b503eca785cd78062524be?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://digitalspaghetti.me.uk' rel='external nofollow' class='url'>Tane Piper</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-150"><time datetime="2007-08-29T14:43:13+00:00">August 29, 2007 at 2:43 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Another fine release!  Keep up the good work.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-151">
+		<p>Pingback: <a href='http://www.ajaxperformance.com/2007/08/29/quick-follow-up-more-yui-compressor-work/' rel='external nofollow' class='url'>Ajax Performance &raquo; Quick follow-up: more YUI Compressor work</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-152">
+		<p>Pingback: <a href='http://outatime.wordpress.com/2007/08/30/compressorrater-compare-the-squeeze/' rel='external nofollow' class='url'>CompressorRater: Compare the squeeze &laquo; outaTiME</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-153">
+		<article id="comment-153" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>The Doctor What</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-153"><time datetime="2007-08-30T06:33:34+00:00">August 30, 2007 at 6:33 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Julien Lecomte:</p>
+<p>Thanks again for your work on this.  It is excellent.</p>
+<p>In your <a href="2007/08/27/yui-compressor-version-20-now-available/index.html#comment-149
+">comment</a> on the 2.0 page, you mention two of my suggestions and the bug that you had already fixed in 2.1.</p>
+<p>I have no problem not having the multiple filenames.</p>
+<p>I think that accepting STDIN and STDOUT for the file arguments would be a big help.  It would also make not having multiple filenames no big deal.</p>
+<p>And line numbers for the warnings would be very useful. :-)</p>
+<p>Thanks again!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-154">
+		<article id="comment-154" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7c588013db49861dd2212c98ba4638d6?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7c588013db49861dd2212c98ba4638d6?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://alchim.sf.net/' rel='external nofollow' class='url'>David Bernard</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-154"><time datetime="2007-08-30T06:36:42+00:00">August 30, 2007 at 6:36 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I upgrade to version 2.1 the <a href="http://alchim.sourceforge.net/yuicompressor-maven-plugin/overview.html" rel="nofollow">yuicompressor-maven-plugin</a>. And I also add a goal to run jslint against js files.</p>
+<p>Thank you Julien for your job.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-155">
+		<article id="comment-155" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/b0765e35b9759af3a07de5af4bc479df?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b0765e35b9759af3a07de5af4bc479df?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://arthur.blake.name' rel='external nofollow' class='url'>Arthur Blake</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-155"><time datetime="2007-08-30T06:47:21+00:00">August 30, 2007 at 6:47 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice Work Julien!  Someone was just mentioning it would be nice to have that feature, over on the ShrinkSafe blog at </p>
+<p><a href="http://dojotoolkit.org/docs/shrinksafe" rel="nofollow">http://dojotoolkit.org/docs/shrinksafe</a>   </p>
+<p>It&#8217;s hard to keep up with you :) but I&#8217;ll be adding this version to the CompressorRater very soon.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-156">
+		<p>Pingback: <a href='http://www.ajaxgirl.com/2007/08/30/compressorrater-compare-the-squeeze/' rel='external nofollow' class='url'>Ajax Girl &raquo; Blog Archive &raquo; CompressorRater: Compare the squeeze</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-157">
+		<article id="comment-157" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/5e71e777dd962c4e9fef0b9ba2683244?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5e71e777dd962c4e9fef0b9ba2683244?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">John Kloor</b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-157"><time datetime="2007-08-30T08:00:39+00:00">August 30, 2007 at 8:00 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>In the CSS compressor, you made this change &#8220;Remove spaces before and after &#8216;(&#8216; and &#8216;)&#8217; as in background:url(&#8216;xxx&#8217;);&#8221;.</p>
+<p>But, when I have a &#8220;background:url(&#8216;xxx&#8217;) no-repeat;&#8221; the space before &#8220;no-repeat&#8221; is removed. This prevents the background from appearing in Internet Explorer.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-158">
+		<article id="comment-158" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-158"><time datetime="2007-08-30T08:55:27+00:00">August 30, 2007 at 8:55 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@John</p>
+<p>Thanks for reporting this. Due to the gravity of this bug, I just pushed version 2.1.1, available from the download page.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-159">
+		<p>Pingback: <a href='http://www.chnorton.com.au/2007/08/31/yui-compressor-21-released/' rel='external nofollow' class='url'>YUI Compressor 2.1 Released &raquo; Chris Norton</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-160">
+		<p>Pingback: <a href='http://ajaxian.com/archives/compressorrater-compare-the-squeeze' rel='external nofollow' class='url'>Ajaxian &raquo; CompressorRater: Compare the squeeze</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-161">
+		<article id="comment-161" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3ada405ce890b6f8204094deb12d8a8?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3ada405ce890b6f8204094deb12d8a8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Fredrik</b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-161"><time datetime="2007-08-30T13:23:31+00:00">August 30, 2007 at 1:23 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Probably a slightly stupid question but anyway:<br />
+How hard would it be to have the compressor attack JS-namespaces and method-names? I find quite a portion of my code to be consisting of,&#8221;MyCompany.NamesSpaceOne.myFunction&#8221; stuff.. </p>
+<p>I&#8217;m feeling there&#8217;s a catch here, or?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-162">
+		<article id="comment-162" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-162"><time datetime="2007-08-30T13:31:20+00:00">August 30, 2007 at 1:31 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Fredrik</p>
+<p>Yes, there is a catch (of course!) Prior to developing the YUI Compressor, I worked (in another company) on a compressor that was able to do just that: obfuscate everything! However, to accomplish that, we had to introduce all types of &#8220;hints&#8221; to tell the compressor the type of each variable, etc. The problem here can be summarized by the term &#8220;COST EFFICIENCY&#8221;: you want to get the biggest bang for your buck. If you need to spend many extra cycles debugging because you want to save an additional 10%, you are not taking the most efficient approach. Trust my experience!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-163">
+		<article id="comment-163" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7c588013db49861dd2212c98ba4638d6?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7c588013db49861dd2212c98ba4638d6?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://alchim.sf.net/' rel='external nofollow' class='url'>David Bernard</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-163"><time datetime="2007-08-30T13:53:16+00:00">August 30, 2007 at 1:53 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,<br />
+Is it possible to add (in a next version, no urgence) an option to keep header comments (if it contains &#8220;license&#8221; or &#8220;copyright&#8221; or &#8220;(c)&#8221;, to agree Copyrigth/Open Source license.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-164">
+		<article id="comment-164" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-164"><time datetime="2007-08-30T15:20:50+00:00">August 30, 2007 at 3:20 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@David Bernard</p>
+<p>This type of task is beyond the scope of the compressor. If you need to prepend some license or copyright information, use the <code>cat</code> command line utility, or if you use Apache Ant to build your application, use a nested <code>header</code> element to the <code>concat</code> task.</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-165">
+		<article id="comment-165" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/49bced6b82914549f7e71a9aded88b18?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/49bced6b82914549f7e71a9aded88b18?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://elliottback.com/wp/' rel='external nofollow' class='url'>Elliott Back</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-165"><time datetime="2007-08-30T19:27:21+00:00">August 30, 2007 at 7:27 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@David, just because your application has to carry the license doesn&#8217;t mean you have to put it in your .css file&#8230;</p>
+<p>Julien, nice working on the string-concatenation constant folding case.  When do we get generic constant propagation? :D</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-166">
+		<article id="comment-166" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7c588013db49861dd2212c98ba4638d6?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7c588013db49861dd2212c98ba4638d6?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://alchim.sf.net/' rel='external nofollow' class='url'>David Bernard</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-166"><time datetime="2007-08-31T01:25:58+00:00">August 31, 2007 at 1:25 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I requested the feature for third parties js and css files, with various licenses.<br />
+Some licenses require keep it and credit authors, eg :<br />
+&#8220;The collection is dual licensed with the MIT license and the GPL, which basically means you can use it for free for both non-commercial and commercial usage as long as you keep the copyright notice in each of Interface&#8217;s JavaScript source file.&#8221;<br />
+from <a href="http://interface.eyecon.ro/" rel="nofollow">interface elements for jQuery</a>.</p>
+<p>But may be, &#8220;minified&#8221; files could be considered like compiled ones.</p>
+<p>Thanks for the replies.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-167">
+		<article id="comment-167" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3ada405ce890b6f8204094deb12d8a8?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3ada405ce890b6f8204094deb12d8a8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Fredrik</b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-167"><time datetime="2007-08-31T08:30:31+00:00">August 31, 2007 at 8:30 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Julien<br />
+Ok, I do trust you. One of the major reasons I&#8217;m interested in, and have tried out your compressor, is the safety-factor. Only JsMin has previously handled our code without errors (and I&#8217;m not doing any evals withs..).<br />
+Though, the reason I pondered namespace &amp; function mangling was that I kindof suspect the savings to be quit a bit larger than 10%. I guess I need to write some test..<br />
+Perhaps an option? &#8211;alias MyNamespace MN ?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-168">
+		<article id="comment-168" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/0e526e646d3088d2080984ec8f8d0cf5?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/0e526e646d3088d2080984ec8f8d0cf5?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Jason Collins</b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-168"><time datetime="2007-08-31T14:32:02+00:00">August 31, 2007 at 2:32 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very nice, thanks for the update! Has anyone integrated this into an ANT task yet and if so, could you please explain how you did it or send me an example? Thanks.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-169">
+		<article id="comment-169" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-169"><time datetime="2007-08-31T14:34:47+00:00">August 31, 2007 at 2:34 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Jason</p>
+<p>Keep watching this blog. You will get your answer in an upcoming article to be published within the next 2 weeks.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-170">
+		<article id="comment-170" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/809f63112063101b1670c292cf333467?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/809f63112063101b1670c292cf333467?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.galan.de/projects/packtag' rel='external nofollow' class='url'>Daniel GalÃ¡n y Martins</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-170"><time datetime="2007-08-31T15:36:37+00:00">August 31, 2007 at 3:36 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>pack:tag 2.4 has been released. It supports the YUI Compressor and the CSS Compressor. Check the website at:<br />
+<a href="http://sf.net/projects/packtag" rel="nofollow">http://sf.net/projects/packtag</a></p>
+<p>Great compressors, keep up the good work.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-171">
+		<article id="comment-171" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/2d5566e16f68126c93c15fc09139a54e?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2d5566e16f68126c93c15fc09139a54e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://ibbydev.blogspot.com/' rel='external nofollow' class='url'>chris holland</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-171"><time datetime="2007-09-01T03:29:00+00:00">September 1, 2007 at 3:29 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Merci pour ce composant genial, je ne l&#8217;ai pas encore integre&#8217; dans mon projet, mais ca ne saurait tarder, il me suffira juste de remplacer shrinksafe. Pour que ca marche pour moi il me faudra acceder a l&#8217;API Java, je suppose que javaScriptCompressorInstance.compress devrait faire l&#8217;affaire.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-178">
+		<article id="comment-178" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/4897b76b6ae3ab9100c85a06966faa38?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4897b76b6ae3ab9100c85a06966faa38?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.jorgetown.net' rel='external nofollow' class='url'>Jorge De Castro</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-178"><time datetime="2007-09-08T02:21:55+00:00">September 8, 2007 at 2:21 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Jason Collins<br />
+I posted an Maven/Ant <a href="http://jorgetown.blogspot.com/2007/06/rhino-maven-automagic-compression.html" rel="nofollow">automated compression example using rhino</a> I implemented some time ago. It included optional conditional compression (compress only if files changed) and namespace &#8220;shrinkage&#8221; (as mentioned by Fredrik above).<br />
+I believe the YUI compressor + Maven plugin are the way to go, though.<br />
+Great work, guys!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-187">
+		<article id="comment-187" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>The Doctor What</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-187"><time datetime="2007-09-10T07:55:12+00:00">September 10, 2007 at 7:55 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Create a file called test.js with the following contents:</p>
+<p>/*extern YAHOO, viv */<br />
+/*jslint undef: false, nomen: true, evil: false, undef: true, browser:<br />
+true, white: true */</p>
+<p>(function () {<br />
+    viv.example = function () {<br />
+    };</p>
+<p>    viv.example();</p>
+<p>    YAHOO.example = function () {<br />
+    };</p>
+<p>    YAHOO.example();<br />
+})();</p>
+<p>Then execute yuicompressor like so and notice the WARNING.</p>
+<p>$  bin/yuicompressor &#8211;charset utf-8 &#8211;warn test.js</p>
+<p>[WARNING] Found an undeclared symbol: viv<br />
+(function (){viv &#8212;&gt; . </p>
+<p>This is strange.  It didn&#8217;t complain about YAHOO, but complained about<br />
+viv.  It&#8217;s almost as if someone added YAHOO to an exception list&#8230; ^_^</p>
+<p>It should either complain about both or neither.</p>
+<p>Alternatively, it could honor jslint&#8217;s extern declaration, which I&#8217;d<br />
+like even better.</p>
+<p>Ciao!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-188">
+		<article id="comment-188" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-188"><time datetime="2007-09-10T08:01:37+00:00">September 10, 2007 at 8:01 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@The Doctor What</p>
+<p>Since all local variables are going to be renamed to a 1 (or 2, or 3) letter symbol, it tries to spot undeclared globals that are less then 3 letters in length (which is the case for &#8220;viv&#8221;) to avoid naming conflicts, and shows a warning. It does not care about undeclared globals that are 4 letters long or more (which is the case for &#8220;YAHOO&#8221;) </p>
+<p>I am planning to make some improvements in that area.</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-194">
+		<article id="comment-194" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>The Doctor What</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-194"><time datetime="2007-09-11T09:43:17+00:00">September 11, 2007 at 9:43 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Oh, okay.  That makes sense.  Obviously, knowing what variable names it can and cannot use would be better.  Meanwhile, can you clean up the warning to say something like your message above?</p>
+<p>Can&#8217;t you just have a function to generate the identifiers for you? Something like (in JavaScript, because I don&#8217;t do enough Java to be confortable):</p>
+<p>var idengen = function () {<br />
+    if (typeof (idengen.list) === &#8216;undefined&#8217;) {<br />
+        idengen.init();<br />
+    }<br />
+    var count = 0;<br />
+    var next = this.gen();<br />
+    while (count </p>
+<p>Then if you find an undefined global variable, then just call <code>idengen.seen(globalvar);</code>.</p>
+<p>Now that I think about it, it would be helpful to track all undifined global variables and then return them optionally with a command line param.</p>
+<p>Ciao!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-440">
+		<article id="comment-440" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-440"><time datetime="2007-10-02T13:23:58+00:00">October 2, 2007 at 1:23 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@The Doctor What</p>
+<p>You should use JSLint. The YUI Compressor is in no way a replacement for JSLint.</p>
+<p><a href="http://www.jslint.com/" rel="nofollow">http://www.jslint.com/</a></p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-782">
+		<article id="comment-782" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8de0050de7f950ed6809ea04a91ee33b?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8de0050de7f950ed6809ea04a91ee33b?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.kezzel.dk' rel='external nofollow' class='url'>Kezzel</a></b> </cite><a href="2007/08/15/comment-page-1/index.html#comment-782"><time datetime="2007-12-07T08:02:11+00:00">December 7, 2007 at 8:02 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Julien</p>
+<p>I&#8217;m building a website framework using js-compressors, and have come accross a problem that I can not find an answer for anywhere else. It seems like you are close to the guru in this area and thus I turn my hope for an answer to you.</p>
+<p>The goal of the framework is to allow modules to be loaded on the fly, either in the background after the initial load has been done, or when the user requests an action/functionality that has not yet been used. When compressing I hide all unnecessary names by enclosing the total script in an anonymous function. This however obfuscates the names in the base js and the modules in different environments and thus they cannot use eachother. My question is thus if it is possible with the current compressors to set a starting obfuscation table of name=&gt;obfuscated_name when compressing a new file and thus compress it like it was compressed in that environment? Using this approach compressed modules could be run inside the compressed environment by using eval.</p>
+<p>Best regards<br />
+Kezzel</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-784">
+		<article id="comment-784" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/08/15/comment-page-1/index.html#comment-784"><time datetime="2007-12-07T16:23:06+00:00">December 7, 2007 at 4:23 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Kezzel</p>
+<p>Each module should export a set of global symbols. Simply omit the &#8216;var&#8217; keyword in front of them, and they won&#8217;t obfuscated.</p>
+<p>Hope this helps,<br />
+Julien</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

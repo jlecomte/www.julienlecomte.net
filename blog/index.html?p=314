@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>A Better Implementation Of The Input Prompt Pattern | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; A Better Implementation Of The Input Prompt Pattern Comments Feed" href="2009/09/314/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='OR: Henry Coe State Park, 8/15/09' href='index.html?p=296' />
+<link rel='next' title='CalStar 2009' href='index.html?p=323' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html?p=314' />
+<link rel='shortlink' href='index.html?p=314' />
+	<link href="wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-314 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html?p=314#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../index.html">Home</a></li><li class="page_item page-item-36"><a href="index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-314" class="post-314 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">A Better Implementation Of The Input Prompt Pattern</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The Input Prompt pattern consists in prefilling a text field with a prompt as a way of supplying help information for controls whose purpose or format may not be immediately clear. In the browser, this pattern is most often implemented by dynamically modifying the <code>value</code> property of a text field element via the <code>focus</code> and <code>blur</code> event handlers attached to the text field, as shown in this example (<a href="../blogfiles/20090914/test-search-label-accessibility1.html">live demo</a>):</p>
+<p>CSS:</p>
+<pre class="prettyprint"><code>.hint {
+  color: #999;
+}</code></pre>
+<p>Markup:</p>
+<pre class="prettyprint"><code>&#60;input type="text" id="sbx"&#62;</code></pre>
+<p>JavaScript (based on YUI 3.0.0):</p>
+<pre class="prettyprint"><code>YUI().use('node', function (Y) {
+
+    var sbx = Y.get('#sbx');
+
+    Y.on('domready', function () {
+
+        sbx.set('value', 'Search');
+        sbx.addClass('hint');
+
+        Y.on('focus', function () {
+            if (this.get('value') === 'Search') {
+                this.set('value', '');
+                this.removeClass('hint');
+            }
+        }, sbx);
+
+        Y.on('blur', function () {
+            if (this.get('value') === '') {
+                this.set('value', 'Search');
+                this.addClass('hint');
+            }
+        }, sbx);
+
+    });
+});</code></pre>
+<p><strong>Note:</strong> the code is intentionally implemented inside a <code>domready</code> event handler to work around issues related to form field caching.</p>
+<p>The main problem with implementing this pattern using the <code>value</code> property is that the default text is used if the form is submitted while the input prompt is showing. Trying to work around this by testing the content of the text field when the form is submitted makes the default text impossible to use as a value. Another side effect of this implementation is that most developers will forget to attach a <code>&lt;label&gt;</code> element to the text field, leading to a confusing experience for screen reader users as they lack the necessary context to understand the purpose of the control.</p>
+<p>A better implementation of this pattern consists in using a <code>&lt;label&gt;</code> element and positioning it on top of the text field it is attached to. Here is an example of this implementation (<a href="../blogfiles/20090914/test-search-label-accessibility2.html">live demo</a>):</p>
+<p>CSS:</p>
+<pre class="prettyprint"><code>#container {
+    position: relative;
+}
+
+#container label {
+    position: absolute;
+    top: 4px; *top: 6px; left: 3px;
+    color: #999;
+    cursor: text;
+}
+
+#container label.offscreen {
+    left: -9999px;
+}</code></pre>
+<p>Markup:</p>
+<pre class="prettyprint"><code>&#60;div id="container"&#62;
+    &#60;label for="sbx" class="offscreen">Search&#60;/label&#62;
+    &#60;input type="text" id="sbx"&#62;
+&#60;/div&#62;</code></pre>
+<p>JavaScript (based on YUI 3.0.0):</p>
+<pre class="prettyprint"><code>YUI().use('node', function (Y) {
+
+    var sbx = Y.get('#sbx'),
+        lbl = Y.get('#container label');
+
+    Y.on('domready', function () {
+
+        sbx.set('value', '');
+        lbl.removeClass('offscreen');
+
+        Y.on('mousedown', function () {
+            setTimeout(function () {
+                sbx.focus();
+            }, 0);
+        }, lbl);
+
+        Y.on('focus', function () {
+            lbl.addClass('offscreen');
+        }, sbx);
+
+        Y.on('blur', function () {
+            if (sbx.get('value') === '') {
+                sbx.set('value', '');
+                lbl.removeClass('offscreen');
+            }
+        }, sbx);
+
+    });
+});</code></pre>
+<p>As always, I am looking forward to reading your comments and answering your questions in the comments section of this blog.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="category/web-development/index.html" rel="category tag">Web Development</a> on <a href="index.html?p=314" title="11:43 am" rel="bookmark"><time class="entry-date" datetime="2009-09-14T11:43:01+00:00">September 14, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="index.html?p=296" rel="prev"><span class="meta-nav">&larr;</span> OR: Henry Coe State Park, 8/15/09</a></span>
+					<span class="nav-next"><a href="index.html?p=323" rel="next">CalStar 2009 <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			8 thoughts on &ldquo;<span>A Better Implementation Of The Input Prompt Pattern</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-3714">
+		<article id="comment-3714" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/87dff3c031bb7082bf3ce1d6b4891fd0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/87dff3c031bb7082bf3ce1d6b4891fd0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://the-echoplex.net' rel='external nofollow' class='url'>Pete B</a></b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3714"><time datetime="2009-09-14T13:16:52+00:00">September 14, 2009 at 1:16 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I was just writing one of these yesterday, and used an html 5 custom data attribute named &#8216;data-hint&#8217;. </p>
+<p>This has the advantage that you can define the hint as independent of the label text.</p>
+<p>I also tested and rejected whitespace only values, but that may be a little ott.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3731">
+		<article id="comment-3731" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/ea077fdc95c2959ca28b052853b4175e?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ea077fdc95c2959ca28b052853b4175e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.nczonline.net/' rel='external nofollow' class='url'>Nicholas C. Zakas</a></b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3731"><time datetime="2009-09-14T19:46:56+00:00">September 14, 2009 at 7:46 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;ve been trying to dissuade people from the first pattern you mention. That tends to be the easiest to implement, but also the least semantic. I really like the second pattern, I think that makes the most sense since the text visibly inside of the textbox really does act like a label. Thanks for sharing the better approach. :)</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3744">
+		<article id="comment-3744" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/3974d5bcfbdb27cc99d10706dc5b85f7?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3974d5bcfbdb27cc99d10706dc5b85f7?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://lucassmith.name' rel='external nofollow' class='url'>Luke</a></b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3744"><time datetime="2009-09-14T21:24:43+00:00">September 14, 2009 at 9:24 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice.  I put together something closer to the first type some time ago, but using the value modification to display example content rather than labels, leaving proper labels displayed.</p>
+<p>It turned out, though, that I ended up spending more time dealing with the field auto fill.  It turns out that domready is too early for some browsers.  It is likely working in your case because YUI 3&#8217;s async module loading spans the time before the window&#8217;s onload event.</p>
+<p>What I found was that some browsers fill the value before domready, others before window onload, and Opera (tested in 9.6, not in 10 yet) auto filled just *after* window onload.  The end result was that to reliably deal with all A grade browsers&#8217; value recall, the init code needed to be executed via a short setTimeout from a window.onload subscriber.  It made me sad.</p>
+<p>The result is here for reference: <a href="http://lucassmith.name/pub/field_default.html" rel="nofollow">http://lucassmith.name/pub/field_default.html</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-3745">
+		<article id="comment-3745" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2009/09/314/comment-page-1/index.html#comment-3745"><time datetime="2009-09-14T21:26:45+00:00">September 14, 2009 at 9:26 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks Luke, this is very useful research!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3749">
+		<article id="comment-3749" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/13753e40e0a6a2ef6b0652e1e05b0af0?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/13753e40e0a6a2ef6b0652e1e05b0af0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Thomas Broyer</b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3749"><time datetime="2009-09-15T02:02:38+00:00">September 15, 2009 at 2:02 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The best implementation, of course, is to rely on the browser&#8217;s own implementation: [input placeholder=&#8221;Search&#8221;] (well, in the case of a search field, you&#8217;d rather even use [input type=search placeholder=&#8221;Search&#8221;])</p>
+<p>placeholder=&#8221;&#8221; is implemented in WebKit for a long time (which means Safari and Chrome); for others you&#8217;d then rely on JavaScript to create a [label] and use your CSS positioning trick (which I concur is the best solution, compared to changing the value=&#8221;&#8221; attribute&#8217;s value). To style the placeholder, you can use the ::-webkit-input-placeholder pseudo-element (input::-webkit-input-placeholder).</p>
+<p>&#8230;and to detect whether placeholder=&#8221;&#8221; is implemented, see <a href="http://diveintohtml5.org/detect.html#input-placeholder" rel="nofollow">http://diveintohtml5.org/detect.html#input-placeholder</a></p>
+<p>The only &#8220;issue&#8221; with placeholder=&#8221;&#8221; is that it isn&#8217;t meant to replace [label], which you seem do be doing here: <a href="http://www.w3.org/TR/html5/forms.html#the-placeholder-attribute" rel="nofollow">http://www.w3.org/TR/html5/forms.html#the-placeholder-attribute</a></p>
+<p>Also, just wondering, couldn&#8217;t you position the [label] *below* the [input] and dynamically changing the [input]&#8217;s background (from transparent to white) instead of moving the [label] around? the only drawback that I can see is that as soon as you style the background you no longer have the &#8220;platform&#8221; styling (thin blue border on Windows for instance) and you have to style the border too.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3750">
+		<article id="comment-3750" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/760ee07e2a7c2a05ac35a981276c6a29?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/760ee07e2a7c2a05ac35a981276c6a29?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.dominykas.com' rel='external nofollow' class='url'>Dominykas</a></b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3750"><time datetime="2009-09-15T03:09:33+00:00">September 15, 2009 at 3:09 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>As Luke says, the real problem is the autofilled values, which make things look very very very ugly. Especially if one of the fields is a password field&#8230; So, you do need to init the default values with timeout.</p>
+<p>The label approach also has problems with positioning, since every browser has different margins/paddings for the input elements. But that can be solved with enough determination :)</p>
+<p>Another problem is that some browsers keep the focus upon page reload/back/forward &#8211; which means that you also need to double check the hasFocus upon init to avoid changing the value of the field when the user is already about to start typing.</p>
+<p><a href="http://code.dominykas.com/js/hasFocus.html" rel="nofollow">http://code.dominykas.com/js/hasFocus.html</a> &#8211; focus on the input, F5 in IE. (The actual code, I think, has a bug for activeElement &#8211; can&#8217;t remember if I fixed it)</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3754">
+		<article id="comment-3754" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/cf33d3202d98e20c0e7041ff5375f2dd?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/cf33d3202d98e20c0e7041ff5375f2dd?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://hanblog.info' rel='external nofollow' class='url'>Rik</a></b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3754"><time datetime="2009-09-15T05:42:27+00:00">September 15, 2009 at 5:42 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice implementation for present use.</p>
+<p>Hopefully, HTML5 will ease this behavior through the placeholder attribute (currently implemented in WebKit browsers).</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3756">
+		<article id="comment-3756" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d04f34d8975d87d53d65451f865da241?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d04f34d8975d87d53d65451f865da241?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">devsmt</b> </cite><a href="2009/09/314/comment-page-1/index.html#comment-3756"><time datetime="2009-09-15T08:29:43+00:00">September 15, 2009 at 8:29 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>extremely nice this creative use of markup. tnx for sharing the good idea</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

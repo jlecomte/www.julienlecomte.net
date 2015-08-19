@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Building Web Applications With Apache Ant | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Building Web Applications With Apache Ant Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Rich Web Experience 2007' href='../../../index.html?p=19' />
+<link rel='next' title='YUI Compressor Version 2.2 Now Available' href='../../../index.html?p=22' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='../../../index.html?p=16' />
+<link rel='shortlink' href='../../../index.html?p=16' />
+	<link href="../../../wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../../../wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-16 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="../../../index.html?p=16#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../../../../index.html">Home</a></li><li class="page_item page-item-36"><a href="../../../index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-16" class="post-16 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Building Web Applications With Apache Ant</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<h4>The importance of having a solid build process</h4>
+<p>Modern web applications are large and complicated pieces of engineering, using many different technologies, sometimes deployed on hundreds (or even thousands) of servers throughout the world, and used by people from dozens of locales. Such applications cannot efficiently be developed without relying on a solid build process to do all the dirty and repetitive work of reliably putting all the pieces together.</p>
+<h4>Apache Ant</h4>
+<p><img src="../../../../blogfiles/images/apache-ant-logo.png" style="width:120px;height:35px;border:none;float:right;margin-left:10px;" alt="Apache Ant"></p>
+<p>Many tools (make, gnumake, nmake, jam, etc.) are available today to build applications. However, when it comes to building a <em>web</em> application, my personal favorite is definitely <a href="http://ant.apache.org/" target="_blank">Apache Ant</a> (here is a <a href="http://ant.apache.org/manual/intro.html" target="_blank">good explanation</a> of Ant&#8217;s benefits over the other tools) This short tutorial will assume you already have some basic knowledge of Ant (if you don&#8217;t, you should flip through its <a href="http://ant.apache.org/manual/index.html" target="_blank">user manual</a> beforehand) This article will focus mainly on building front-end code using Ant.</p>
+<p><br style="clear:both;line-height:0;"/></p>
+<h4>Build types</h4>
+<p>It is often useful to build an application differently at different stages of its life cycle. For instance, a development build will have assertions and tons of logging code, while a production version will be stripped of all that. You may also need some intermediate build to hand off to QA, and still be able to debug things easily while running actual production code. With Ant, you can create one target per build type, and have a different dependency list for each target. Properties can also be used to customize specific build types. Here is an example:</p>
+<pre class="prettyprint" style="overflow:auto;overflow-y:hidden;">
+&#60;target name="dev" depends="load.properties.dev, js.preprocess, js.check.syntax, copy.jsp, copy.image.files, copy.css.files, copy.js.files, compile.jsp, copy.properties.files, compile.webapps, copy.libs"
+    description="Development build"&#62;
+&#60;/target&#62;
+
+&#60;target name="prod" depends="load.properties.prod, js.preprocess, js.check.syntax, js.concatenate, js.minify, copy.jsp, copy.image.files, copy.css.files, copy.js.files, compile.jsp, copy.properties.files, compile.webapps, copy.libs"
+    description="Full production build"&#62;
+&#60;/target&#62;
+
+&#60;target name="load.properties"&#62;
+    &#60;property file="ant.properties"/&#62;
+&#60;/target&#62;
+
+&#60;target name="load.properties.dev" depends="load.properties"&#62;
+    &#60;property name="js.preprocess.switches" value="-P -DDEBUG_VERSION=1"/&#62;
+    &#60;property name="js.compressor.switches" value="--nomunge --line-break"/&#62;
+&#60;/target&#62;
+
+&#60;target name="load.properties.prod" depends="load.properties"&#62;
+    &#60;property name="js.preprocess.switches" value="-P -DDEBUG_VERSION=0"/&#62;
+    &#60;property name="js.compressor.switches" value=""/&#62;
+&#60;/target&#62;
+</pre>
+<h4>Concatenate your JavaScript and CSS files</h4>
+<p>Concatenating JavaScript and CSS files contributes to making your site faster <a href="http://developer.yahoo.com/performance/rules.html#num_http" target="_blank">according to Yahoo!&#8217;s Exceptional Performance team</a>. File concatenation using Ant is trivial using the <code>concat</code> task. However, it is often important to concatenate JavaScript and CSS files in a very specific order (If you are using <a href="http://developer.yahoo.com/yui/" target="_blank">YUI</a> for example, you want yahoo.js to appear first, and then dom.js/event.js, and then animation.js, etc. in order to respect module dependencies) This can be accomplished using a filelist, or a combination of filesets. Here is an example:</p>
+<pre class="prettyprint">
+&#60;target name="js.concatenate"&#62;
+    &#60;concat destfile="${build.dir}/concatenated/foo.js"&#62;
+        &#60;filelist dir="${src.dir}/js"
+            files="a.js, b.js"/&#62;
+        &#60;fileset dir="${src.dir}/js"
+            includes="*.js"
+            excludes="a.js, b.js"/&#62;
+    &#60;/concat&#62;
+&#60;/target&#62;
+</pre>
+<p>It is also possible to prepend some comments to the destination file, which is often used for license and copyright information, using a nested <code>header</code> element (see the <a href="http://ant.apache.org/manual/CoreTasks/concat.html" target="_blank">Apache Ant manual</a>) Just keep in mind that minifying your code will make these comments go away, so you may want to do this later in the build process.</p>
+<h4>Preprocess your JavaScript files using CPP</h4>
+<p>Preprocessing JavaScript code is very useful to facilitate the development process. It allows you to define your own macros, and conditionally compile blocks of code. One easy way to preprocess JavaScript code is to use the <a href="http://en.wikipedia.org/wiki/C_preprocessor" target="_blank">C preprocessor</a>, which is usually installed by default on UNIX machines. It is available on Windows machines as well using <a href="http://www.cygwin.com/" target="_blank">cygwin</a>. Here is a snippet of an Ant build.xml file illustrating the use of cpp to preprocess JavaScript files:</p>
+<pre class="prettyprint">
+&#60;target name="js.preprocess" depends="js.concatenate"&#62;
+    &#60;apply executable="cpp" dest="${build.dir}/preprocessed"&#62;
+        &#60;fileset dir="${build.dir}/concatenated"
+            includes="foo.js"/&#62;
+        &#60;arg line="${js.preprocess.switches}"/&#62;
+        &#60;srcfile/&#62;
+        &#60;targetfile/&#62;
+        &#60;mapper type="identity"/&#62;
+    &#60;/apply&#62;
+&#60;/target&#62;
+</pre>
+<p>You can now write JavaScript code that looks like the following:</p>
+<p><em>include.js</em>:</p>
+<pre class="prettyprint">
+#if DEBUG_VERSION
+function assert(condition, message) {
+    ...
+}
+#define ASSERT(x, ...) assert(x, ## __VA_ARGS__)
+#else
+#define ASSERT(x, ...)
+#endif
+</pre>
+<p><em>foobar.js</em>:</p>
+<pre class="prettyprint">
+#include "include.js"
+
+function myFunction(arg) {
+    ASSERT(YAHOO.lang.isString(argvar), "arg should be a string");
+    ...
+#if DEBUG_VERSION
+    YAHOO.log("Log this in debug mode only");
+#endif
+    ...
+}
+</pre>
+<p>Just a word of caution here: make sure you use the UNIX EOL character before preprocessing your files. Otherwise, you&#8217;ll have some issues with multi-line macros. You may use the <code>fixcrlf</code> Ant task to automatically fix that for you.</p>
+<h4>Minify your JavaScript and CSS files</h4>
+<p>Minifying your JavaScript and CSS files will help make your application faster <a href="http://developer.yahoo.com/performance/rules.html#minify" target="_blank">according to Yahoo!&#8217;s Exceptional Performance team</a>. I warmly recommend you use the YUI Compressor, available for <a href="http://www.julienlecomte.net/yuicompressor/" target="_blank">download</a> on this site. There are two ways to call the YUI Compressor from Ant. Here is the first one using the <code>java</code> task:</p>
+<pre class="prettyprint">
+&#60;target name="js.minify" depends="js.preprocess"&#62;
+    &#60;java jar="yuicompressor.jar" fork="true"&#62;
+        &#60;arg value="foo.js"/&#62;
+    &#60;/java&#62;
+&#60;/target&#62;
+</pre>
+<p>Here is another way using the <code>apply</code> task that allows you to pass several files to the compressor using a <code>fileset</code>:</p>
+<pre class="prettyprint">
+&#60;target name="js.minify" depends="js.preprocess"&#62;
+    &#60;apply executable="java" parallel="false"&#62;
+        &#60;fileset dir="." includes="foo.js, bar.js"/&#62;
+        &#60;arg line="-jar"/&#62;
+        &#60;arg path="yuicompressor.jar"/&#62;
+        &#60;mapper type="glob" from="*.js" to="*-min.js"/&#62;
+    &#60;/apply&#62;
+&#60;/target&#62;
+</pre>
+<p><strong>Update:</strong> Starting with version 2.2.x of the YUI Compressor, the ant target described above needs to be slightly modified:</p>
+<pre class="prettyprint">
+&#60;target name="js.minify" depends="js.preprocess"&#62;
+    &#60;apply executable="java" parallel="false"&#62;
+        &#60;fileset dir="." includes="foo.js, bar.js"/&#62;
+        &#60;arg line="-jar"/&#62;
+        &#60;arg path="yuicompressor.jar"/&#62;
+        &#60;srcfile/&#62;
+        &#60;arg line="-o"/&#62;
+        &#60;mapper type="glob" from="*.js" to="*-min.js"/&#62;
+        &#60;targetfile/&#62;
+    &#60;/apply&#62;
+&#60;/target&#62;
+</pre>
+<p>Also consider the following ant target to minify CSS files:</p>
+<pre class="prettyprint">
+&#60;target name="js.minify" depends="js.preprocess"&#62;
+    &#60;apply executable="java" parallel="false"&#62;
+        &#60;fileset dir="." includes="*.css"/&#62;
+        &#60;arg line="-jar"/&#62;
+        &#60;arg path="yuicompressor.jar"/&#62;
+        &#60;arg line="--line-break 0"/&#62;
+        &#60;srcfile/&#62;
+        &#60;arg line="-o"/&#62;
+        &#60;mapper type="glob" from="*.css" to="*-min.css"/&#62;
+        &#60;targetfile/&#62;
+    &#60;/apply&#62;
+&#60;/target&#62;
+</pre>
+<h4>Work around caching issues</h4>
+<p><a href="http://developer.yahoo.com/performance/rules.html#expires" target="_blank">Adequate cache control</a> can really enhance your users&#8217; experience by not having them re-download static content (usually JavaScript, CSS, HTML and images) when coming back to your site. This has a downside however: when rev&#8217;ing your application, you want to make sure your users get the latest static content. The only way to do that is to change the name of these files (for example by adding a time stamp to their file name, or using their checksum as their file name) You must also propagate that change to all the files that refer to them.</p>
+<p>The copy and file name replacement will be handled by a custom Ant task named FileTransform (see <a href="../../../../blogfiles/apache-ant/FileTransform.java" target="_blank">FileTransform.java</a>) The first step is to build the task from the source and define the custom task:</p>
+<pre class="prettyprint">
+&#60;target name="-setup.build.tools" depends="-load.properties"&#62;
+    &#60;mkdir dir="${build.dir}/tools/classes"/&#62;
+    &#60;javac srcdir="tools/src"
+           destdir="${build.dir}/tools/classes"
+           includes="**/*.java"&#62;
+        &#60;classpath&#62;
+            &#60;pathelement location="tools/lib/ant.jar"/&#62;
+        &#60;/classpath&#62;
+    &#60;/javac&#62;
+    &#60;taskdef name="FileTransform"
+        classname="com.yahoo.platform.build.ant.FileTransform"
+        classpath="${build.dir}/tools/classes"/&#62;
+&#60;/target&#62;
+</pre>
+<p>(Note the use of a &#8220;-&#8221; in front of the name of the target. This is used to make the target &#8220;private&#8221; i.e. not invokable directly) The second part is the copy of the static content that is going to be cached using the newly defined FileTransform task:</p>
+<pre class="prettyprint">
+&#60;target name="-copy.js.files" depends="-setup.build.tools"&#62;
+    &#60;mkdir dir="${build.dir}/js"/&#62;
+    &#60;FileTransform todir="${build.dir}/js"
+        changefilenames="true"
+        propertiesfile="${build.dir}/js.files.mapping.properties"&#62;
+        &#60;fileset dir="site/js" includes="*.js"/&#62;
+    &#60;/FileTransform&#62;
+&#60;/target&#62;
+</pre>
+<p>The mapping between the old names and the new names is stored in a properties file. The final step is the copy of the files that refer to files which name was changed in the previous step. For this, we use the <code>copy</code> task:</p>
+<pre class="prettyprint">
+&#60;target name="-copy.php.files" depends="-copy.js.files"&#62;
+    &#60;mkdir dir="${build.dir}/php"/&#62;
+    &#60;copy todir="${build.dir}/php"&#62;
+        &#60;fileset dir="site/php" includes="*.php"/&#62;
+        &#60;filterset&#62;
+            &#60;filtersfile file="${build.dir}/js.files.mapping.properties"/&#62;
+        &#60;/filterset&#62;
+    &#60;/copy&#62;
+&#60;/target&#62;
+</pre>
+<p>You can <a href="../../../../blogfiles/apache-ant/ant-filetransform-project.zip">download</a> an archive containing a very simple Ant project illustrating this advanced technique.</p>
+<h4>Deploy your application</h4>
+<p>Deploying a web application is usually done by copying a set of files over to the production servers and running a list of commands on those servers (stop the services, run a few shell commands, and finally restart the services)</p>
+<p>You have many options to copy files to remote servers with Apache Ant. You could use the <code>copy</code> task to copy files to a locally mounted file system, or you could use the optional <code>FTP</code> task. My personal preference is to use <code>scp</code> and <code>rsync</code> (both utilities are available on all major platforms) Here is a very simple example demonstrating the use of <code>scp</code> with Apache Ant:</p>
+<pre class="prettyprint">
+&#60;apply executable="scp" failonerror="true" parallel="true"&#62;
+    &#60;fileset dir="${build.dir}" includes="**/*"/&#62;
+    &#60;srcfile/&#62;
+    &#60;arg line="${live.server}:/var/www/html/"/&#62;
+&#60;/apply&#62;
+</pre>
+<p>And here is an example showing how you can run remote commands:</p>
+<pre class="prettyprint">
+&#60;exec executable="ssh" failonerror="true"&#62;
+    &#60;arg line="${live.server}"/&#62;
+    &#60;arg line="sudo webctl restart"/&#62;
+&#60;/exec&#62;
+</pre>
+<h4>Conclusion</h4>
+<p>I hope this article has given you some ideas of what&#8217;s possible to automate with modern build tools such as Apache Ant (other cool things include automatic generation of documentation, source control integration, packaging using rpm and such, etc.) My professional experience has taught me that the build process cannot be an afterthought. Just like performance, it should be part of your project from the very beginning. The second lesson is that all web developers need to be active participants in creating and maintaining the build process (with maybe one build engineer to centralize all the information) instead of relying on somebody else to build their component. Finally, keep your build process alive and maintain it actively as your needs will change during your project life cycle.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../category/web-development/index.html" rel="category tag">Web Development</a> on <a href="../../../index.html?p=16" title="1:37 pm" rel="bookmark"><time class="entry-date" datetime="2007-09-11T13:37:31+00:00">September 11, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../../index.html?p=19" rel="prev"><span class="meta-nav">&larr;</span> The Rich Web Experience 2007</a></span>
+					<span class="nav-next"><a href="../../../index.html?p=22" rel="next">YUI Compressor Version 2.2 Now Available <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			25 thoughts on &ldquo;<span>Building Web Applications With Apache Ant</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-205">
+		<article id="comment-205" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/6c5d8be6ffe678809cb737db55c761d2?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6c5d8be6ffe678809cb737db55c761d2?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.henke.ws' rel='external nofollow' class='url'>Mike</a></b> </cite><a href="comment-page-1/index.html#comment-205"><time datetime="2007-09-12T09:30:18+00:00">September 12, 2007 at 9:30 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very good quality post!  Great Stuff.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-206">
+		<p>Pingback: <a href='http://www.pixzone.com/blog/273/links-for-2007-09-12/' rel='external nofollow' class='url'>Federico Feroldi&#8217;s blog &raquo; Blog Archive &raquo; links for 2007-09-12</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-208">
+		<p>Pingback: <a href='http://stephenwoods.net/wordpress/2007/09/12/ant-phing/' rel='external nofollow' class='url'>stephenwoods.net &raquo; Ant &#38; Phing</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-214">
+		<article id="comment-214" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/b447facae658f830e7b9796e9d1f67d0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b447facae658f830e7b9796e9d1f67d0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Demetrios Kyriakis</b> </cite><a href="comment-page-1/index.html#comment-214"><time datetime="2007-09-13T05:30:36+00:00">September 13, 2007 at 5:30 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This article about ANT is just plain cool :).<br />
+I think it should be posted on the ANT site too.</p>
+<p>Please, please write more articles like this about automations with ANT :).</p>
+<p>Thank you,</p>
+<p>Demetrios.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-215">
+		<article id="comment-215" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/88baa606188a8e1a951b8baaabc07cb2?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/88baa606188a8e1a951b8baaabc07cb2?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='https://www.thecrumb.com' rel='external nofollow' class='url'>Jim Priest</a></b> </cite><a href="comment-page-1/index.html#comment-215"><time datetime="2007-09-13T07:44:31+00:00">September 13, 2007 at 7:44 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great article!! Especially the bit about compressing JS code.  I&#8217;m using jQuery more and more &#8211; and being able to compress this (and it&#8217;s many plugins) will be helpful!</p>
+<p>FWIW &#8211; I have a Ant wiki page setup with a lot of info: <a href="http://www.thecrumb.com/wiki/Ant" rel="nofollow">http://www.thecrumb.com/wiki/Ant</a></p>
+<p>A lot of it is centered around using Ant with ColdFusion but still good info.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-216">
+		<p>Pingback: <a href='http://www.thecrumb.com/2007/09/13/compressing-js-and-css-with-ant/' rel='external nofollow' class='url'>Compressing JS and CSS with Ant</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-218">
+		<article id="comment-218" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/39014f70023734c87c8d50a6257a0d56?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/39014f70023734c87c8d50a6257a0d56?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.php-learn-it.com' rel='external nofollow' class='url'>Learn PHP</a></b> </cite><a href="comment-page-1/index.html#comment-218"><time datetime="2007-09-13T13:21:13+00:00">September 13, 2007 at 1:21 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>wow extensive tutorial. thanks for the article. definitely something new to learn here.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-251">
+		<article id="comment-251" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/9adaec017aede6bd4b7e7803dfdae5cd?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9adaec017aede6bd4b7e7803dfdae5cd?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://musetracks.instantspot.com' rel='external nofollow' class='url'>Rob Wilkerson</a></b> </cite><a href="comment-page-1/index.html#comment-251"><time datetime="2007-09-16T15:36:28+00:00">September 16, 2007 at 3:36 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great article.  I&#8217;ve been using Ant to build web apps for several years now, but I&#8217;ve never processed my JavaScript files as you&#8217;ve discussed.  I&#8217;ll be trying that next time around.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-301">
+		<p>Pingback: <a href='../20/trimming-comments-in-html-documents-using-apache-ant/index.html' rel='external nofollow' class='url'>Julien Lecomte&#8217;s Blog &raquo; Trimming comments in HTML documents using Apache Ant</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-311">
+		<p>Pingback: <a href='http://www.chnorton.com.au/2007/09/23/web-application-construction-tools/' rel='external nofollow' class='url'>Web Application Construction Tools &raquo; Chris Norton</a> </p>
+	</li><!-- #comment-## -->
+	<li class="trackback even thread-even depth-1" id="comment-422">
+		<p>Pingback: <a href='http://jira.hq.samba.biz:8080/browse/FW-608' rel='external nofollow' class='url'>JIRA: FleetWatch3</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-525">
+		<article id="comment-525" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/1aebcf96aeb2e2bcad662bbb06adbd2e?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1aebcf96aeb2e2bcad662bbb06adbd2e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Magnus Naslund</b> </cite><a href="comment-page-1/index.html#comment-525"><time datetime="2007-10-08T05:29:16+00:00">October 8, 2007 at 5:29 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m trying to minify javascripts with ant and yuicompressor-2.2.4 but the apply script (the 2nd) doesn&#8217;t work since the result is sent to stdout. What to change in the script to make it work?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-549">
+		<article id="comment-549" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/27cdb18cd724b494282b8292528f42f9?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/27cdb18cd724b494282b8292528f42f9?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Nick Aliwell</b> </cite><a href="comment-page-1/index.html#comment-549"><time datetime="2007-10-17T04:55:47+00:00">October 17, 2007 at 4:55 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I tried to post a sample before but it didnt work.<br />
+heres an ant target that worked for me.<br />
+<a href="http://homepage.mac.com/nickaliwell/code.html" rel="nofollow">http://homepage.mac.com/nickaliwell/code.html</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-623">
+		<article id="comment-623" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="comment-page-1/index.html#comment-623"><time datetime="2007-11-15T13:20:03+00:00">November 15, 2007 at 1:20 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Magnus</p>
+<p>I just updated the blog post to make the ant target work with YUI Compressor version 2.2.x</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-652">
+		<article id="comment-652" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/af49f5cd66ce0256dcb61ae3b8746ac9?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/af49f5cd66ce0256dcb61ae3b8746ac9?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.ubik-ingenierie.com' rel='external nofollow' class='url'>Philippe Mouawad</a></b> </cite><a href="comment-page-1/index.html#comment-652"><time datetime="2007-11-19T14:30:33+00:00">November 19, 2007 at 2:30 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If you are interested, I developed an ANT Task to do minification on a set of JS/CSS using ANT fileset.</p>
+<p>For download and configuration:<br />
+<a href="http://www.ubik-ingenierie.com/ubikwiki/index.php?title=Minifying_JS/CSS" rel="nofollow">http://www.ubik-ingenierie.com/ubikwiki/index.php?title=Minifying_JS/CSS</a></p>
+<p>Thanks Julien for your great tool.<br />
+Philippe.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-709">
+		<p>Pingback: <a href='http://blog.gomilko.com/2007/11/29/yui-compression-tool-as-ant-task/' rel='external nofollow' class='url'>IN MY OPINION &raquo; YUI Compression tool as Ant Task</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2840">
+		<article id="comment-2840" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/6c5d8be6ffe678809cb737db55c761d2?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6c5d8be6ffe678809cb737db55c761d2?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.henke.ws' rel='external nofollow' class='url'>Mike Henke</a></b> </cite><a href="comment-page-1/index.html#comment-2840"><time datetime="2008-02-11T10:16:04+00:00">February 11, 2008 at 10:16 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Could you update the ant example for yuicompressor.jar to the latest release 2.3.5?  Maybe that could be included in the documentaion (Readme file) so it is update for each release.  Thanks</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2866">
+		<article id="comment-2866" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/3029a0d6a1871f9d07cce78fd4c12412?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3029a0d6a1871f9d07cce78fd4c12412?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Jean-Daniel</b> </cite><a href="comment-page-1/index.html#comment-2866"><time datetime="2008-03-15T12:11:50+00:00">March 15, 2008 at 12:11 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for this great article.</p>
+<p>Just a note about the CPP invocation, I suggest to had the -CC flag to avoid comments stripping. The comment stripping will be performed by yuicompressor and it will preserve conditional comments.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2875">
+		<article id="comment-2875" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/4ae117861651fecf99a9f4faa9e4801f?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4ae117861651fecf99a9f4faa9e4801f?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.sigge.eu' rel='external nofollow' class='url'>SiggeLund</a></b> </cite><a href="comment-page-1/index.html#comment-2875"><time datetime="2008-04-14T07:54:47+00:00">April 14, 2008 at 7:54 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Excellent guide that truly helped me today. Thank you!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2877">
+		<article id="comment-2877" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/38fa390dc71d6e34b2a4c0adf4b73b80?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/38fa390dc71d6e34b2a4c0adf4b73b80?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.foreseeresults.com' rel='external nofollow' class='url'>Mitchell Cohen</a></b> </cite><a href="comment-page-1/index.html#comment-2877"><time datetime="2008-04-15T06:31:06+00:00">April 15, 2008 at 6:31 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Greate article&#8230;really.  Any chance you post your ant script?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2879">
+		<article id="comment-2879" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/9ef56f541cabd3914434bdede11c1723?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9ef56f541cabd3914434bdede11c1723?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://hirenpanchal.com' rel='external nofollow' class='url'>hiren panchal</a></b> </cite><a href="comment-page-1/index.html#comment-2879"><time datetime="2008-04-17T09:45:27+00:00">April 17, 2008 at 9:45 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>indeed great article. </p>
+<p>would it be possible for you to post sample ant project which minifies and concatenates js and css files?</p>
+<p>thanks in advance</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2904">
+		<article id="comment-2904" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f7ab8ee59b1d32f5635646fc0039bb32?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f7ab8ee59b1d32f5635646fc0039bb32?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://iws.cs.uni-magdeburg.de/~elkner/yui/' rel='external nofollow' class='url'>Jens Elkner</a></b> </cite><a href="comment-page-1/index.html#comment-2904"><time datetime="2008-04-22T21:36:44+00:00">April 22, 2008 at 9:36 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yeep, that&#8217;s a good one. However pretty inefficient ant &#8220;support&#8221; is pretty annoying. Thus I wrote a Css and Js Ant filter, which might be used e.g. in a copy task (for more info see <a href="http://iws.cs.uni-magdeburg.de/~elkner/yui/yuicompressor-2.3.5jel.readme.txt" rel="nofollow">http://iws.cs.uni-magdeburg.de/~elkner/yui/yuicompressor-2.3.5jel.readme.txt</a>). BTW: Also improved performance by ~ factor 10 ;-).</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3192">
+		<article id="comment-3192" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/206d58c514286245315b7e1c9e9fa5ee?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/206d58c514286245315b7e1c9e9fa5ee?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://911Blogger.com' rel='external nofollow' class='url'>DJDaveMark</a></b> </cite><a href="comment-page-1/index.html#comment-3192"><time datetime="2009-01-23T02:35:28+00:00">January 23, 2009 at 2:35 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Any reason why we can&#8217;t use the ANT tasks &#8216;replace&#8217; et &#8216;replaceregexp&#8217; for preprocessing the JavaScript code instead of &#8216;cpp&#8217;?</p>
+<p><a href="http://ant.apache.org/manual/CoreTasks/replace.html" rel="nofollow">http://ant.apache.org/manual/CoreTasks/replace.html</a></p>
+<p>This would save installing Cygwin</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3226">
+		<article id="comment-3226" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8bf1c9d4005ec592ac518840559db996?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8bf1c9d4005ec592ac518840559db996?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.drupaldeveloper.com.au' rel='external nofollow' class='url'>Rimian</a></b> </cite><a href="comment-page-1/index.html#comment-3226"><time datetime="2009-02-26T22:08:57+00:00">February 26, 2009 at 10:08 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice one! I&#8217;ve been using Apache Ant to deploy and manage tasks for a while but this takes me to a new level. Thank you.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3362">
+		<article id="comment-3362" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e2c1cf7791d60d24e3c8bdc3e4bd8a00?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e2c1cf7791d60d24e3c8bdc3e4bd8a00?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.spltech.co.uk' rel='external nofollow' class='url'>Armindo Cachada</a></b> </cite><a href="comment-page-1/index.html#comment-3362"><time datetime="2009-06-15T02:23:59+00:00">June 15, 2009 at 2:23 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Julien,</p>
+<p>I really found your blog post useful. I used your FileTransform, tweaked it a bit and added extra features. If you are interested you can find more at:</p>
+<p><a href="http://simplyolaf.blogspot.com/2009/06/minimizing-number-of-http-requests-by.html" rel="nofollow">http://simplyolaf.blogspot.com/2009/06/minimizing-number-of-http-requests-by.html</a></p>
+<p>and </p>
+<p><a href="http://simplyolaf.blogspot.com/2009/06/minifying-css-and-js-with-yahoo.html" rel="nofollow">http://simplyolaf.blogspot.com/2009/06/minifying-css-and-js-with-yahoo.html</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0b1/build/cssreset/reset-min.css&3.0.0b1/build/cssfonts/fonts-min.css">
+    <style type="text/css">
+
+#container {
+    position: relative;
+}
+
+#container label {
+    position: absolute;
+    top: 4px; *top: 6px; left: 3px;
+    color: #999;
+    cursor: text;
+}
+
+#container label.offscreen {
+    left: -9999px;
+}
+    </style>
+  </head>
+  <body>
+    <form action="http://search.yahoo.com/search">
+      <div id="container">
+        <label for="sbx" class="offscreen">Search</label>
+        <input type="text" name="p" id="sbx">
+        <input type="submit" value="Go">
+      </div>
+    </form>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.0.0b1/build/yui/yui-min.js"></script>
+    <script type="text/javascript">
+
+YUI().use('node', function (Y) {
+
+    var sbx = Y.get('#sbx'),
+        lbl = Y.get('#container label');
+
+    Y.on('domready', function () {
+        
+        sbx.set('value', '');
+        lbl.removeClass('offscreen');
+
+        Y.on('mousedown', function () {
+            setTimeout(function () {
+                sbx.focus();
+            }, 0);
+        }, lbl);
+
+        Y.on('focus', function () {
+            lbl.addClass('offscreen');
+        }, sbx);
+
+        Y.on('blur', function () {
+            if (Y.Lang.trim(sbx.get('value')) === '') {
+                sbx.set('value', '');
+                lbl.removeClass('offscreen');
+            }
+        }, sbx);
+
+    });
+});
+    </script>
+  </body>
+</html>

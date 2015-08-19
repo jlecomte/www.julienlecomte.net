@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Web Development | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Web Development Category Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3" />
+	<link href="../../wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../../wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="archive category category-web-development category-3 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../../../index.html">Home</a></li><li class="page_item page-item-36"><a href="../../index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Category Archives: <span>Web Development</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-583" class="post-583 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=583" rel="bookmark">An unconventional loading strategy for YUI 3</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div style="width:425px" id="__ss_7451141"><object id="__sse7451141" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=f2esummit-110330130440-phpapp02&#038;stripped_title=an-unconventional-loading-strategy-for-yui-3&#038;userName=julien.lecomte" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed name="__sse7451141" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=f2esummit-110330130440-phpapp02&#038;stripped_title=an-unconventional-loading-strategy-for-yui-3&#038;userName=julien.lecomte" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object></div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=583" title="11:18 am" rel="bookmark"><time class="entry-date" datetime="2011-03-30T11:18:20+00:00">March 30, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-404" class="post-404 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=404" rel="bookmark">O’Reilly Book &#8220;High Performance JavaScript&#8221; Now Available For Preorder</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://www.amazon.com/dp/059680279X/" target="_blank"><img src="../../../blogfiles/20100203/high-performance-javascript-book-cover.gif" style="width:180px;height:236px;float:right;margin-left:10px;"></a></p>
+<p>Last year, I was honored to be asked by Yahoo! engineer Nicholas Zakas whether I would be interested in contributing a chapter to an upcoming book about JavaScript performance. Well, after many months of hard labor by an impressive line up of talented engineers, this book, appropriately titled &#8220;High Performance JavaScript&#8221;, is now available for preorder on <a href="http://www.amazon.com/dp/059680279X/" target="_blank">amazon.com</a> (the book will be available on March 15<sup>th</sup> according to amazon). Here is the list of chapters:</p>
+<ul>
+<li>Loading and Execution</li>
+<li>Data Access</li>
+<li>DOM Scripting (<a href="http://www.phpied.com/">Stoyan Stefanov</a>)</li>
+<li>Algorithms and Flow Control</li>
+<li>Strings and Regular Expressions (<a href="http://blog.stevenlevithan.com/">Steven Levithan</a>)</li>
+<li>Responsive Interfaces</li>
+<li>Ajax (<a href="http://techfoolery.com/">Ross Harmes</a>)</li>
+<li>Programming Practices</li>
+<li>Build and Deployment (<a href="../../../index.html">Julien Lecomte</a>)</li>
+<li>Tools (Matt Sweeney)</li>
+</ul>
+<p><br style="clear:both;line-height:0;"/></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=404" title="9:02 am" rel="bookmark"><time class="entry-date" datetime="2010-02-03T09:02:11+00:00">February 3, 2010</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-314" class="post-314 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=314" rel="bookmark">A Better Implementation Of The Input Prompt Pattern</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The Input Prompt pattern consists in prefilling a text field with a prompt as a way of supplying help information for controls whose purpose or format may not be immediately clear. In the browser, this pattern is most often implemented by dynamically modifying the <code>value</code> property of a text field element via the <code>focus</code> and <code>blur</code> event handlers attached to the text field, as shown in this example (<a href="../../../blogfiles/20090914/test-search-label-accessibility1.html">live demo</a>):</p>
+<p>CSS:</p>
+<pre class="prettyprint"><code>.hint {
+  color: #999;
+}</code></pre>
+<p>Markup:</p>
+<pre class="prettyprint"><code>&#60;input type="text" id="sbx"&#62;</code></pre>
+<p>JavaScript (based on YUI 3.0.0):</p>
+<pre class="prettyprint"><code>YUI().use('node', function (Y) {
+
+    var sbx = Y.get('#sbx');
+
+    Y.on('domready', function () {
+
+        sbx.set('value', 'Search');
+        sbx.addClass('hint');
+
+        Y.on('focus', function () {
+            if (this.get('value') === 'Search') {
+                this.set('value', '');
+                this.removeClass('hint');
+            }
+        }, sbx);
+
+        Y.on('blur', function () {
+            if (this.get('value') === '') {
+                this.set('value', 'Search');
+                this.addClass('hint');
+            }
+        }, sbx);
+
+    });
+});</code></pre>
+<p><strong>Note:</strong> the code is intentionally implemented inside a <code>domready</code> event handler to work around issues related to form field caching.</p>
+<p>The main problem with implementing this pattern using the <code>value</code> property is that the default text is used if the form is submitted while the input prompt is showing. Trying to work around this by testing the content of the text field when the form is submitted makes the default text impossible to use as a value. Another side effect of this implementation is that most developers will forget to attach a <code>&lt;label&gt;</code> element to the text field, leading to a confusing experience for screen reader users as they lack the necessary context to understand the purpose of the control.</p>
+<p>A better implementation of this pattern consists in using a <code>&lt;label&gt;</code> element and positioning it on top of the text field it is attached to. Here is an example of this implementation (<a href="../../../blogfiles/20090914/test-search-label-accessibility2.html">live demo</a>):</p>
+<p>CSS:</p>
+<pre class="prettyprint"><code>#container {
+    position: relative;
+}
+
+#container label {
+    position: absolute;
+    top: 4px; *top: 6px; left: 3px;
+    color: #999;
+    cursor: text;
+}
+
+#container label.offscreen {
+    left: -9999px;
+}</code></pre>
+<p>Markup:</p>
+<pre class="prettyprint"><code>&#60;div id="container"&#62;
+    &#60;label for="sbx" class="offscreen">Search&#60;/label&#62;
+    &#60;input type="text" id="sbx"&#62;
+&#60;/div&#62;</code></pre>
+<p>JavaScript (based on YUI 3.0.0):</p>
+<pre class="prettyprint"><code>YUI().use('node', function (Y) {
+
+    var sbx = Y.get('#sbx'),
+        lbl = Y.get('#container label');
+
+    Y.on('domready', function () {
+
+        sbx.set('value', '');
+        lbl.removeClass('offscreen');
+
+        Y.on('mousedown', function () {
+            setTimeout(function () {
+                sbx.focus();
+            }, 0);
+        }, lbl);
+
+        Y.on('focus', function () {
+            lbl.addClass('offscreen');
+        }, sbx);
+
+        Y.on('blur', function () {
+            if (sbx.get('value') === '') {
+                sbx.set('value', '');
+                lbl.removeClass('offscreen');
+            }
+        }, sbx);
+
+    });
+});</code></pre>
+<p>As always, I am looking forward to reading your comments and answering your questions in the comments section of this blog.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=314" title="11:43 am" rel="bookmark"><time class="entry-date" datetime="2009-09-14T11:43:01+00:00">September 14, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-273" class="post-273 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=273" rel="bookmark">YUI Compressor now hosted on GitHub</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I am pleased to announce that the YUI Compressor is now <a href="http://github.com/yui/yuicompressor/tree/master">hosted on GitHub</a>. Hopefully, this move will make the external contribution process more streamlined. Have fun coding!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=273" title="10:09 am" rel="bookmark"><time class="entry-date" datetime="2009-07-10T10:09:57+00:00">July 10, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-156" class="post-156 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=156" rel="bookmark">The YUI library source code is now hosted on GitHub</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>If you haven&#8217;t done so already, head over to the YUI Blog for the <a href="http://yuiblog.com/blog/2009/01/14/github/">official announcement</a>. I am proud to have made a (very modest) recent contribution to the library by porting the browser history utility to YUI3 (take a look at the <a href="http://github.com/yui/yui3/blob/master/src/history/js/history.js">source code</a>) By the way, this new version of the browser history utility supports Opera and IE8 (in both quirks mode and IE7 standards mode) Moreover, it has more features than the YUI2 version, should be easier to use, and weighs a few hundred bytes less (after minification with the YUI Compressor) I&#8217;ll try to find some time in the next few weeks/months to write a bit more about YUI3 in general, and the new browser history utility and the YUI Compressor. Stay tuned!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=156" title="11:09 pm" rel="bookmark"><time class="entry-date" datetime="2009-01-14T23:09:30+00:00">January 14, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-80" class="post-80 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=80" rel="bookmark">YUI Compressor and Java Class Loader</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The <a href="../../index.html?p=11">YUI Compressor</a> uses a slightly modified version of the parser used in the <a href="http://www.mozilla.org/rhino/">Rhino</a> JavaScript engine. The reason for modifying the parser came from the need to support JScript conditional comments, unescaped forward slashes in regular expressions &#8212; which all browsers support and many people use &#8212; and a few micro optimizations. The problem is that many users had the original Rhino Jar file somewhere on their system, either in their classpath, or in their JRE extension directory (&lt;JRE_HOME&gt;/lib/ext) This caused many headaches because the wrong classes were being loaded, leading to many weird bugs.</p>
+<p>Today, I finally decided to do something about it. This meant writing a custom class loader to load the modified classes directly from the YUI Compressor Jar file. You can download the source and binary package here:</p>
+<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.4 of the YUI Compressor</a></p>
+<p>The skeleton of the custom class loader is pretty straightforward:</p>
+<pre class="prettyprint">
+package com.yahoo.platform.yui.compressor;
+
+public class JarClassLoader extends ClassLoader
+{
+    public Class loadClass(String name) throws ClassNotFoundException
+    {
+        // First check if the class is already loaded
+        Class c = findLoadedClass(name);
+        if (c == null) {
+            // Try to load the class ourselves
+            c = findClass(name);
+        }
+
+        if (c == null) {
+            // Fall back to the system class loader
+            c = ClassLoader.getSystemClassLoader().loadClass(name);
+        }
+
+        return c;
+    }
+
+    protected Class findClass(String name)
+    {
+        // Most of the heavy lifting takes place here
+    }
+}
+</pre>
+<p>The role of the <code>findClass</code> method is to first locate the YUI Compressor Jar file. To do that, we look in the classpath for a Jar file that contains the <code>com.yahoo.platform.yui.compressor.JarClassLoader</code> class:</p>
+<pre class="prettyprint">
+private static String jarPath;
+
+private static String getJarPath()
+{
+    if (jarPath != null) {
+        return jarPath;
+    }
+
+    String classname = JarClassLoader.class.getName().replace('.', '/') + ".class";
+    String classpath = System.getProperty("java.class.path");
+    String classpaths[] = classpath.split(System.getProperty("path.separator"));
+    for (int i = 0; i < classpaths.length; i++) {
+        String path = classpaths[i];
+        JarFile jarFile = new JarFile(path);
+        JarEntry jarEntry = findJarEntry(jarFile, classname);
+        if (jarEntry != null) {
+            jarPath = path;
+            break;
+        }
+    }
+
+    return jarPath;
+}
+
+private static JarEntry findJarEntry(JarFile jarFile, String entryName)
+{
+    Enumeration entries = jarFile.entries();
+    while (entries.hasMoreElements()) {
+        JarEntry entry = (JarEntry) entries.nextElement();
+        if (entry.getName().equals(entryName)) {
+            return entry;
+        }
+    }
+    return null;
+}
+</pre>
+<p>Once we know where the YUI Compressor Jar file is, we can load the appropriate class from that file. Note the need to define the package the class belongs to before calling <code>defineClass</code>!</p>
+<pre class="prettyprint">
+protected Class findClass(String name)
+{
+    Class c = null;
+    String jarPath = getJarPath();
+    if (jarPath != null) {
+        JarFile jarFile = new JarFile(jarPath);
+        c = loadClassData(jarFile, name);
+    }
+    return c;
+}
+
+private Class loadClassData(JarFile jarFile, String className)
+{
+    String entryName = className.replace('.', '/') + ".class";
+    JarEntry jarEntry = findJarEntry(jarFile, entryName);
+    if (jarEntry == null) {
+        return null;
+    }
+
+    // Create the necessary package if needed...
+    int index = className.lastIndexOf('.');
+    if (index >= 0) {
+        String packageName = className.substring(0, index);
+        if (getPackage(packageName) == null) {
+            definePackage(packageName, "", "", "", "", "", "", null);
+        }
+    }
+
+    // Read the Jar File entry and define the class...
+    InputStream is = jarFile.getInputStream(jarEntry);
+    ByteArrayOutputStream os = new ByteArrayOutputStream();
+    copy(is, os);
+    byte[] bytes = os.toByteArray();
+    return defineClass(className, bytes, 0, bytes.length);
+}
+
+private void copy(InputStream in, OutputStream out)
+{
+    byte[] buf = new byte[1024];
+    while (true) {
+        int len = in.read(buf);
+        if (len < 0) break;
+        out.write(buf, 0, len);
+    }
+}
+</pre>
+<p>The last thing we need to do is bootstrap the application. In order to do that, we simply load the main class (<code>YUICompressor</code>) using our new custom class loader. All the classes that will be needed at runtime will use the same class loader:</p>
+<pre class="prettyprint">
+package com.yahoo.platform.yui.compressor;
+
+public class Bootstrap
+{
+    public static void main(String args[]) throws Exception
+    {
+        ClassLoader loader = new JarClassLoader();
+        Thread.currentThread().setContextClassLoader(loader);
+        Class c = loader.loadClass(YUICompressor.class.getName());
+        Method main = c.getMethod("main", new Class[]{String[].class});
+        main.invoke(null, new Object[]{args});
+    }
+}
+</pre>
+<p>As you can see, it's not terribly complicated to write a custom class loader. Note: I left out all the exception handling code and the import statements for clarity. The final code can be found in the downloadable archive. Cheers!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=80" title="5:16 pm" rel="bookmark"><time class="entry-date" datetime="2008-10-21T17:16:32+00:00">October 21, 2008</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-50" class="post-50 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=50" rel="bookmark">Velocity Conference 2008</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://en.oreilly.com/velocity2008/public/content/home"><img src="../../../blogfiles/images/velocity-conference-2008.jpg" style="width:240px;height:161px;padding:0;border:none;float:left;" alt="Velocity Conference 2008 Logo"></a></p>
+<p>I will be speaking at the <a href="http://en.oreilly.com/velocity2008/public/content/home">Velocity Conference 2008</a> alongside my buddies and former co-workers <a href="http://www.souders.org/">Steve Souders</a> and <a href="http://looksgoodworkswell.blogspot.com/">Bill Scott</a>. The conference takes place on Monday, June 23 in Burlingame, CA. The topic of my presentation is <a href="http://en.oreilly.com/velocity2008/public/schedule/detail/1544">High Performance Ajax Applications</a>. I am also looking forward to attending all the other interesting talks.</p>
+<p>Hope to see you all there!</p>
+<div style="clear:both;"></div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=50" title="6:45 pm" rel="bookmark"><time class="entry-date" datetime="2008-06-20T18:45:55+00:00">June 20, 2008</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-44" class="post-44 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=44" rel="bookmark">JavaScript: The Good Parts</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://www.oreilly.com/catalog/9780596517748/"><img src="../../../blogfiles/images/js-the-good-parts-cover.png" alt="JavaScript: The Good Parts (Book Cover)" style="width:180px;height:236px;float:left;margin-right:15px;border:none;padding:0;"></a></p>
+<p><a href="http://www.crockford.com/">Douglas Crockford</a> just published his first book titled <a href="http://www.oreilly.com/catalog/9780596517748/">JavaScript: The Good Parts</a>. After reading this book, some of you may be left with the impression that Douglas is always complaining about some aspect of this very popular programming language. However, having been a user of the JavaScript language for about 7 years, and having used it extensively in small web sites and large web applications, all I can tell you is that I could not agree more with the author.</p>
+<p>It is really unfortunate that we live in an imperfect world. As such, there is no perfect programming language, and there will probably never be. However, by gaining a deep understanding of the philosophy and the inner workings of a programming language, and by sticking to a subset of that language (what the author refers to as the &#8220;good parts&#8221;), we can all become better programmers by constructing more reliable and more maintainable programs.</p>
+<p>In <a href="http://www.oreilly.com/catalog/9780596517748/">JavaScript: The Good Parts</a>, Douglas extensively describes that good subset of the JavaScript language, occasionally warning to avoid the bad. I consider Douglas&#8217; book a must-buy for anybody who&#8217;s serious about developing professional applications for the web. It&#8217;s definitely well worth the read!</p>
+<div style="clear:both;"></div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=44" title="11:59 am" rel="bookmark"><time class="entry-date" datetime="2008-04-16T11:59:32+00:00">April 16, 2008</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-42" class="post-42 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=42" rel="bookmark">YUI Compressor Version 2.3 Now Available</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>This new version of the compressor fixes a few bugs and implements a few additional micro optimizations. Please refer to the <a href="../../../yuicompressor/CHANGELOG" target="_blank">CHANGELOG</a> file for a complete list of changes, and don&#8217;t hesitate to report any issue you may experience with this version of the YUI Compressor.</p>
+<p style="margin:30px 0;text-align:center;"><a href="http://www.julienlecomte.net/yuicompressor/" target="_blank" style="padding:8px;border:1px solid #bbb;font-weight:bold;text-decoration:underline;">Download version 2.3 of the YUI Compressor</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=42" title="3:17 pm" rel="bookmark"><time class="entry-date" datetime="2008-01-28T15:17:30+00:00">January 28, 2008</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-39" class="post-39 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="../../index.html?p=39" rel="bookmark">High Performance Ajax Applications &#8211; Video Presentation</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><img src="../../../blogfiles/performance/video-snapshot.jpg" width="150" height="112" style="float:right;" alt="Video snapshot"></p>
+<p style="margin-right:180px;">A few days ago, I gave a talk at Yahoo! about High Performance Ajax Applications. Eric Miraglia, from the YUI team, and Ricky Montalvo, from the Yahoo! Developer Network, were kind enough to shoot the video, edit it, and put it on the <a href="http://yuiblog.com/blog/2007/12/20/video-lecomte/" target="_blank">YUI Blog</a>. In this talk, I cover the following topics:</p>
+<ul>
+<li>Developing for high performance</li>
+<li>High performance page load</li>
+<li>High performance JavaScript</li>
+<li>High performance DHTML</li>
+<li>High performance layout and CSS</li>
+<li>High performance Ajax</li>
+<li>Performance measurement tools</li>
+</ul>
+<p>Follow along by downloading the <a href="../../../blogfiles/performance/ajax-perf.ppt">PowerPoint slides</a>, or by looking at the <a href="http://www.slideshare.net/julien.lecomte/high-performance-ajax-applications/" target="_blank">slides on Slideshare</a>. I&#8217;m looking forward to reading your comments and answering your questions in the comments section of this blog!</p>
+<p><embed src="http://cosmos.bcst.yahoo.com/up/fop/embedflv/swf/fop_wrapper.swf?sv=0&amp;id=5557209&amp;autoStart=0&amp;infoEnable=1&amp;shareEnable=1&amp;prepanelEnable=1&amp;carouselEnable=0&amp;postpanelEnable=1" width="400" height="300" type="application/x-shockwave-flash"></embed></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="index.html" rel="category tag">Web Development</a> on <a href="../../index.html?p=39" title="5:07 am" rel="bookmark"><time class="entry-date" datetime="2007-12-22T05:07:06+00:00">December 22, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+		<nav id="nav-below" class="navigation" role="navigation">
+			<h3 class="assistive-text">Post navigation</h3>
+			<div class="nav-previous"><a href="page/2/index.html" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+			<div class="nav-next"></div>
+		</nav><!-- #nav-below .navigation -->
+	
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='../../wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

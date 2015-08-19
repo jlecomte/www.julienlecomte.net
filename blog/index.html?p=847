@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Federal Card Table Project Wrap-Up | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='A Sliding Dovetail Bridle Joint for a Federal Card Table' href='index.html?p=833' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html?p=847' />
+<link rel='shortlink' href='index.html?p=847' />
+	<link href="wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<link rel="stylesheet" type="text/css" href="wp-content/plugins/lightbox-gallery/lightbox-gallery.css" />
+<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-847 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html?p=847#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../index.html">Home</a></li><li class="page_item page-item-36"><a href="index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-847" class="post-847 post type-post status-publish format-standard hentry category-woodworking">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Federal Card Table Project Wrap-Up</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>After 6 months, working almost daily between 7 and 8am before going to work in my small garage shop, I finally put the finishing touches on the Federal Card Table project.</p>
+<p>This project was inspired by a Fine Woodworking article titled <a href="http://www.finewoodworking.com/woodworking-plans/article/federal-demilune-card-table.aspx">&#8220;Federal Demilune Card Table&#8221;</a> (Steve Latta, issue #180.) I met Steve at the <a href="http://finewoodworkinglive.com/">Fine Woodworking Live conference</a> last August in New Haven, CT, and he gave me a few great tips he had learned since writing that article about the best ways to build and veneer the apron. I made sure to follow his advice.</p>
+<p>The last step was to take a few photographs of the finished project. To achieve this, I turned to an excellent Fine Woodworking article titled <a href="http://www.finewoodworking.com/how-to/article/a-woodworker%E2%80%99s-guide-to-photography.aspx">&#8220;A Woodworker&#8217;s Guide to Photography&#8221;</a> (Michael Pekovich, issue #213.) Overall I am extremely pleased with the result:</p>
+<p><a href="../blogfiles/20140208/IMG_001.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_001.jpg" style="width:145px;height:130px;"></a><a href="../blogfiles/20140208/IMG_002.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_002.jpg" style="width:158px;height:130px;"></a><a href="../blogfiles/20140208/IMG_003.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_003.jpg" style="width:121px;height:130px;"></a><a href="../blogfiles/20140208/IMG_004.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_004.jpg" style="width:150px;height:130px;"></a><a href="../blogfiles/20140208/IMG_005.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_005.jpg" style="width:150px;height:130px;"></a><a href="../blogfiles/20140208/IMG_006.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_006.jpg" style="width:143px;height:130px;"></a><a href="../blogfiles/20140208/IMG_007.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_007.jpg" style="width:143px;height:130px;"></a><a href="../blogfiles/20140208/IMG_008.jpg" style="float:left;margin-right:10px;" rel="lightbox"><img src="../blogfiles/20140208/thumbnails/IMG_008.jpg" style="width:143px;height:130px;"></a><br style="clear:both;"></p>
+<p>As you can see, this table is not a reproduction, but rather an interpretation of a period form. I am not a huge fan of bell flower inlay, and I replaced the oval inlays found on most period pieces with a slightly more modern curly maple diamond inlay on each leg.</p>
+<p>I chose this project not only based on the esthetics of the table, but also because it has taught me the following skills:</p>
+<ul>
+<li>How to prepare and use hot hide glue</li>
+<li>How to make and apply holly stringing</li>
+<li>How to make a knuckle joint</li>
+<li>How to install card table hinges</li>
+<li>How to drawbore a mortise and tenon joint</li>
+<li>Hammer veneering</li>
+<li>French polishing</li>
+</ul>
+<p>Nowadays, this table sits in my living room, and is used as a decorative piece of furniture sporting picture frames and flower bouquets.</p>
+<p>I hope you like it!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="category/woodworking/index.html" rel="category tag">Woodworking</a> on <a href="index.html?p=847" title="8:58 pm" rel="bookmark"><time class="entry-date" datetime="2014-02-08T20:58:57+00:00">February 8, 2014</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="index.html?p=833" rel="prev"><span class="meta-nav">&larr;</span> A Sliding Dovetail Bridle Joint for a Federal Card Table</a></span>
+					<span class="nav-next"></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<script type='text/javascript' src='wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='wp-content/plugins/lightbox-gallery/js/jquery.tooltip.js?ver=4.3'></script>
+<script type='text/javascript' src='wp-content/plugins/lightbox-gallery/lightbox-gallery.js?ver=4.3'></script>
+</body>
+</html>

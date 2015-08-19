@@ -1,0 +1,1222 @@
+HERSCHEL 400 Observing Log
+
+Observer's name: Julien Lecomte
+
+Observing sites: a collection of sites in northern California.
+
+Telescope used: Unless otherwise noted, all objects were observed using a Meade Lightbridge 12" F/5
+
+Eyepieces used:
+- Televue Panoptic 27mm (56x - 1.2° TFOV)
+- Televue Nagler 16mm type 5 (95x - 52' TFOV)
+- Televue Nagler 9mm type 6 (169x - 29' TFOV)
+- Televue Nagler 7mm type 6 (217x - 22' TFOV)
+- Televue Nagler 5mm type 6 (305x - 16' TFOV)
+
+Log format: [designation(s)] [type] [constellation] [RA] [Dec] [magnitude] [date and local time of observation (Pacific time zone)]
+
+Note: The log is sorted by observation date/time.
+Note: The descriptions are of varying quality as I gained experience as I was going through the list.
+Note: All objects were manually searched using star hopping techniques.
+
+-------------------------------------------------------------------------------
+
+NGC 247 GX Cet 00 47 36 -20 42 44 9.7 2009-01-17 06:40pm
+Elongated 4×1 N-S, low surface brightness, fairly uniform, only very slightly brighter in the middle.
+
+NGC 157 GX Cet 00 35 14 -08 20 48 11.0 2009-01-17 06:50pm
+Pretty bright, elongated 2×1 NE-SW, fairly uniform. Faint star nestled inside the halo. Surrounded by two bright stars on a N-S line.
+
+NGC 246 PN Cet 00 47 31 -11 49 23 10.4 2009-01-17 07:00pm
+Pretty bright, round, with darker areas inside. The E-SE portion is darker. 3 easy stars nestled inside the nebulosity + 1 fainter.
+
+NGC 584 GX Cet 01 31 48 -06 49 17 11.3 2009-01-17 07:10pm
+Elongated 2×1 E-W, progressively brighter towards the middle, fairly bright overall. Nearby galaxy 5' E-SE (NGC 586)
+
+NGC 596 GX Cet 01 33 20 -06 59 06 11.8 2009-01-17 07:15pm
+Fairly bright, round, bright almost stellar core. 15' W of bright star.
+
+NGC 615 GX Cet 01 35 33 -07 17 38 12.4 2009-01-17 07:20pm
+Elongated N-S, almost stellar core.
+
+NGC 720 GX Cet 01 53 27 -13 41 41 11.1 2009-01-17 07:27pm
+Slightly elongated NW-SE, fairly bright, with a bright and almost stellar core.
+
+NGC 908 GX Cet 02 23 30 -21 11 38 10.8 2009-01-17 07:32pm
+Fairly bright and uniform, gradually brighter towards the center, elongated 3×1 E-W.
+
+NGC 779 GX Cet 02 00 10 -05 55 13 11.9 2009-01-17 07:40pm
+Fairly bright, elongated 3×1 almost N-S, bright almost stellar core. Eastern side felt darker for some reason. Photos don't show any dark lane however.
+
+NGC 936 GX Cet 02 28 06 -01 06 51 11.2 2009-01-17 07:45pm
+Pretty bright, with a bright non stellar core. Looks round. This is supposed to be a barred spiral. I did not however detect any central bar structure. Faint galaxy 10' E (NGC 941)
+
+NGC 1022 GX Cet 02 39 00 -06 38 17 12.1 2009-01-17 07:52pm
+Fairly bright, round, somewhat brighter in the middle. My notes mention that the halo did not seem perfectly uniform (?)
+
+NGC 1052 GX Cet 02 41 32 -08 12 59 11.4 2009-01-17 08:00pm
+Fairly bright, round, somewhat brighter in the middle.
+
+NGC 772 GX Ari 01 59 50 +19 03 16 10.6 2009-01-17 08:30pm
+Almost round, fairly bright with a bright non stellar core. Did not see any hint of spiral structure.
+
+NGC 1964 GX Lep 05 33 46 -21 56 30 11.5 2009-01-17 08:40pm
+Slightly elongated SW-NE, fairly bright, almost stellar core. Dim halo. I noted the presence of a faint star in the halo right near the core. I forgot to include its relative position though.
+
+NGC 2215 OC Mon 06 21 17 -07 17 16 8.6 2009-01-17 10:10pm
+About 30 fairly bright stars scattered within a 10' roundish area.
+
+NGC 2232 OC Mon 06 27 43 -04 45 51 4.2 2009-01-17 10:20pm
+Large (50') cluster of about 20 scattered stars, including 10 Mon.
+
+NGC 2204 OC CMa 06 15 58 -18 40 07 9.3 2009-01-17 11:00pm
+20+ stars in front of a somewhat milky background. Orange star 10' to the north.
+
+NGC 2354 OC CMa 07 14 34 -25 42 23 8.9 2009-01-17 11:10pm
+40+ stars over a milky background. Several dark lanes split the cluster.
+
+NGC 2362 OC CMa 07 19 05 -24 58 20 3.8 2009-01-17 11:15pm
+Small cluster of about 30 fairly bright stars, centered on an even brighter star surrounded by a darker band.
+
+NGC 2360 OC CMa 07 18 09 -15 39 31 9.1 2009-01-17 11:20pm
+Large and compressed cluster of stars of comparable brightness.
+
+NGC 2244 OC Mon 06 32 26 +04 56 06 5.2 2009-01-17 11:25pm
+Very bright and large cluster inside the Rosetta nebula.
+
+NGC 2264 OC Mon 06 41 30 +09 53 11 4.1 2009-01-17 11:35pm
+The famous Christmas tree cluster. Very beautiful. Did not notice any nebulosity.
+
+NGC 1647 OC Tau 04 46 28 +19 07 59 6.2 2009-02-19 07:00pm
+This cluster is easily found and already resolved in a 9x50 finder scope. Using a TeleVue Panoptic 27mm, 56x, I estimated that there were about 50 bright stars scattered within a 40' circle.
+
+NGC 1817 OC Tau 05 12 48 +16 42 07 7.8 2009-02-19 07:10pm
+Using a TeleVue Panoptic 27mm, 56x, I estimated that there were about 50 bright stars scattered within 20'. Right next to NGC 1817 can be found another open cluster, NGC 1807. Both clusters fit within the same field of view. A nice sight.  I saw a nebulous object nearby that did not appear in Uranometria. I later found out that it was comet 144P/Kushida.
+
+NGC 2169 (37 Cluster) OC Ori 06 08 56 +13 57 50 7.0 2009-02-19 07:20pm
+16 stars spelling the number 37. A fun object!
+
+NGC 2194 OC Ori 06 14 17 +12 48 15 10.0 2009-02-19 07:30pm
+Barely visible as a fuzzy blob in a 9x50 finder scope. Using a TeleVue Nagler 5 16mm, 95x, I estimated that there were about 20 stars within 10'. A large dark lane almost splits this cluster in half (direction?) An open cluster with an irregular shape and numerous dark lanes can be seen about 30' East.
+
+NGC 2022 PN Ori 05 42 37 +09 05 27 11.7 2009-02-19 07:40pm
+This small planetary nebula is easy to overlook while scanning the area using a TeleVue Nagler 5 16mm, 95x. It is best viewed using a TeleVue Nagler 6 5mm, 305x and a UHC filter. It appears almost round, gray, and pretty much uniform, although I think I barely saw its ring structure.
+
+NGC 2186 OC Ori 06 12 37 +05 27 20 9.2 2009-02-19 07:50pm
+Located in a star rich area of the sky, this open cluster is definitely not very conspicuous. Barely visible in a 9x50 finder scope. About 20 fairly bright stars appear in this irregularly shaped open cluster.
+
+NGC 2024 (Flame Nebula) DN Ori 05 42 11 -01 50 47   2009-02-19 08:00pm
+This is the "Flame Nebula". Large dark lanes, beautiful object, lots of intricate details. Get Alnitak (Zeta Orionis) out the field of view to better appreciate this object.
+
+NGC 1788 DN Ori 05 07 22 -03 19 19   2009-02-19 08:10pm
+Seen using a TeleVue Nagler 5 16mm, 95x. This object appears as a faint nebulosity surrounding two stars separated by about 3'.
+
+NGC 1980 OC Ori 05 35 52 -05 54 37 2.5 2009-02-19 08:20pm
+This is the faint nebulosity around iota Orionis. Not an easy object given the brightness of iota Orionis.
+
+NGC 1999 DN Ori 05 36 52 -06 42 44   2009-02-19 08:30pm
+Best seen using a Televue Nagler 6 7mm, 218x. This is a small (2') roundish nebula surrounding a star. There is a dark patch just west of the star.
+
+NGC 2371 (Gemini Nebula) PN Gem 07 26 11 +29 28 22 11.2 2009-02-19 08:40pm
+Using a TeleVue Nagler 6 7mm, 218x, this nebula appears as 2 bright lobes, almost on an E-W line, on either sides of the central star, detected with averted vision. There is a faint halo all around. At lower magnification, this object almost looks rectangular.
+
+NGC 2392 (Eskimo Nebula) PN Gem 07 29 45 +20 53 33 8.6 2009-02-19 08:50pm
+This is the famous "Eskimo Nebula". At low magnification, it appears very bright, round, uniform, with a fairly bright central star. I can make this nebula blink easily by using alternatively direct and averted vision. Using a TeleVue Nagler 6 7mm, 218x and slightly averted vision, I can differentiate the inner and outer areas. The inner portion does not look quite round.
+
+NGC 2158 OC Gem 06 08 00 +24 05 48 12.1 2009-02-19 09:00pm
+Just SW of M35. Small, very dense. I saw a dozen or so superimposed stars. The southern portion appeared darker. Amazing contrast with M35!
+
+NGC 2266 OC Gem 06 43 55 +26 57 42 9.5 2009-02-19 09:00pm
+Small (8') and compact open cluster. I estimated it contains about 40 stars. Slightly triangular shape. Line of slightly brighter stars delimits its southern side.
+
+NGC 2129 OC Gem 06 01 42 +23 19 25 7.0 2009-02-19 09:10pm
+Using a TeleVue Nagler 5 16mm, 95x, I estimated that this open cluster contained about 25 stars scattered within a 5' circle.
+
+NGC 2420 OC Gem 07 38 57 +21 33 08 10.0 2009-02-19 09:20pm
+Using a TeleVue Nagler 5 16mm, 95x, this open cluster appears pretty uniform. I estimated that it contains about 50 stars within an 8' circle.
+
+NGC 2304 OC Gem 06 55 45 +17 58 36 10.0 2009-02-19 09:30pm
+Using a TeleVue Nagler 5 16mm, 95x, this open cluster appears faint and small, slightly elongated NE-SW. I estimated that it contains about 30 or 40 stars within 5'. Easy to miss, even at 95x.
+
+NGC 2355 OC Gem 07 17 32 +13 43 59 9.7 2009-02-19 09:40pm
+I estimated that this open cluster contains 40 to 50 fairly bright stars within 10'. Roundish shape.
+
+NGC 2395 OC Gem 07 27 44 +13 35 21 9.4 2009-02-19 09:50pm
+Elongated 2×1 E-W. I estimated that this open cluster contains about 40 stars.  Medusa nebula nearby seen with UHC filter at low power.
+
+NGC 2903 GX Leo 09 32 43 +21 27 29 10.0 2009-02-19 10:00pm
+Already visible in 9x50 finder scope. At 95x, this galaxy appears large and bright, elongated 4x1 almost N-S, with a bright non-stellar core. Hints of a central bar, slightly oblique, and what starts to look like spiral arms.  NGC 2916 nearby seen easily.
+
+NGC 2964 GX Leo 09 43 29 +31 48 11 12.1 2009-02-19 10:10pm
+Fairly bright and uniform. Very slightly elongated E-W.  Makes for a nice field of view with NGC 2968 and NGC 2970.
+
+NGC 3190 GX Leo 10 18 38 +21 47 03 11.9 2009-02-19 10:20pm
+Using the TeleVue Nagler 5 16mm, 95x and Vixen Lanthanum LV Series  9mm, 169x, this galaxy appears elongated 4x1 NW-SE, with a bright almost stellar core and a fairly bright halo. I did not detect the dust lane seen in photographs.  This galaxy forms a nice group with NGC 3193, NGC 3187 and NGC 3185.
+
+NGC 3193 GX Leo 10 18 57 +21 50 42 12.0 2009-02-19 10:20pm
+Very slightly elongated and pretty uniform. Located just 1' south of a star of comparable magnitude.  This galaxy forms a nice group with NGC 3190, NGC 3187 and NGC 3185.
+
+NGC 3226 GX Leo 10 23 59 +19 50 56 12.3 2009-02-19 10:30pm
+Very slightly elongated NW-SE. Morphology?  This galaxy forms a tight pair with NGC 3227, located just 3' south.
+
+NGC 3227 GX Leo 10 24 02 +19 48 57 11.5 2009-02-19 10:30pm
+Morphology?  This galaxy forms a tight pair with NGC 3226, located just 3' north.
+
+NGC 3377 GX Leo 10 48 13 +13 56 02 11.1 2009-02-19 10:50pm
+Pretty bright, almost stellar core. Elongated 2x1 NE-SW.  I did not note anything about nearby NGC 3377A.
+
+NGC 3900 GX Leo 11 49 40 +26 58 02 12.3 2009-03-17 10:35pm
+Elongated N-S 2x1 with a pretty faint non-stellar core surrounded by a very faint uniform halo. Located near the middle of the hypotenuse of a right angled triangle formed by 3 stars of similar magnitude.
+
+NGC 3626 GX Leo 11 20 35 +18 18 11 11.8 2009-03-17 11:00pm
+Fairly bright almost stellar core surrounded by a much fainter halo elongated almost N-S 2x1.
+
+NGC 3607 GX Leo 11 17 25 +17 59 58 10.9 2009-03-17 11:10pm
+Fairly bright almost stellar core, surrounded by a roundish uniform halo.  This galaxy forms an interesting group with slightly dimmer NGC 3608, located only 5' N, and much dimmer NGC 3605, located only 2' S-W. NGC 3599 is located about 15' W.
+
+NGC 3608 GX Leo 11 17 30 +18 05 42 11.6 2009-03-17 11:10pm
+Fairly bright stellar core, surrounded by a roundish uniform halo.  This galaxy forms an interesting group with slightly brighter NGC 3607, located only 5' S, and much dimmer NGC 3605, located only 2' S-W of NGC 3607. NGC 3599 is located about 15' W.
+
+NGC 3686 GX Leo 11 28 15 +17 10 12 12.0 2009-03-17 11:25pm
+Elongated 2x1 N-S. It looks fairly uniform, with no obvious core (a slightly brighter central condensation was suspected) A faint superimposed star is visible using averted vision, about 1.5' S of the center of the galaxy.  This galaxy forms an interesting group with NGC 3684 and NGC 3681. These three galaxies are almost aligned on a N-E/S-W line, and are separated by about 8' from their nearest neighbor. Much fainter NGC 3691 is also visible, about 10' E of that line.
+
+NGC 3242 (Ghost of Jupiter) PN Hya 10 25 14 -18 41 34 8.6 2009-03-17 11:40pm
+At 95x, this planetary nebula appears very bright, round and very uniform. It shows an almost surreal fluorescent blue-green color. At 305x, the nebula loses its color, but starts revealing details, especially an elliptical ring, elongated 2x1 N-S, nested inside the nebula. The central star was suspected during very brief moments of steadier seeing.
+
+NGC 3655 GX Leo 11 23 25 +16 32 08 12.3 2009-03-18 12:05am
+Elongated 2x1 N-S with a non stellar core surrounded by a uniform halo. Located about 2' W-SW of a star of comparable magnitude.
+
+NGC 3489 GX Leo 11 00 49 +13 50 55 11.1 2009-03-18 12:20am
+Elongated 2x1 E-W with an almost stellar core surrounded by a uniform halo.
+
+NGC 3628 GX Leo 11 20 47 +13 32 14 10.0 2009-03-18 12:25am
+This is an edge-on spiral. As such, it appears very elongated E-W. At 169x, the dust lane was detected, but not easily at all! The galaxy does not appear perfectly symmetrical like some other edge-on spirals do. It looks like its disc is warped a little. A faint superimposed star is visible near the eastern end, 1' south of the center line.  This galaxy is a member of the splendid Leo triplet, which also contains the much brighter M65 and M66, located about 20' south. All three galaxies fit within a single field of view of the TeleVue Nagler 16mm (95x, 51.7') and show distinct morphological differences.
+
+NGC 3412 GX Leo 10 51 24 +13 21 37 11.5 2009-03-18 01:00am
+Fairly bright, with an almost stellar core surrounded by a faint roundish uniform halo, very slightly elongated N-S.
+
+NGC 3593 GX Leo 11 15 08 +12 45 52 11.8 2009-03-18 01:05am
+Pretty faint with a non stellar core surrounded by a faint uniform halo elongated 3x1 E-W.
+
+NGC 3384 GX Leo 10 48 48 +12 34 37 10.9 2009-03-18 01:15am
+Seen using a TeleVue Nagler 16mm (95x, 51.7'), this galaxy appears fairly bright with an almost stellar core surrounded by a uniform halo elongated 3x1 NE-SW.  This galaxy forms a beautiful tight triangle with brighter M105 and smaller and much fainter NGC 3389. The members of this group are separated by only 4' approximatively.
+
+NGC 3810 GX Leo 11 41 29 +11 25 01 11.3 2009-03-18 01:25am
+Pretty faint, with a low surface brightness. The halo looks pretty uniform, with only a slight brightness gradient toward the middle. The halo is slightly elongated 2x1 NE-SW.
+
+NGC 3640 GX Leo 11 21 37 +03 10 51 11.3 2009-03-18 01:35am
+Fairly bright and large core, surrounded by a roundish halo.
+
+NGC 3521 GX Leo 11 06 19 -00 05 17 9.9 2009-03-18 01:45am
+Fairly bright and large, with a bright stellar core surrounded by a fairly uniform halo elongated 4x1 N-S. The western portion looks slightly dimmer. I confirmed this later by looking at actual photographs. Dust clouds seem to be more prevalent on the western half of this spiral galaxy. O'Meara and others are able to see some subtle mottling of the halo under very dark skies.
+
+NGC 3912 GX Leo 11 50 35 +26 25 28 13.2 2009-03-18 01:55am
+Using the TeleVue Nagler 16mm (95x, 51.7'), this galaxy is hard to find. A good finder scope is of great help! It appears tiny, faint, and elongated 2x1 N-S.
+
+NGC 2324 OC Mon 07 04 36 +01 01 47 7.9 2009-03-24 09:15pm
+About 40 faint stars scattered fairly uniformly within a 10' roundish area.
+
+NGC 2301 OC Mon 06 52 14 +00 26 51 6.3 2009-03-24 09:20pm
+About 50 fairly bright stars scattered within a 15' area. This cluster is much denser in its core, where about 30 stars are regrouped within a 6' roundish area. There is a nice mag. 8 orange star (SAO 114533) right in the center of this cluster.
+
+NGC 2286 OC Mon 06 48 08 -03 09 37 8.3 2009-03-24 09:30pm
+About 30 stars scattered within a 15' x 7' area oriented NW-SE.
+
+NGC 2311 OC Mon 06 58 15 -04 37 33 9.6 2009-03-24 09:40pm
+About 20 stars scattered within a 10' x 5' area oriented NW-SE. 3 Fairly bright stars, almost forming a line about 10' ENE of this cluster, can be spotted in a 9x50 finder scope, serving as a marker to find this inconspicuous cluster.
+
+NGC 2185 DN Mon 06 11 27 -06 14 13   2009-03-24 10:00pm
+Small and very faint nebulosity surrounding a small group of stars. Did not respond well to UHC filter. I later verified it was indeed a reflection nebula.
+
+NGC 2775 GX Cnc 09 10 51 +06 59 54 11.1 2009-03-24 10:20pm
+Round with a fairly large core surrounded by a much fainter halo.
+
+NGC 2548 (M 48) OC Hya 08 14 11 -05 46 50 5.5 2009-03-24 10:25pm
+Large (30') and very rich (100 bright stars) cluster, visible with the naked eye.
+
+NGC 2811 GX Hya 09 16 38 -16 21 17 12.3 2009-03-24 10:35pm
+Elongated 3x1 NNE-SSW, with a large core surrounded by a much fainter halo. Using averted vision, I spotted a very faint superimposed star less than 1' NNE of the center of the galaxy.
+
+NGC 3621 GX Hya 11 18 45 -32 51 58 10.1 2009-03-24 11:00pm
+Elongated 3x1 NNW-SSE. Fairly uniform, no obvious core, only gradually brighter toward the center. I noted the presence of a couple of superimposed stars in the NNW portion of the halo. However, I can only find one conspicuous superimposed star in that area. I also apparently failed to note the presence of 2 superimposed stars in the SSE area.
+
+NGC 3962 GX Crt 11 55 10 -14 01 48 11.6 2009-03-24 11:20pm
+Round faint halo surrounding a star-like nucleus. The halo looked a lot smaller than the advertised 3.7'x 2.8'. This galaxy forms a right angle triangle with 2 stars slightly brighter than the nucleus.
+
+NGC 4038 (The Antennae) GX Crv 12 02 23 -18 55 21 10.9 2009-03-24 11:30pm
+NGC 4038 and NGC 4039, also known as "The Antennae" appear as 2 faint and fairly uniform blobs, separated by a dark lane oriented NE-SW. The northern galaxy (NGC 4038) is larger and slightly brighter than its companion.
+
+NGC 4027 GX Crv 12 00 00 -19 19 13 11.6 2009-03-24 11:55pm
+The core appears slightly elongated E-W with no apparent nucleus. I noted that the halo did not seem perfectly uniform, which makes sense when looking at photographs of this galaxy. I expect a darker sky to confirm this observation. I also noted the presence of a faint superimposed star ENE of the center.
+
+NGC 2974 GX Sex 09 43 02 -03 44 42 11.8 2009-03-25 12:20am
+Located about 1' ENE of a mag. 9 star. The core looks slightly elongated NE-SW, surrounded by a very faint halo, made even fainter by the presence of the nearby bright star.
+
+NGC 3115 (Spindle Galaxy) GX Sex 10 05 43 -07 46 00 10.0 2009-03-25 12:30am
+Bright, elongated 5x1 NE-SW, with a bright core. A mag. 12.7 star is located just 3' south of the center.
+
+NGC 3294 GX LMi 10 36 50 +37 16 31 12.1 2009-03-25 01:00am
+Fairly uniform, elongated 3x1 WNW-ESE.
+
+NGC 3432 GX LMi 10 53 04 +36 34 06 11.6 2009-03-25 01:10am
+Very elongated NE-SW, uniform in brightness. No central bulge detected. I noted the presence of 2 superimposed stars on the SE portion of the galaxy, and another star located just 1' E of the center.
+
+NGC 3395 GX LMi 10 50 23 +32 55 56 12.4 2009-03-25 01:30am
+NGC 3395 and NGC 3396 form a very tight pair of galaxies physically interacting with one another. NGC 3395 looks slightly elongated NE-SW, while NGC 3396 is elongated 2x1 E-W. Both are pretty faint, and of similar brightness.
+
+NGC 2787 GX UMa 09 20 13 +69 10 01 11.6 2009-03-28 10:50pm
+Round, gradually brighter toward the center, with a non stellar core surrounded by a very faint halo. Faint star 1' SE, even fainter one 1' W-SW.
+
+NGC 2976 GX UMa 09 48 05 +67 52 35 10.8 2009-03-28 11:05pm
+Elongated 3x1 NW-SE. Fairly uniform, no central condensation visible. Fairly bright superimposed star at the SW edge of the halo. Slightly fainter star (mag. 14.1) just beyond the NW edge of the halo.
+
+NGC 2985 GX UMa 09 51 16 +72 14 17 11.2 2009-03-28 11:15pm
+Round, with an almost stellar core surrounded by a faint halo. A star of similar apparent magnitude as the nucleus of this galaxy can be found 1' E.
+
+NGC 3034 (M82 - Cigar Galaxy) GX UMa 09 56 42 +69 38 15 9.0 2009-03-28 11:25pm
+At low power (56x and 95x), this galaxy appears very bright and very elongated SW-NE. It looks like a cigar or a spindle. At higher magnification (169x), many details start to appear. A large dark lane almost splits the galaxy in half. Other dark and bright patches can be seen throughout.
+
+NGC 3077 GX UMa 10 04 08 +68 41 26 10.6 2009-03-28 11:35pm
+Very slightly elongated NE-SW. Fairly large core surrounded by a faint uniform halo.
+
+NGC 2742 GX UMa 09 08 20 +60 26 40 12.1 2009-03-28 11:55pm
+Elongated 2x1 E-W. Fairly uniform, with only a weak central condensation.
+
+NGC 2768 GX UMa 09 12 23 +60 00 05 10.8 2009-03-29 12:00am
+Bright, elongated 3x1 E-W with a fairly bright non stellar core.
+
+NGC 2950 GX UMa 09 43 18 +58 48 37 11.9 2009-03-29 12:10am
+Bright, almost stellar core. Faint halo, elongated 2x1 NW-SE.
+
+NGC 3079 GX UMa 10 02 39 +55 38 12 11.4 2009-03-29 12:15am
+Very elongated almost N-S, slightly curved and assymetrical. There is a faint superimposed star at the northern end.
+
+NGC 3310 GX UMa 10 39 23 +53 27 17 11.2 2009-03-29 12:25am
+Round, small and fairly bright, with a relatively large core.
+
+NGC 2681 GX UMa 08 54 14 +51 16 48 11.2 2009-03-29 12:30am
+Very bright, almost stellar core surrounded by a faint round halo.
+
+NGC 2841 GX UMa 09 22 43 +50 56 17 10.0 2009-03-29 12:45am
+Elongated 4x1 NW-SE. Fairbly bright elongated core with a stellar nucleus. Pretty faint superimposed star at the NW end.
+
+NGC 3184 GX UMa 10 18 52 +41 22 39 10.4 2009-03-29 01:00am
+At low power, this galaxy appears as a uniform disk. At higher power, with a bit of concentration, a faint and stellar nucleus appears embedded inside a very weak and slightly elongated core. The halo shows hints of spiral structure.
+
+NGC 3198 GX UMa 10 20 31 +45 30 10 10.9 2009-03-29 01:05am
+Pretty faint. Elongated 3x1 NE-SW. Fairly uniform with a very weak core and some very subtle mottling.
+
+NGC 3556 (M 108) GX UMa 11 12 06 +55 37 22 10.7 2009-03-29 01:15am
+Fairly uniform. Elongated 5x1 E-W. Superimposed star right in the center - could be confused with the galaxy nucleus. Some mottling was easily detected.
+
+NGC 4027 GX Crv 12 00 00 -19 19 14 11.6 2009-03-29 01:35am
+Overall pretty faint with a weak core. Northern portion of the halo shows a spiral arm, confirming my impression on 2009 Mar 24.
+
+NGC 3166 GX Sex 10 14 16 +03 22 34 11.5 2009-03-29 01:50am
+Small, roundish, with a fairly bright almost stellar core.  This galaxy forms an interesting couple with NGC 3169, located only 7' E.
+
+NGC 3169 GX Sex 10 14 45 +03 25 04 11.3 2009-03-29 01:50am
+Small, roundish, with a fairly bright almost stellar core.  This galaxy forms an interesting couple with NGC 3166, located only 7' W.
+
+NGC 3726 GX UMa 11 33 54 +46 58 35 10.7 2009-03-29 02:25am
+At low power (95x), this galaxy appears uniform, elongated 2x1 almost N-S. At higher power (169x), a faint stellar nucleus appears, along with some hints of a spiral structure.
+
+NGC 3877 GX UMa 11 46 40 +47 26 28 11.8 2009-03-29 02:30am
+Elongated 5x1 NE-SW with a weak core and a faint stellar nucleus.
+
+NGC 3893 GX UMa 11 49 10 +48 39 22 10.8 2009-03-29 02:35am
+Small, roundish, fairly bright, with a large core. Fairly bright superimposed star about 1' NW. Very faint superimposed star less than 1' S. Halo does not seem perfectly uniform.
+
+NGC 4041 GX UMa 12 02 44 +62 05 08 11.6 2009-04-18 09:20pm
+Fairly bright, round, non stellar core, gradually fainter toward the edge.
+
+NGC 4036 GX UMa 12 01 59 +61 50 38 11.6 2009-04-18 09:25pm
+Elongated 4x1 E-W with a fairly bright stellar core.
+
+NGC 3610 GX UMa 11 19 00 +58 44 10 11.6 2009-04-18 09:35pm
+Bright almost stellar core. Faint halo slightly elongated NW-SE.
+
+NGC 3613 GX UMa 11 19 11 +57 56 59 11.7 2009-04-18 09:55pm
+Fairly bright almost stellar core. Faint halo elongated 3x1 E-W. Forms a nice trio of galaxies with NGC 3619 about 15' SSE, and much fainter NGC 3625, about 5' E of NGC 3619.
+
+NGC 3619 GX UMa 11 19 56 +57 42 31 12.5 2009-04-18 09:55pm
+Fairly faint stellar core. Very faint round halo. Forms a nice trio of galaxies with NGC 3613 about 15' NNW, and much fainter NGC 3625, about 5' E.
+
+NGC 3898 GX UMa 11 49 48 +56 01 54 11.3 2009-04-18 10:05pm
+Fairly bright non stellar core. Very faint halo elongated 2x1 E-W.
+
+NGC 3982 GX UMa 11 57 00 +55 04 22 11.8 2009-04-18 10:10pm
+Fairly faint, very uniform, slightly elongated NE-SW. Very faint stellar nucleus. At 95x, 52' TFOV, no less than 5 galaxies are visible in one eyepiece: NGC 3998, NGC 3990, NGC 3977, NGC 3972 and NGC 3982.
+
+NGC 3998 GX UMa 11 58 28 +55 24 05 11.4 2009-04-18 10:10pm
+Fairly bright almost stellar core. Faint uniform halo slightly elongated NW-SE. Forms a tight pair with NGC 3990. At 95x, 52' TFOV, no less than 5 galaxies are visible in one eyepiece: NGC 3998, NGC 3990, NGC 3977, NGC 3972 and NGC 3982.
+
+NGC 3992 (M 109) GX UMa 11 58 07 +53 19 20 10.5 2009-04-18 10:20pm
+Fairly bright non stellar core. Pretty large and bright halo, elongated 4x1 ENE-WSW. Hints of spiral structure. Fairly bright superimposed star 1' NNW of the nucleus.
+
+NGC 3631 GX UMa 11 21 36 +53 07 05 10.7 2009-04-18 10:35pm
+Fairly bright round non stellar core. Round halo, appears slightly mottled.
+
+NGC 3729 GX UMa 11 34 23 +53 04 24 11.7 2009-04-18 10:45pm
+Fairly uniform, elongated 2x1 N-S. Fairly bright superimposed star 1' S. Forms a nice couple with NGC 3718.
+
+NGC 4102 GX UMa 12 06 55 +52 39 29 12.1 2009-04-18 11:00pm
+Small, with a fairly bright almost stellar core. The core seems slightly elongated E-W while the halo is elongated 2x1 NE-SW. Fairly bright stars 1' W and 2' E.
+
+NGC 3953 GX UMa 11 54 21 +52 16 28 10.5 2009-04-18 11:05pm
+Fairly bright non stellar core. Fairly bright halo elongated 3x1 NE-SW. Fairly faint superimposed stars 1' NW and 1' ENE of the nucleus.
+
+NGC 4026 GX UMa 11 59 56 +50 54 34 11.7 2009-04-18 11:15pm
+Elongated 5x1 N-S. Fairly bright non stellar core.
+
+NGC 3949 GX UMa 11 54 13 +47 48 20 11.4 2009-04-18 11:20pm
+Fairly uniform, elongated 2x1 E-W. Faint nucleus seen at higher magnification (217x)
+
+NGC 3938 GX UMa 11 53 20 +44 04 08 10.9 2009-04-18 11:45pm
+Round, faint, uniform nebulosity. Faint stellar core. Faint superimposed star about 3' WSW.
+
+NGC 3675 GX UMa 11 26 41 +43 32 05 11.0 2009-04-18 11:50pm
+Elongated 4x1 N-S. Fairly bright non stellar core.
+
+NGC 5322 GX UMa 13 49 37 +60 08 30 11.0 2009-04-19 12:40am
+Elongated 2x1 E-W. Fairly bright, fairly large core. Faint superimposed star <1' S and slightly brighter one about 3' E of the nucleus.
+
+NGC 5631 GX UMa 14 26 53 +56 32 15 12.5 2009-04-19 12:50am
+Fairly bright non stellar core. Round uniform halo.
+
+NGC 5473 GX UMa 14 05 06 +54 50 46 12.4 2009-04-19 12:55am
+Small, round, pretty faint, with a non stellar core. Very faint superimposed star <1' E. I later found out this was a mag 15.6 star, which is right at the limit of detection for a 12" scope on a perfect night!
+
+NGC 5474 GX UMa 14 05 24 +53 36 53 11.5 2009-04-19 01:10am
+Fairly faint and uniform, with a weak condensation located at the northen edge of the halo. Faint superimposed star (mag 14.6) 1' NE.
+
+NGC 5694 GC Hya 14 40 10 -26 34 53 10.2 2009-04-19 01:25am
+Small, bright, round, gradually brighter toward the center, unresolved.
+
+NGC 4088 GX UMa 12 06 04 +50 29 13 11.3 2009-04-19 01:30am
+Elongated 3x1 ENE-WSW. Fairly uniform with a faint stellar nucleus. The halo does not appear perfectly uniform, and shows hints of 2 curved arms. Forms a nice couple with NGC 4085 located about 10' S.
+
+NGC 4085 GX UMa 12 05 53 +50 18 01 12.3 2009-04-19 01:40am
+Fairly faint, uniform, elongated 4x1 E-W. Forms a nice couple with NGC 4088 located about 10' N.
+
+NGC 4051 GX UMa 12 03 40 +44 28 42 10.8 2009-04-19 01:55am
+Elongated 3x1 NW-SE. Fairly bright stellar core. Two large spiral arms seen at 169x.
+
+NGC 3941 GX UMa 11 53 26 +36 56 00 11.3 2009-04-19 02:10am
+Slightly elongated N-S. Fairly bright, large, round core.
+
+NGC 3813 GX UMa 11 41 50 +36 29 38 12.3 2009-04-19 02:15am
+Elongated 3x1 E-W. Fairly uniform. Fairly faint (mag 14.3) superimposed star 2' E, right at the eastern edge of the halo.
+
+NGC 4147 GC Com 12 10 36 +18 29 15 10.4 2009-04-25 10:40pm
+Fairly small and dim. The outside of this cluster was partially resolved at 169x.
+
+NGC 4150 GX Com 12 11 04 +30 20 54 12.5 2009-04-25 10:55pm
+Small, faint, with a tiny core surrounded by a very faint halo elongated 2x1 NNW-SSE.
+
+NGC 4203 GX Com 12 15 35 +33 08 43 11.7 2009-04-25 11:00pm
+Fairly small, fairly faint, with a small and fairly bright core and a very faint halo that appears round. Faint superimposed star about 1' W.
+
+NGC 4274 GX Com 12 20 20 +29 33 39 11.3 2009-04-26 12:00am
+Fairly large and bright, elongated 3x1 almost E-W. Fairly large and diffuse central concentration. Faint superimposed stars about 2' W and 3'E.
+
+NGC 4278 GX Com 12 20 37 +29 13 41 11.0 2009-04-26 12:00am
+Fairly bright and compact, round, with a relatively large core. Forms an interesting trio with slightly fainter and smaller NGC 4283 located about 4' ENE, and much fainter NGC 4286, located about 10' ENE.
+
+NGC 4245 GX Com 12 18 07 +29 33 17 12.3 2009-04-26 12:20am
+Fairly small and bright with a relativelt large core. Elongated 2x1 NNW-SSE.
+
+NGC 4251 GX Com 12 18 38 +28 07 19 11.6 2009-04-26 12:50am
+Fairly bright and moderately large, with a fairly small compact core surrounded by a halo elongated 2x1 E-W.
+
+NGC 4293 GX Com 12 21 43 +18 19 43 11.1 2009-04-26 12:55am
+Fairly large and moderately bright. Elongated 4x1 almost E-W. Weak central condensation.
+
+NGC 4350 GX Com 12 24 28 +16 38 18 11.9 2009-04-26 01:10am
+Fairly small. Elongated 3x1 NW-SE. Fairly bright non central core. Forms a nice tight couple with NGC 4340.
+
+NGC 4394 GX Com 12 26 25 +18 09 36 11.6 2009-04-26 01:15am
+Fairly bright with a non stellar core surrounded by a faint halo slightly elongated NNW-SSE. Forms a nice couple with M85.
+
+NGC 4448 GX Com 12 28 45 +28 34 04 12.0 2009-04-26 01:20am
+Elongated 3x1. Fairly bright and large core.
+
+NGC 4419 GX Com 12 27 26 +14 59 34 12.0 2009-04-26 01:35am
+Elongated 4x1 NW-SE. Fairly bright non stellar core.
+
+NGC 2859 GX LMi 09 24 53 +34 28 28 11.8 2009-05-16 09:45pm
+Small, moderately bright, with a small non stellar core and a round halo.
+
+NGC 3245 GX LMi 10 27 51 +28 27 37 11.7 2009-05-16 09:53pm
+Fairly small, moderately bright. Fairly bright non stellar core. Halo elongated 2x1 N-S.
+
+NGC 3277 GX LMi 10 33 28 +28 27 50 12.5 2009-05-16 10:05pm
+Small (appeared smaller than expected - about 1.5') with a round, faint, broad core, progressively brighter toward the middle, surrounded by a very faint halo.
+
+NGC 3344 GX LMi 10 44 03 +24 52 23 10.5 2009-05-16 10:15pm
+Fairly faint almost stellar core. Round, faint halo does not appear perfectly uniform. Two fairly bright superimposed stars, mag 11.2 and 10.4, located respectively 1' and 2' E of the core. Fainter superimposed star about 30" SW of the core.
+
+NGC 3414 GX LMi 10 51 48 +27 55 32 12.0 2009-05-16 10:25pm
+Small, fairly faint. Small core, progressively brighter toward the middle. Very faint round halo. Much fainter NGC 3418 located about 10' N.
+
+NGC 3486 GX LMi 11 00 56 +28 55 29 11.1 2009-05-16 10:35pm
+Elongated 3:2 E-W. Progressively and very slightly brighter toward the middle. Very faint nucleus.
+
+NGC 3504 GX LMi 11 03 43 +27 55 19 11.6 2009-05-16 10:45pm
+Moderately bright. Small, fairly bright and sharply defined core. Halo appears elongated 2x1 NW-SE. Fairly faint superimposed star <1' ESE.
+
+NGC 4314 GX Com 12 23 02 +29 50 33 11.4 2009-05-16 11:10pm
+Elongated 3x1 NW-SE. Fairly bright with a broad central concentration. Hint of a nucleus at 305x. Moderately bright superimposed star at the NW tip. Another slightly dimmer superimposed star about 1' SE of the nucleus. Star of similar brightness about 1.5' ENE of the nucleus.
+
+NGC 4414 GX Com 12 26 56 +31 10 13 11.0 2009-05-16 11:20pm
+Elongated 3:2 NNW-SSE. Fairly bright halo, progressively brighter toward the middle. Bright, sharply defined nucleus.
+
+NGC 4494 GX Com 12 31 53 +25 43 20 10.7 2009-05-16 11:25pm
+Round, fairly bright, progressively brighter to an almost stellar nucleus.
+
+NGC 4559 GX Com 12 36 27 +27 54 27 10.3 2009-05-16 11:40pm
+Fairly large and uniform, only slightly brighter in the middle. Medium surface brightness. Elongated 2x1 NW-SE. Fairly bright (11.9 mag) superimposed star about 2' E. Slightly fainter (12.3 mag) superimposed star about 2' S. Did not notice a third superimposed star of mag 13.4, located about 2' SE, seen on DSS image.
+
+NGC 4565 GX Com 12 36 50 +25 56 06 10.1 2009-05-16 11:55pm
+Superb edge on spriral. Best seen at 169x. Very reminiscent of photographs. Dark lane easily seen, splitting the central bulge slightly to the northeast. The southwest "half" thus appears larger and brighter, sporting a fairly bright nucleus. Extensions spotted up to 8' on either side of the core.
+
+NGC 4725 GX Com 12 50 56 +25 26 55 9.9 2009-05-17 12:05am
+At low power, this galaxy forms a nice trio with NGC 4747 and NGC 4712. Fairly large and bright. Elongated 3x1 NE-SW. Bright, fairly large core. Two superimposed stars located about 3' E and 3' ENE. The halo showed hints of an "S" shaped spiral, although photographs do not show evidence of that.
+
+NGC 4143 GX CVn 12 10 06 +42 28 58 11.8 2009-05-17 12:15am
+Fairly small and bright. Elongated 2x1 NNW-SSE. Almost stellar core.
+
+NGC 4111 GX CVn 12 07 33 +43 00 50 11.7 2009-05-17 12:25am
+Fairly small and bright. Elongated 4x1 NW-SE. Elongated core. Nice FOV with nearby double star and NGC 4117/4118.
+
+NGC 4151 GX CVn 12 11 03 +39 21 14 11.3 2009-05-17 12:30am
+Very bright stellar nucleus, surrounded by a very faint halo showing hints of spiral structure. Forms a nice couple with much fainter NGC 4156.
+
+NGC 4214 GX CVn 12 16 09 +36 16 34 10.2 2009-05-17 12:40am
+Fairly bright. Elongated 3:2 WNW-ESE. Appears to be irregular in shape. Although fairly uniform at first, some mottling starts to appear at higher magnification.
+
+NGC 4258 (M 106) GX CVn 12 19 27 +47 15 09 9.1 2009-05-17 12:45am
+Fairly large and bright halo, elongated 2x1 NW-SE. Very bright small nucleus. Obvious signs of spiral arms, especially to the north. The core region appears elongated NE-SW (possibly a central bar?)
+
+NGC 4346 GX CVn 12 23 57 +46 56 34 12.1 2009-05-17 12:50am
+Fairly small and bright. Elongated 3x1 E-W. Small elongated non stellar core.
+
+NGC 4449 GX CVn 12 28 40 +44 02 28 9.5 2009-05-17 01:00am
+Fairly bright and uniform. Appears to be irregular in shape. Elongated 2x1 NE-SW. Faint almost stellar nucleus. Faint superimposed star about 1.5' E.
+
+NGC 4485 GX CVn 12 31 00 +41 38 54 12.3 2009-05-17 01:05am
+Round, very uniform, very slightly brighter in the middle. Forms a nice couple with NGC 4490.
+
+NGC 4490 (Cocoon Galaxy) GX CVn 12 31 05 +41 35 32 9.8 2009-05-17 01:05am
+Elongated 3x1 WNW-ESE. Broad diffuse core. Faint superimposed star at the eastern tip. Forms a nice couple with NGC 4485.
+
+NGC 4618 GX CVn 12 42 01 +41 05 59 11.3 2009-05-17 01:10am
+Appears to be irregular in shape. A brighter bar is readily visible, elongated 3:2 ENE-WSW. The halo extends to the south of that bar. Forms a nice couple with NGC 4625 located 8' NNE.
+
+NGC 4631 (Whale Galaxy) GX CVn 12 42 37 +32 29 27 9.5 2009-05-17 01:15am
+Fairly large and bright. Seen in 9x50 finder scope. Elongated 8x1 E-W. Fairly uniform at low power. The eastern half looks larger. At 169x, the galaxy appears mottled. Forms a very nice tight couple with NGC 4627. Fairly bright superimposed star between these two galaxies. At low power, forms a superb view with nearby NGC 4656 (the "hockey stick" galaxy)
+
+NGC 4656 GX CVn 12 44 27 +32 07 06 9.7 2009-05-17 01:25am
+Very elongated NE-SW. Bends toward the east at its north eastern tip, hence it being called the "hockey stick". At higher magnification, some mottling was detected. At low power, forms a superb view with nearby NGC 4631 (the "whale" galaxy)
+
+NGC 2419 (Intergalactic Wanderer) GC Lyn 07 38 46 +38 51 45 10.3 2009-05-19 09:40pm
+Faint, round, unresolved, progressively brighter core at 95x. Remains unresolved, but starts displaying a mottled appearance at higher magnification.
+
+NGC 2683 GX Lyn 08 53 16 +33 23 14 10.0 2009-05-19 09:45pm
+Moderately large, fairly bright, elongated 5x1 NE-SW, gradually brighter core. Fairly bright superimposed star (mag 13) 2' NE.
+
+NGC 2782 GX Lyn 09 14 41 +40 04 34 12.3 2009-05-19 10:05pm
+Very small, very faint halo, fairly faint small but non-stellar core.
+
+NGC 3379 (M 105) GX Leo 10 48 20 +12 31 52 10.2 2009-05-19 10:15pm
+Moderately large, very bright, broad central concentration. Uniform roundish halo, only very slightly elongated E-W. Forms a beautiful triplet with NGC 3384 and NGC 3389.
+
+NGC 4361 PN Crv 12 25 01 -18 50 27 10.9 2009-05-19 10:25pm
+Moderately large planetary nebula, fairly bright, easily spotted at 95x. At 169x, it looks round, very slightly elongated NE-SW. The central star (mag 11.5) was seen easily using direct vision. At high magnification, using a UHC filter and averted vision, I started spotting delicate variation in brightness. This nebula seemed to be made of two "bars" centered on the central star. One is elongated 2x1 E-W, and the other is elongated 3x1 NE-SW. This impression was beautifully confirmed by looking at a DSS image.
+
+NGC 5054 GX Vir 13 17 30 -16 41 13 11.6 2009-05-19 10:50pm
+Moderately large, fairly faint, uniform halo, elongated 2x1 N-S, gradually brighter to a stellar nucleus. There is a really nice group of 5 galaxies 15' WNW, forming a circle.
+
+NGC 4856 GX Vir 12 59 52 -15 05 48 11.4 2009-05-19 11:00pm
+Fairly small and fairly bright, with a halo elongated 3x1 NE-SW. Broad central concentration. Moderately bright superimposed star 30" SE. Very faint superimposed star 2' NE.
+
+NGC 4594 (M104 - Sombrero Galaxy) GX Vir 12 40 30 -11 40 41 9.1 2009-05-19 11:10pm
+Fairly large, very bright, elongated 3x1 E-W. Dark lane crossing the galaxy. Northern half looks much larger and brighter, with a very bright broad central concentration. The southern half is barely visible. Fairly bright star just 2' N.
+
+NGC 4781 GX Vir 12 54 54 -10 35 27 11.4 2009-05-19 11:20pm
+Moderately large, moderately bright, elongated 3:2 WNW-ESE, fairly uniform, very slight brightening in the middle. Fairly faint superimposed star 2'W. Forms a tight couple with fainter and smaller NGC 4784.
+
+NGC 4699 GX Vir 12 49 33 -08 43 08 10.4 2009-05-19 11:30pm
+Fairly small, very bright, elongated 3:2 NNE-SSW. Small elongated core. I thought I saw two broad spiral arms, but a DDS image shows that this spiral is tightly wound.
+
+NGC 4958 GX Vir 13 06 19 -08 04 25 11.5 2009-05-19 11:35pm
+Fairly small, pretty bright, elongated 3x1 NNE-SSW. Fairly broad central concentration.
+
+NGC 4995 GX Vir 13 10 12 -07 53 07 11.9 2009-05-19 11:45pm
+Fairly small, fairly faint, very uniform, elongated 4:3 E-W, tiny nucleus. I noted a very faint superimposed star 2' E. However, a 2' angular distance would not make this a superimposed star. Moreover, there is a very faint (mag 15.4) star about 1.5' E, and another one (mag 15.4) only 30" E. I'm not sure which one I saw.
+
+NGC 4697 GX Vir 12 49 06 -05 51 19 10.1 2009-05-19 11:50pm
+Pretty bright, moderately large, elongated 2x1 ENE-WSW. Fairly large central concentration. Very faint superimposed star (mag 15.3) about 1.5' E.
+
+NGC 4546 GX Vir 12 36 00 -03 50 52 11.3 2009-05-20 12:15am
+Fairly small, pretty bright, elongated 5:2 E-W, small non-stellar core.
+
+NGC 4030 GX Vir 12 00 53 -01 09 20 11.2 2009-05-20 12:30am
+Moderately large, moderately bright, appears round at first, with a gradually brighter core. Framed by 3 fairly bright stars (magnitude 11.1, 11.5 and 13.7) I noted hints of 2 barely visible spiral arms going counter-clockwise.
+
+NGC 4666 (Superwind Galaxy) GX Vir 12 45 39 -00 30 57 11.5 2009-05-20 12:40am
+Elongated 5x1 NE-SW, with an elongated core. Forms a nice field of view with much fainter and smaller NGC 4668.
+
+NGC 4753 GX Vir 12 52 52 -01 15 13 10.9 2009-05-20 12:45am
+Moderate size, fairly bright, elongated 3:2 E-W, gradually brighter core to an almost stellar nucleus.
+
+NGC 5634 GC Vir 14 30 08 -06 01 17 9.5 2009-05-20 12:50am
+Fairly small, pretty bright, located at the base of an isosceles triangle formed by 3 fairly bright stars. At 300x, using averted vision, this globular cluster appears slightly mottled.
+
+NGC 4550 GX Vir 12 36 00 +12 10 03 12.5 2009-05-20 01:05am
+Fairly small and bright, elongated 3x1 N-S, with a relatively large, elongated core. Forms a tight couple with NGC 4551.
+
+NGC 4548 (M 91) GX Com 12 35 56 +14 26 35 10.9 2009-05-20 01:15am
+Large, round and faint halo. Embedded in it is a bar elongated 3x1 E-W, with a bulge in the middle, corresponding to the core of the galaxy. No trace of the beautiful spiral arms seen in photographs.
+
+NGC 4459 GX Com 12 29 30 +13 55 30 11.4 2009-05-20 01:25am
+Fairly small, bright and round, with a relatively large core and a stellar nucleus. Located 2' NNW of a very bright star (magnitude 8.7)
+
+NGC 4689 GX Com 12 48 15 +13 42 33 11.6 2009-05-20 01:35am
+Moderately large, very pale, very uniform, elongated 4:3 N-S. Tiny very faint nucleus glimpsed at higher magnifications.
+
+NGC 4477 GX Com 12 30 32 +13 34 59 11.3 2009-05-20 01:40am
+Very faint round halo, elongated core 2x1 N-S. Forms a nice tight couple with smaller NGC 4479.
+
+NGC 4473 GX Com 12 30 19 +13 22 33 11.1 2009-05-20 01:50am
+Fairly small and bright, elongated 2x1 E-W, sharply defined non-stellar core.
+
+NGC 3945 GX UMa 11 53 45 +60 37 33 11.7 2009-05-20 01:55am
+Small, moderately bright, round, with a relatively large and well defined core and a very faint stellar nucleus. Photographs show an outer ring elongated 2x1 NNE-SSW.
+
+NGC 3665 GX UMa 11 25 15 +38 42 44 11.8 2009-05-20 02:00am
+Small, moderately bright, round halo, elongated core 3:2 NNE-SSW, stellar nucleus.
+
+NGC 4800 GX CVn 12 55 05 +46 28 51 12.3 2009-05-20 02:15am
+Fairly small, moderately bright, elongated 3:2 N-S, gradually brighter core. Fairly bright star (mag 13.2) about 1.5' W.
+
+NGC 5005 GX CVn 13 11 24 +37 00 29 10.5 2009-05-20 02:20am
+Fairly large and bright, elongated 3x1 E-W, with a bright elongated, fairly large and well defined core.
+
+NGC 5033 GX CVn 13 13 55 +36 32 37 10.7 2009-05-20 02:25am
+Fairly large, moderately bright, elongated 2x1 N-S, with a small, bright and well defined core. Fairly bright (mag 13.9) superimposed star 1.5' N.
+
+NGC 5273 GX CVn 13 42 35 +35 36 22 12.5 2009-05-20 02:35am
+Fairly small, very pale, round halo, tiny almost stellar nucleus.
+
+NGC 5195 GX CVn 13 30 25 +47 13 10 10.5 2009-06-21 11:00pm
+Bright stellar core surrounded by an assymetrical halo, fairly bright on the west side, very dim on the east side where this galaxy connects to M51. The nucleus is slightly off center to the south.
+
+NGC 5248 GX Boo 13 38 02 +08 50 10 10.9 2009-06-21 11:10pm
+Moderately large and bright, elongated 2x1 NW-SE. Fairly bright small round core, surrounded by a halo showing hints of two far-flung spiral arms, the one on the NW side being the most obvious. Very faint (15.4 mag) superimposed star about 30" N of the core.
+
+NGC 5557 GX Boo 14 18 51 +36 27 06 11.9 2009-06-21 11:20pm
+Small, moderately bright, round halo, gradually brighter to a stellar nucleus seen using direct vision during brief moments of better seeing. Fairly faint superimposed star about 30" SE.
+
+NGC 5676 GX Boo 14 33 09 +49 25 04 11.9 2009-06-21 11:35pm
+Moderately bright and large, elongated 3x1 NE-SW, very uniform. Very faint stellar nucleus.
+
+NGC 5689 GX Boo 14 35 51 +48 42 07 12.7 2009-06-21 11:45pm
+Small, moderately bright, elongated 3x1 E-W, fairly bright almost stellar core.
+
+NGC 7000 (North American Nebula) DN Cyg 20 58 52 +44 24 33 4.0 2009-06-22 12:05am
+[Using David Cooper's William Optics 80ED F/6.8 refractor + Televue Panoptic 27mm + Lumicon OIII filter] Very easily seen, fits nicely in the 3.5 degree field of view. Very reminiscent of photographs. The "central america", "north eastern United States" and "north western United States" regions are brighter. The "Florida" region is surprinsingly dim. The entire nebula is "peppered" with fairly bright stars.
+
+NGC 6543 (Cat's Eye Nebula) PN Dra 17 58 36 +66 37 54 8.3 2009-06-22 12:25am
+Very small, very bright, elongated 4:3 N-S, blue-green color at low power (95x) Central star seen very briefly during moments of better seeing. The use of an OIII filter shows the central region a little darker.
+
+NGC 6207 GX Her 16 43 26 +36 48 53 11.9 2009-06-22 01:15am
+Small, moderately faint, elongated 3x1 NNE-SSW, fairly uniform halo. Bright stellar nucleus or superimposed star (photographs show that it is a 13 mag superimposed star, not the actual nucleus of that galaxy) Fits beautifully along M13 in the 1.2 degree field of view of the Televue Panoptic 27mm.
+
+NGC 6229 GC Her 16 47 17 +47 30 42 9.4 2009-06-22 01:25am
+Fairly small and bright, unresolved but appears "powdery" with a few stars coming in and out of view during brief moments of better seeing.
+
+NGC 6781 PN Aql 19 18 58 +06 33 21 11.8 2009-06-22 01:35am
+Fairly large planetary nebula. Fairly uniform, round. Southern rim is slightly brighter and better defined than the northern rim. The center region appears slightly darker.
+
+NGC 5466 GC Boo 14 05 54 +28 29 25 9.2 2009-06-22 10:30pm
+Detected in 9x50 finder scope. Fairly large. Fairly uniform low surface brightness. Brighter stars resolved at 95x. A few more stars visible at 169x. Appears irregular in shape.
+
+NGC 5897 GC Lib 15 17 58 -21 02 51 8.4 2009-06-22 10:50pm
+Moderately large, fairly uniform, fairly low surface brightness. A few bright stars are resolved over a milky background at 95x and 169x.
+
+NGC 3147 GX Dra 10 17 41 +73 21 25 11.3 2009-06-22 11:00pm
+Small, moderately bright, round, gradually brighter to a fairly large core. At 169x, the halo seems slightly elongated NW-SE.
+
+NGC 5866 (M 102) GX Dra 15 06 47 +55 43 42 10.7 2009-06-22 11:15pm
+Fairly large and bright, elongated 3x1 WNW-ESE. Fairly large central concentration. Forms an equilateral triangle with two fairly bright stars (mag 7.7 and 9.2)
+
+NGC 5907 (Splinter Galaxy) GX Dra 15 16 11 +56 17 44 11.1 2009-06-22 11:25pm
+Fairly large, moderately bright edge-on galaxy. Elongated roughly 10x1 NNW-SSE. Weak central concentration/bulge. Hints of a dark lane at 217x. Eastern half of the bulge appears brighter. Fairly faint star (14.5 mag) about 1' WSW of bulge. Reminiscent of NGC 4565, although not as impressive.
+
+NGC 5982 GX Dra 15 38 54 +59 19 35 12.0 2009-06-22 11:35pm
+Small, fairly bright, with a relatively large core surrounded by a halo slightly elongated E-W. Forms a beautiful trio with NGC 5981 and NGC 5985. The members of this group show obvious differences in morphology.
+
+NGC 6144 GC Sco 16 27 51 -26 02 42 9.0 2009-06-22 11:45pm
+Small, faint, right near Antares and M4. At 217x, about a dozen or so brighter stars are resolved over a milky background. Both M4 and NGC 6144 fit in the same 1.2 degree field of view generated by the Panoptic 27mm.
+
+NGC 6451 (Tom Thumb Cluster) OC Sco 17 51 20 -30 12 48 8.2 2009-06-23 12:05am
+Fairly small, composed of about 30 moderately bright stars. Overall shape reminds me of an arrowhead. A large dark lane splits this cluster in the N-S direction.
+
+NGC 6755 OC Aql 19 08 19 +04 16 53 8.6 2009-06-23 12:35am
+About 30 fairly bright stars scattered within 15'. Irregular shape, several dark lanes. Located about 40' SSE of NGC 6756.
+
+NGC 6756 OC Aql 19 09 12 +04 43 12 10.6 2009-06-23 12:35am
+Very compact group of relatively faint stars (could not get a reliable star count) surrounded by a darker ring and a few moderately bright stars.
+
+NGC 6826 (Blinking Planetary) PN Cyg 19 45 05 +50 32 47 8.8 2009-06-23 01:10am
+Small, very bright, roundish, very slightly elongated WNW-ESE. Blue/green color seen at 169x. Fairly bright central star. Blinking effect noticed easily. OIII filter shows hints of an extremely faint outer shell (?)
+
+NGC 6946 GX Cyg 20 35 06 +60 11 02 9.8 2009-06-23 01:25am
+Fairly large galaxy with a relatively low surface brightness, elongated 3:2 E-W. Very weak, moderately large central concentration. Two spiral arms seen pretty easily E and W of the core. Situated in a rich star field. Forms a superb couple with open cluster NGC 6939. Both objects can be seen within the 1.2 degree field of view of the Panoptic 27mm.
+
+NGC 7008 PN Cyg 21 00 51 +54 34 41 12.0 2009-06-23 01:40am
+Relatively large and pretty bright planetary nebula. Appears elongated 2x1 N-S at low power. Using a higher magnification and an OIII filter, I can see 2 lobes positioned on a N-S line, the one to the north being the bigger and brighter one. Without the narrow band filter, the central star was easily detected, as well as a superimposed star to the ENE and 2 fairly bright stars located SE of the nebula. This object is also called the Fetus Nebula.
+
+NGC 6905 PN Del 20 22 50 +20 08 04 12.0 2009-06-23 01:55am
+Fairly small, moderately bright, almost round, very slightly elongated N-S. The disk is not perfectly uniform. The eastern portion of the nebula is brighter, while the southern and especially the northern regions are slightly darker. Fairly faint central star.
+
+NGC 6118 GX Ser 16 22 20 -02 18 27 12.4 2009-06-23 02:05am
+Moderately large, very low surface brightness, elongated 2x1 almost E-W, very uniform. Extremely weak central concentration detected at 169x. Fairly faint (15.2 mag) superimposed star located about 2' E of the core.
+
+NGC 6171 (M 107) GC Oph 16 33 06 -13 04 30 7.8 2009-06-23 10:40pm
+Detected in 9x50 finder scope. Moderately large and bright. Best seen at 219x. Moderately dense, pretty well resolved.
+
+NGC 6235 GC Oph 16 54 01 -22 11 38 8.9 2009-06-23 10:50pm
+Pretty small and faint. At 219x, a few brighter stars are resolved using averted vision. Appears slightly triangular in shape...
+
+NGC 6284 GC Oph 17 05 06 -24 46 47 8.9 2009-06-23 11:00pm
+Pretty small and faint haze surrounding a moderately bright unresolved core. At higher magnification, a few stars are resolved in the outer halo.
+
+NGC 6293 GC Oph 17 10 47 -26 35 42 8.3 2009-06-23 11:10pm
+Pretty small, moderately bright, intense core, outer region partially resolved at 219x.
+
+NGC 6287 GC Oph 17 05 45 -22 43 22 9.3 2009-06-23 11:15pm
+Pretty small and faint, relatively uniform, located at the southern edge of a region devoid of stars (B51/B47 dark nebulae?) Takes on a powdery appearance at 219x, especially its eastern region, with a few stars coming in and out of view.
+
+NGC 6304 GC Oph 17 15 10 -29 28 27 8.3 2009-06-23 11:20pm
+Pretty small, moderately bright, relatively uniform, unresolved at 219x, powdery appearance.
+
+NGC 6316 GC Oph 17 17 15 -28 09 07 8.1 2009-06-23 11:25pm
+Very small, moderately bright, broad central concentration, unresolved. Located 1' WNW of a fairly bright (mag 11.4) star and 1' E of a slightly fainter (mag 12.3) star.
+
+NGC 6342 GC Oph 17 21 46 -19 35 50 9.5 2009-06-23 11:30pm
+Very small, fairly faint, relatively bright core, unresolved. Located just 1' NNE of a moderately bright (mag 12) star, and just south of B259.
+
+NGC 6356 GC Oph 17 24 10 -17 49 24 8.2 2009-06-23 11:35pm
+Moderately large and bright, relatively bright core, unresolved (this object was low over the horizon when I observed it, so the bad seeing didn't help)
+
+NGC 6355 GC Oph 17 24 35 -26 21 48 8.6 2009-06-23 11:40pm
+Very small, pretty faint, relatively uniform, unresolved, apparently located behind a dark cloud.
+
+NGC 6369 (Little Ghost Nebula) PN Oph 17 29 57 -23 46 05 11.0 2009-06-23 11:50pm
+Pretty small, pretty faint, round, uniform, looks like an out of focus star at 95x. Delicate ring structure suspected, confirmed at 219x using a UHC filter. I did not see the central star. Northern rim looks very slightly brighter. Reminiscent of M57, but much smaller.
+
+NGC 6401 GC Oph 17 39 14 -23 54 59 7.4 2009-06-24 12:00am
+Small, pretty faint, almost completely uniform. Moderately bright (mag 12) superimposed star very slightly off center toward ESE.
+
+NGC 6426 GC Oph 17 45 24 +03 09 56 10.9 2009-06-24 12:10am
+Fairly small, surprisingly faint and uniform. Very weak central concentration. A few very faint stars pop in and out of view around the edge of the halo.
+
+NGC 6517 GC Oph 18 02 24 -08 57 32 10.1 2009-06-24 12:15am
+Small, fairly faint, small and relatively bright core, unresolved.
+
+NGC 6633 OC Oph 18 27 44 +06 30 49 5.6 2009-06-24 12:20am
+Best seen at low power (Panoptic 27mm) Easily spotted in 9x50 finder scope. About 30 bright stars of comparable brightness, along with many fainter stars, are scattered within about 25'.
+
+NGC 6569 GC Sgr 18 14 17 -31 49 29 8.4 2009-07-20 09:55pm
+Moderately small and faint, relatively uniform. The halo takes on a grainy appearance at 219x. Located about 45' E of smaller and fainter globular cluster NGC 6558, giving a nice comparison.
+
+NGC 6624 GC Sgr 18 24 19 -30 21 14 7.6 2009-07-20 10:00pm
+Moderately small and fairly bright. Small intense core. Halo resolves in a great number of faint stars during brief moments of better seeing.
+
+NGC 6520 OC Sgr 18 04 02 -27 53 20 7.6 2009-07-20 10:25pm
+The central region of this open cluster is made up of about 20 fairly bright stars, seemingly arranged in a circle of about 1.5' in diameter around a pretty bright star with a distinctive orange tinge. A few bright stars are scattered around this area within 8'. Best seen at low power. Amazing contrast with Barnard 86 (a.k.a. the "ink spot") located just to west. I'm wondering whether B86 is located in front of or behind NGC 6520.
+
+NGC 6540 OC Sgr 18 06 59 -27 47 38 14.6 2009-07-20 10:30pm
+Barely noticeable as a faint and tiny (1') very unimpressive smudge elongated 2x1 E-W. About half a dozen stars are resolved at 219x. PSA says it's a globular cluster, but it does not look like one and ST mentions it as an open cluster...
+
+NGC 6553 GC Sgr 18 09 55 -25 54 26 8.3 2009-07-20 10:40pm
+Moderately large, relatively low surface brightness, surprisingly uniform with no obvious core! Appears very slightly elongated NW-SE? Fairly bright (mag 11.8) superimposed star on the NW side. Generally unresolved, very slight grainy appearance maybe? A few stars pop in and out of view during brief moments of better seeing (not sure whether these are actually part of the globular cluster)
+
+NGC 6544 GC Sgr 18 07 57 -24 59 52 7.5 2009-07-20 10:45pm
+Small (about 1'), moderately bright with a tiny fairly bright core. About a dozen brighter stars are resolved at higher magnification. Surrounded by numerous moderately bright field stars.  Both NGC 6544 and M8 should fit within the same field of view of the Panoptic 27, forming an interesting couple, although I did not think of observing both of these objects at once.
+
+NGC 6514 (M 20) OC Sgr 18 03 19 -22 58 20 5.2 2009-07-20 11:10pm
+Fairly large (about 10'), bright, detected in the finder scope. Absolutely gorgeous at lower magnification with a UHC filter. The dark lanes that split this object in 3 lobes are very well defined. There is a double star in the middle of the nebula. Another nebula, about the same size, is visible, although fainter, slightly to the north.
+
+NGC 6440 GC Sgr 17 49 29 -20 21 49 9.3 2009-07-20 11:15pm
+Pretty small (1'), moderately faint, moderately well defined core, unresolved. Forms a really beautiful couple with planetary nebula NGC 6445 located about 22' NNE.
+
+NGC 6445 PN Sgr 17 49 51 -20 00 47 13.0 2009-07-20 11:25pm
+Pretty small (about 40"), fairly bright, easily found even at low magnification (95x) Forms a really beautiful couple with globular cluster NGC 6440 located about 22' SSW. At 219x with a UHC filter, appears as a ring very slightly elongated 4:3 NNW-SSE. Brighter arches on the NNW and SSE sides. No central star seen. Moderately faint (mag 12.5) star just 30" WNW.
+
+NGC 6568 OC Sgr 18 13 20 -21 36 10 8.6 2009-07-20 11:40pm
+Best seen at low magnification. About 50 moderately bright stars of comparable magnitude, scattered evenly within an area 20' in diameter. At higher magnification, the stars appear to be forming "chain structures" surrounded by darker regions.
+
+NGC 6583 OC Sgr 18 16 26 -22 08 02 10.0 2009-07-20 11:45pm
+Compact group made of about 2 dozen stars. Pretty faint, barely noticeable in a crowded star field.
+
+NGC 6629 PN Sgr 18 26 19 -23 11 52 10.5 2009-07-21 12:00am
+Careful star hopping is required to found this planetary nebula as it appears almost stellar, especially in below average seeing. Pretty bright, round.
+
+NGC 6642 GC Sgr 18 32 31 -23 28 06 8.9 2009-07-21 12:10am
+Small, moderately bright, tiny fairly bright core, halo partially resolved at higher magnification.
+
+NGC 6638 GC Sgr 18 31 34 -25 29 25 9.2 2009-07-21 12:15am
+Fairly small, moderately bright, comparatively large core. The halo takes on a grainy appearance during brief moments of better seeing.
+
+NGC 6645 OC Sgr 18 33 12 -16 52 34 8.5 2009-07-21 12:20am
+About 50 stars spread within an area roughly 15' in diameter. Spotted in 9x50 finder scope. Curious oval dark region almost in the middle of the cluster.
+
+NGC 6217 GX UMi 16 32 15 +78 10 52 11.9 2009-07-25 10:15pm
+Small, faint, elongated 3:2 NW-SE, fairly faint stellar core or super imposed star. Very faint super imposed star about 20" SE, another one about 2.5' NW. Hints of two spiral arms, one on the N side going E, and another one on the S side going W. This observation was later beautifully confirmed with a DSS image.
+
+NGC 6834 OC Cyg 19 52 37 +29 26 04 9.7 2009-07-25 10:30pm
+Seen as a tiny smudge in a 9x50 finder scope. Small grouping of about 30 moderately bright stars. One brighter star in the middle, with a possible slight yellow tinge. Located in a region with relatively few stars (dark nebula?) in an otherwise crowded milky way star field. For some reason, I found it hard to star-hop to...
+
+NGC 6866 OC Cyg 20 04 16 +44 11 11 9.1 2009-07-25 10:40pm
+About 30 fairly bright stars within a region 15' in diameter. Detected in 9x50 finder scope.
+
+NGC 6910 OC Cyg 20 23 34 +40 48 37 7.3 2009-07-25 10:45pm
+Small group of about 15 stars, elongated 2x1 WNW-ESE (dimensions: 10' x 5') The two brightest stars have a yellow tinge. Located about 30' N of Gamma Cyg (Sadr)
+
+NGC 7044 OC Cyg 21 13 32 +42 32 06 12.0 2009-07-25 10:50pm
+Small compact group of maybe 50 faint stars (hard to get a reliable star count) scattered within a circular region of about 5' in diameter.
+
+NGC 6522 GC Sgr 18 04 14 -30 02 08 9.9 2009-07-25 11:00pm
+Fairly small, moderately faint, fairly well defined core, halo appears grainy. There is a moderately bright star located about 30" E which probably does not belong to this cluster. Forms a beautiful couple with globular cluster NGC 6528 located about 15' E.
+
+NGC 6528 GC Sgr 18 05 28 -30 03 25 9.6 2009-07-25 11:00pm
+Fairly small, moderately faint, fairly well defined core, unresolved. Located at the NW edge of B298. Forms a beautiful couple with globular cluster NGC 6522 located about 15' W. This cluster is slightly dimmer than its neighbor NGC 6522 (some of its light may be absorbed by B298?)
+
+NGC 6818 (Little Gem) PN Sgr 19 44 32 -14 07 45 10.0 2009-07-25 11:25pm
+Tiny fairly bright disk, almost circular (extremely slightly elongated NS) showing a delicate bluish tinge, especially at low power. At higher magnification, the center of the nebula appears very slightly darker. The central star (mag 15.0) was not seen. Located inside a small triangle of moderately bright stars.
+
+NGC 6664 OC Sct 18 37 10 -07 48 17 8.5 2009-07-25 11:45pm
+About 60 moderately faint stars within 15'. This cluster appears slightly elongated N-S, and is located about 25' NE of Alpha Sct, which has a fairly distinctive yellow tinge.
+
+NGC 6712 GC Sct 18 53 37 -08 41 33 8.1 2009-07-25 11:50pm
+Moderately large and bright with a poorly defined core region. Many stars are resolved over a milky background.
+
+NGC 6802 OC Vul 19 31 02 +20 16 59 11.7 2009-07-26 12:50am
+Small (5' x 2') compact group of about 25 very faint stars, elongated N-S. Located just east of the famous coat hanger asterism (Cr 399)
+
+NGC 6823 OC Vul 19 43 35 +23 19 27 7.1 2009-07-26 12:55am
+About 30 fairly bright stars scattered within 6' around a small group of 4 bright stars and a few fainter ones. Not very conspicuous in a crowded star field. Nearby nebula NGC 6820 was not seen (although I did not really look for it and thus was not using a nebula filter)
+
+NGC 6830 OC Vul 19 51 25 +23 07 33 8.9 2009-07-26 01:00am
+Very inconspicuous grouping of about 20 fairly bright stars.
+
+NGC 6934 GC Del 20 34 41 +07 26 22 8.9 2009-07-26 02:00am
+Relatively small, fairly bright, intense core. A great number of stars are resolved throughout at 217x.
+
+NGC 7128 OC Cyg 21 44 19 +53 45 39 11.3 2009-08-15 09:30pm
+About 15 moderately bright stars within an area roughly 4' x 2' elongated NE-SW. The brightest star, located NE of the cluster, shows a nice orange/reddish color.
+
+NGC 7086 OC Cyg 21 30 49 +51 38 39 11.6 2009-08-15 09:40pm
+About 50 moderately bright stars within 10'.
+
+NGC 7062 OC Cyg 21 23 50 +46 25 18 8.3 2009-08-15 09:45pm
+About two dozen moderately bright to moderately faint stars located within 5'. Slightly elongated E-W.
+
+NGC 7006 GC Del 21 01 58 +16 13 44 10.6 2009-08-15 09:50pm
+Small, faint, small fairly bright core, fairly faint halo, unresolved.
+
+NGC 7009 (Saturn Nebula) PN Aqr 21 04 44 -11 19 22 8.3 2009-08-15 10:30pm
+At low power (95x), this planetary nebula appears small, fairly bright, elongated 3:2 WNW-ESE, and shows a beautiful blue/green color. At higher magnification, the center of the nebula appears very slightly darker. Faint extensions show up on both sides of the oval disk, terminated by a tiny slightly brighter knot. The extension on the ESE side seems to slightly bend toward the NE. Finally, during brief moments of better seeing, a ring elongated 2:1 appears inside the nebula. The central star was not detected.
+
+NGC 6940 OC Vul 20 34 52 +28 19 09 7.2 2009-08-15 10:45pm
+About 80 stars within an area 25' x 10' elongated WNW-ESE. Orange star in the center.
+
+NGC 6882 OC Vul 20 12 13 +26 50 35   2009-08-15 10:50pm
+About 20 moderately bright stars within an area roughly 10' in diameter located about 10' NW of 20 Vul (mag 5.9), and inside another open cluster, NGC 6885.
+
+NGC 6885 OC Vul 20 12 27 +26 30 35 5.7 2009-08-15 10:50pm
+Sparse cluster of roughly 20 fairly bright stars within an area 20' in diameter, centered around 20 Vul (mag 5.9) Another open cluster, NGC 6882, is embedded inside NGC 6885.
+
+NGC 6939 OC Cep 20 31 44 +60 41 48 10.1 2009-08-15 11:10pm
+About 80 moderately bright stars within an area roughly 10' in diameter. The southern boundary seems delimited by an almost perfect alignment of 5 brighter stars. Slight triangular shape, like an arrow moving west... Forms a superb couple with galaxy NGC 6946. Both objects can be seen within the 1.2 degree field of view of the Panoptic 27mm.
+
+NGC 7160 OC Cep 21 53 59 +62 39 00 6.4 2009-08-15 11:40pm
+About 20 fairly bright stars scattered within an area roughly 5' in diameter, centered around two very bright stars (mag 7.0 and 7.9) separated by about 1'.
+
+NGC 7380 OC Cep 22 47 46 +58 11 00 8.8 2009-08-16 12:40am
+About 30 moderately bright stars within 15'. Apparently, this cluster is embedded inside a nebula (Sh 2-142) but I did not notice anything, and since I was not aware of it, I did not think of trying a narrow-band filter.
+
+NGC 7510 OC Cep 23 11 30 +60 37 22 9.3 2009-08-16 12:45am
+About 20 moderately bright to moderately faint stars within an area 5' x 2' elongated WSW-ENE.
+
+NGC 40 PN Cep 00 13 36 +72 34 28 10.7 2009-08-16 01:00am
+Moderately large and bright, fairly bright central star, very slightly elongated NNE-SSW. Appears pretty uniform at first. With careful examination, the southern region of the nebula shows a slight darkening. The rim is fairly well defined, and slightly brighter than the disk itself. Superimposed star on the SSW rim.
+
+NGC 7142 OC Cep 21 45 25 +65 49 26 10.0 2009-09-17 08:40pm
+Very inconspicuous group of about 40 moderately faint stars over a milky background. Slightly elongated WNW-ESE. A few brighter stars delimit this cluster on the north and east sides.
+
+NGC 7331 GX Peg 22 37 33 +34 28 14 10.2 2009-09-17 09:00pm
+Elongated 3x1 NNW-SSE. Fairly bright core region surrounding a bright stellar nucleus visible at 217x and 305x during brief moments of better seeing. The halo is rather dim compared to the core. It extends about 6' along its major axis. The western half of the galaxy looks darker, due to the presence of a dark lane. Very faint superimposed star about 2' SSE of nucleus.  NGC 7335, NGC 7337 and NGC 7340 were easily detected. NGC 7336 was not detected. I did not search for nearby NGC 7325 and NGC 7326.
+
+NGC 7217 GX Peg 22 08 20 +31 24 39 11.1 2009-09-17 10:35pm
+Bright, round non stellar core surrounded by a larger, relatively bright uniform halo. Faint superimposed star less than 1' NNE of the core.
+
+NGC 7814 GX Peg 00 03 47 +16 12 11 11.6 2009-09-17 10:50pm
+Moderately bright and large. Appears roundish at first, progressively brighter toward its center. At higher magnification and with careful examination, a faint halo extending NW-SE can be detected. The bisecting dust lane obvious on photographs was not seen.
+
+NGC 7448 GX Peg 23 00 34 +16 02 10 12.1 2009-09-17 11:00pm
+Pretty small, moderately bright, elongated 2x1 NNW-SSE, faint nucleus seen intermittently at high magnification. Suspected the detached segment that makes this galaxy peculiar to be at the northern tip of the galaxy.
+
+NGC 205 (M 110) GX And 00 40 56 +41 44 30 8.9 2009-09-18 12:30am
+Fairly large and bright, elongated 2x1 NW-SE, gradually brighter to a stellar nucleus.
+
+NGC 891 GX And 02 23 12 +42 23 30 10.9 2009-09-18 12:45am
+Moderately faint, elongated roughly 6x1 NNE-SSW, about 12' along its major axis. The dust lane splitting this galaxy in half is clearly visible only through the central bulge. Several fairly bright stars are superimposed.  Peter Natscher's 24" scope showed the bisecting dust lane much more clearly, along with some mottling.
+
+NGC 7662 (Blue Snowball) PN And 23 26 24 +42 35 30 8.6 2009-09-18 01:30am
+At 95x, this planetary nebula appears bright, stellar, and looks slightly bluish. At 217x and 305x, the center region of the nebula appears darker, and an elliptical ring oriented roughly E-W can be detected. What I failed to see is the lumpy texture of the ring, beautifully documented in the October 2009 issue of Astronomy Now's Drawn To The Universe column.
+
+NGC 7479 GX Peg 23 05 28 +12 22 45 11.7 2009-09-18 10:20pm
+Moderately bright, fairly small, elongated 5:2 N-S, weak fairly large core. Moderately bright (mag 12.9) superimposed star at the northern end, slightly dimmer (mag 13.7) star about 1' SW of the center. Suspected some mottling in the core. This galaxy is actually a barred spiral. The arms should be visible under better conditions and with a slightly larger scope.
+
+NGC 404 (Mirach's Ghost) GX And 01 10 01 +35 46 21 11.2 2009-09-18 11:00pm
+Located about 7' NW of Mirach (Beta And), a mag 2.0 star exhibiting a beautiful golden color. Moderately bright and small, round, gradually brighter to a fairly bright stellar nucleus best seen at high magnification.
+
+NGC 7606 GX Aqr 23 19 37 -08 25 42 11.7 2009-09-19 12:10am
+Moderately large and bright, elongated 2x1 NNW-SSE, fairly bright stellar core, uniform halo.
+
+NGC 7727 GX Aqr 23 40 26 -12 14 02 11.6 2009-09-19 12:20am
+Fairly small and bright, small round intense core, round uniform halo. NGC 7723 and NGC 7724 nearby.
+
+NGC 7723 GX Aqr 23 39 29 -12 54 15 11.9 2009-09-19 12:25am
+Fairly small, moderately faint, moderately bright stellar nucleus surrounded by a fairly uniform halo elongated 3:2 NE-SW. Located about 20' ENE of a bright yellow double star. NGC 7727 and NGC 7724 nearby.
+
+NGC 253 (Sculptor Galaxy) GX Scl 00 48 04 -25 13 53 7.9 2009-09-19 12:45am
+Very easily seen along globular cluster NGC 288 in 9x50 finder scope. Very large and bright, elongated 6x1 NE-SW. The core region is large, bright, and shows some obvious mottling (seen even better in Peter Natscher's 24" scope). Numerous fairly bright field stars are superimposed.
+
+NGC 247 GX Cet 00 47 39 -20 42 11 9.7 2009-09-19 12:55am
+Pretty large, moderately faint, elongated 6x1 N-S, very weak central condensation. Fairly bright (mag 9.5) star at the southern tip, moderately bright (mag 11.6) superimposed star about 7' S.
+
+NGC 288 GC Scl 00 53 15 -26 31 34 8.1 2009-09-19 01:00am
+Very easily seen along galaxy NGC 253 in 9x50 finder scope. Fairly large and bright, fairly uniform, well resolved throughout.
+
+NGC 613 GX Scl 01 34 47 -29 21 46 10.7 2009-09-19 01:10am
+Moderately large and bright, elongated 3x1 NW-SE, fairly bright small round core. Hints of two spiral arms, one starting at the NW end, bending towards the W, and a symmetrical arm starting at the SE end, bending towards the E.
+
+NGC 524 GX Psc 01 25 20 +09 35 35 11.4 2009-09-19 01:30am
+Bright, fairly small. Intense core surrounding an almost stellar nucleus. Fairly bright round halo. Brightest member of the Shakhbazian 40 group.
+
+NGC 1023 GX Per 02 41 02 +39 06 23 9.6 2009-09-19 01:35am
+Moderately large, fairly bright, small bright round core, halo elongated 2x1 E-W. Two faint superimposed stars about 1' W of the center, and one faint superimposed star about 1' E. The companion NGC 1023A was not seen.
+
+NGC 488 GX Psc 01 22 19 +05 18 41 11.1 2009-09-19 02:00am
+Fairly small and bright, bright round core surrounded by a halo very slightly elongated N-S.
+
+NGC 185 GX Cas 00 39 32 +48 23 36 10.2 2009-09-19 02:15am
+This is a satellite of M31. Fairly large, pretty uniform, large faint core surrounded by a halo elongated 4:3 NNE-SSE. Located in a crowded region of the milky way. Could not detect the dust patch seen on photographs.
+
+NGC 278 GX Cas 00 52 39 +47 36 20 11.5 2009-09-19 02:30am
+Fairly small, pretty bright, fairly bright stellar nucleus, round uniform halo. Located about 3' S of a bright (mag 8.8) field star.
+
+NGC 7296 OC Lac 22 28 27 +52 22 19 9.7 2009-10-10 08:00pm
+About 30 stars, a dozen of which are fairly bright, grouped within an area roughly 4' in diameter. Relatively inconspicuous, best seen at 217x.
+
+NGC 7243 OC Lac 22 15 32 +49 57 09 6.7 2009-10-10 08:05pm
+About 80 stars, 20 of which are pretty bright, within an area 25' x 15' elongated NE-SW. The center region, delimited to the west by a nice double star, is very sparsely populated.
+
+NGC 7209 OC Lac 22 05 32 +46 32 11 7.8 2009-10-10 08:10pm
+About 80 stars, 40 of which are uniformly pretty bright, within an area 20' x 15' elongated NNE-SSW. Moderately bright and slightly orange star near the center. Bright yellow star (HT Lac, mag 6.2) about 15' N.
+
+NGC 7686 OC And 23 30 37 +49 11 31 5.6 2009-10-10 08:15pm
+About 30 moderately faint to moderately bright stars grouped within an area 15' in diameter centered on a bright yellow-orange star (HD 221246, mag 6.2)
+
+NGC 7789 OC Cas 23 57 56 +56 46 02 7.5 2009-10-10 08:50pm
+Very rich and fairly compact. Very large number of moderately faint stars of comparable brightness scattered pretty uniformly within a roughly circular area 15' in diameter.
+
+NGC 7790 OC Cas 23 58 56 +61 16 01 7.2 2009-10-10 09:00pm
+About 20 moderately faint stars within an area roughly 5' x 3' elongated E-W. The proximity of numerous star clusters in the vicinity (esp. NGC 7788) makes this cluster interesting to track down.
+
+NGC 129 OC Cas 00 30 36 +60 16 34 9.8 2009-10-10 09:10pm
+Located 15' NNW of a bright star (HD 2626, mag 5.9) This cluster contains a good number of moderately bright to fairly bright stars. It is not very well delimited, especially to the north, making star counts unreliable. A few fairly bright stars form a ring elongated 3:2 NW-SE.
+
+NGC 136 OC Cas 00 32 07 +61 34 04   2009-10-10 09:20pm
+Maybe a dozen faint stars grouped within an area 1.5' in diameter. About 6' NE of a fairly bright yellowish star (SAO 11238, mag 8.4) This cluster is so inconspicuous that a good atlas is a must to confirm that you're indeed looking at the right spot.
+
+NGC 381 OC Cas 01 08 59 +61 38 19 9.3 2009-10-10 09:30pm
+Fairly sparse cluster containing about 30 moderately faint to moderately bright stars within an area roughly 6' in diameter. Best seen at 169x.
+
+NGC 225 (Sailboat Cluster) OC Cas 00 44 16 +61 49 55 8.9 2009-10-10 09:35pm
+About 30 bright stars within an area 12' x 8' elongated NE-SW. Requires some imagination to see the outline of a sailboat...
+
+NGC 457 (ET Cluster) OC Cas 01 20 15 +58 20 27 5.1 2009-10-10 09:40pm
+Two bright stars (mag 5 and 7, the one to the NE being the brighter), located at the western end of the cluster, about 3' apart, form the eyes of the ET cluster. A narrow group of stars, elongated NW-SE, form the body, and a few more bright stars form the arms.
+
+NGC 436 OC Cas 01 16 38 +58 51 58 9.3 2009-10-10 10:25pm
+Fairly compact cluster containing about 25 moderately bright to moderately faint stars within an area 5' in diameter. Best seen at 169x.
+
+NGC 559 OC Cas 01 30 14 +63 21 35 7.4 2009-10-10 10:25pm
+About 30 fairly faint stars within an area roughly 5' in diameter. Best seen at 169x.
+
+NGC 637 OC Cas 01 43 49 +64 05 29 7.3 2009-10-10 10:35pm
+Small, compact group of about 20 stars, 5 of which are fairly bright, the others are fairly faint, within an area roughly 3' in diameter elongated NE-SW. Best seen at 217x.
+
+NGC 654 OC Cas 01 44 44 +61 56 11 8.2 2009-10-10 10:40pm
+About 40 moderately faint stars within 5'. Best seen at 169x. Located 3' NNW of a bright yellow-orange star (HD 10494, mag 7.3) Fits with NGC 663 in the same field of view of my Panoptic 27mm eyepiece, showing some nice difference in structure.
+
+NGC 663 OC Cas 01 46 53 +61 17 10 6.4 2009-10-10 10:40pm
+About 80 fairly bright stars within an area 15' x 10' elongated NW-SE. Fits with NGC 654 in the same field of view of my Panoptic 27mm eyepiece, showing some nice difference in structure.
+
+NGC 659 OC Cas 01 45 07 +60 43 29 7.2 2009-10-10 10:45pm
+About 15 moderately faint stars within an area 4' in diameter. Best seen at 169x. Located about 15' NE of a trio of bright stars.
+
+NGC 752 OC And 01 58 18 +37 50 08 6.6 2009-10-10 10:50pm
+Seen with the naked eye as a fuzzy spot between Tri and And. Best seen using the 50mm finder scope using a 16mm Nagler type 5 eyepiece. In my 12" scope, using a Panoptic 27mm eyepiece, more than 100 bright stars are visible. Two bright yellowish stars were seen near the south-western boundary (56 And and HD 11727, mag 5.7 and 5.9 respectively)
+
+NGC 598 (M33 - Pinwheel Galaxy) GX Tri 01 34 26 +30 42 53 6.4 2009-11-14 09:25pm
+Barely detected naked eye. Easily seen in 9x50 finder scope, including the broad S-shaped spiral structure. Elongated 3:2 NNE-SSW. Large bright round core. Appears amazing in a 12" scope, with lots of fine details easily visible in the spiral arms. Absolutely dazzling though Peter Natscher's 24" scope! Several NGC objects physically belong to M33: NGC 604, NGC 595, NGC 592 and NGC 588. All were seen very easily in a 12" scope.
+
+NGC 1027 OC Cas 02 43 29 +61 38 37 7.4 2010-01-13 06:50pm
+About 40 fairly bright to moderately bright stars within an area 20' wide, centered on a bright (mag 7) yellowish (?) star.
+
+NGC 869 (h Persei) OC Per 02 19 44 +57 10 49 4.3 2010-01-13 07:20pm
+Striking at low power, when nearby NGC 884 appears in the same field of view. Composed of 100+ bright stars scattered within a 8' wide area, with a few additional stars to the NW. Two very bright yellowish stars (mag 6.7 and 7.1) stand out near the center.
+
+NGC 884 (Chi Persei) OC Per 02 23 02 +57 11 18 4.4 2010-01-13 07:30pm
+Striking at low power, when nearby NGC 869 appears in the same field of view. Composed of 100+ bright stars scattered within an area 15' in diameter. A few orange stars can be spotted in and around the cluster, the most impressive of which is FZ Per (mag 8.0), located about 10' WNW of the cluster center region.
+
+NGC 1501 PN Cam 04 07 54 +60 57 07 12.0 2010-01-13 07:55pm
+Moderately bright and almost round, very slightly elongated E-W, about 1' in diameter. Very slightly darker in the center. The northern and southern portions of the rim appear very slightly brighter. Moderately faint (mag 14.4) central star easily visible when not using a narrowband filter. This nebula is also known as the (Blue) Oyster Nebula.
+
+NGC 1502 OC Cam 04 08 47 +62 21 46 4.1 2010-01-13 08:05pm
+Located at the southeast end of a popular asterism known as "Kemble's Cascade". About 40 moderately bright to very bright stars within an area roughly 7' in diameter, centered on a close pair of bright yellow stars (Struve 485)
+
+NGC 1535 (Cleopatra's Eye) PN Eri 04 14 45 -12 42 54 9.4 2010-01-13 08:45pm
+Bright, round, about 15" in diameter, surrounded by a fainter round envelope about 25" in diameter. The central star was easily seen when not using a UHC filter. The region just around the central star looks slightly darker, although this may be a visual artifact (a DSS image shows that it is indeed real). The nebula shows a very light tinge of blue at low magnifications.
+
+NGC 1664 OC Aur 04 51 52 +43 41 41 7.2 2010-01-13 09:10pm
+About 30 moderately bright stars within an area 10' in diameter. One of the stars (HN Aur) appears prominently red on photographs, but I did not notice it. Since it is a variable star, its redness may vary over time. Some people find that this cluster appears to draw the shape of a kite, which is why it is often nicknamed the "Kite Cluster". Others have seen the leaf of a clover (Walter Scott Houston). I personally see the shape of a heart. The string of stars to the SSE forms the string of a heart shaped helium balloon...
+
+NGC 1857 OC Aur 05 20 50 +39 21 19 8.4 2010-01-13 09:30pm
+About two dozen fairly faint to moderately bright stars scattered within an area 10' in diameter centered on a bright (mag 7.4) orange star.
+
+NGC 1245 OC Per 03 15 26 +47 16 42 7.7 2010-01-13 09:45pm
+Roughly 60 moderately faint stars spread fairly evenly over an 8' wide area, except for a couple of small regions nearly devoid of stars near the center of the cluster. Bright (mag 8) star about 5' SSE.
+
+NGC 1084 GX Eri 02 46 30 -07 32 13 11.2 2010-02-13 07:10pm
+2'x1' elongated NE-SW. Moderately bright. Fairly uniform, only marginally brighter in the center. Faint stellar nucleus.
+
+NGC 1055 GX Cet 02 42 17 +00 29 07 11.4 2010-02-13 07:30pm
+2.5' x 30" elongated WNW-ESE. Pretty faint. With careful examination, a large dust lane is detected, separating the large and much brighter southern region from the barely visible northern region of this edge-on spiral galaxy. Moderately bright field star 1' NNW. A few bright stars are visible in the same field of view of the 9mm Televue Nagler eyepiece.
+
+NGC 1407 GX Eri 03 40 40 -18 32 59 10.7 2010-02-13 07:45pm
+Round, about 1' in diameter, with a fairly bright stellar nucleus surrounded by a moderately bright core, about 15" in diameter, and a faint halo. NGC 1400 is located just 15' WSW. Uranometria shows a lot of galaxies in that area, none of them (except for NGC 1400) were detected due to poor conditions.
+
+NGC 1342 OC Per 03 32 18 +37 24 52 7.2 2010-02-13 08:00pm
+About 30 fairly bright to moderately bright stars scattered within an area 15' in diameter. The brightest stars seem to be arranged in chains, drawing a large "S".
+
+NGC 1513 OC Per 04 10 44 +49 32 44 8.9 2010-02-13 08:15pm
+About 40 moderately bright to faint stars within roughly 8', over a faint milky background of unresolved stars. A dozen stars, in the southern half of the cluster, form a loop around a moderately faint star, while the northern half contains a large void delimited to the north by a bright (mag 9.7) star.
+
+NGC 1528 OC Per 04 16 11 +51 14 40 6.4 2010-02-13 08:25pm
+Easily spotted in 9x50 finder scope. Composed of about 80 moderately bright to fairly bright stars scattered within an area 20' in diameter.
+
+NGC 1545 OC Per 04 21 44 +50 16 53 4.6 2010-02-13 08:35pm
+About 30 moderately bright to moderately faint stars loosely spread within an area 15' in diameter, centered on a bright double star, which SE component shows a fairly obvious orange color.
+
+NGC 1907 OC Aur 05 28 47 +35 20 07 10.2 2010-02-13 10:05pm
+Compact group of about 15 moderately bright stars within 2'. A few additional stars are scattered around, but may not be part of this cluster. Located just 30' S of M38, forming a nice couple visible in the same field of view of the 27mm Televue Panoptic.
+
+NGC 1931 OC Aur 05 32 07 +34 15 15 10.1 2010-02-13 10:15pm
+Very compact group of 5 moderately bright stars within 30", surrounded by some faint nebulosity 1.5' x 45" elongated WSW-ENE. The nebulosity did not respond well to the UHC filter, so I suspect it is a reflection nebula.
+
+NGC 2126 OC Aur 06 03 22 +49 52 08 10.2 2010-02-13 10:30pm
+About 25 moderately faint stars within an area 8' in diameter. Located just 4' SW of bright (mag 6) star (HD 40626), which does not appear to be a member of this cluster.
+
+NGC 2281 OC Aur 06 49 02 +41 04 04 7.2 2010-02-13 10:35pm
+30 fairly bright stars and a few more moderately bright stars scattered in an area 12' in diameter. The brighter stars are arranged in a large S-shaped chain.
+
+NGC 2335 OC Mon 07 07 19 -10 02 50 9.3 2010-03-10 07:20pm
+Barely visible in 9x50 finder scope using averted vision as a small and very pale smudge. This cluster is composed of about 25 moderately bright to moderately faint stars, plus a few fainter ones coming in and out of view, appearing within an area 10' in diameter. The brightest star (mag 9.5), located near the center of the cluster, appears slightly orange.
+
+NGC 2343 OC Mon 07 08 36 -10 38 10 7.5 2010-03-10 07:25pm
+Already noticeable in 9x50 finder scope. Contains about 20 moderately bright stars within 6'. There is a tight double (J2782A/B) in the center of the cluster. A pretty double, which brighter component, to the east, appears orange, grazes the eastern edge of the cluster.
+
+NGC 2353 OC Mon 07 15 00 -10 17 15 5.2 2010-03-10 07:35pm
+Barely visible in 9x50 finder scope. About 40 moderately bright to faint stars scattered within an area 12'x10' WNW-ESE. A very bright star (mag 6.0) is located at the SW boundary. Hipparcos data seems to show that the brighter stars in this cluster are superimposed field stars (the cluster supposedly being 3,600 ly away from us) which would explain the large brightness distribution.
+
+NGC 2422 (M 47) OC Pup 07 37 04 -14 30 35 4.3 2010-03-10 07:50pm
+Easily seen in 9x50 finder scope, along with nearby M46. Composed of about 80 bright to moderately faint stars scattered within 25'. Nice appparent double in the center, with components of similar brightness (mag 6.9 and 7.3). Small and faint cluster NGC 2425 spotted just 30' SE.
+
+NGC 2423 OC Pup 07 37 35 -13 53 53 7.0 2010-03-10 08:00pm
+Located about 1° N of much brighter M47. Composed of about 50 stars of similar magnitude scattered within an area 12' in diameter. Nice apparent double star near the center.
+
+NGC 2438 PN Pup 07 42 21 -14 45 34 11.0 2010-03-10 08:05pm
+This planetary nebula is embedded inside open cluster M46, providing a striking view at 95x. Fairly bright and round, about 1' in diameter. A moderately bright star is located  just 15" SE. At 217x, two faint superimposed stars can be seen, the brighter one being located 5" NW of the center, while the dimmer one is about 5" W of the center. Using a UHC filter, the nebula shows up as a ring. The marginally darker inner region is about 30" in diameter. The eastern portion of the rim seems slightly brighter.
+
+NGC 1444 OC Per 03 50 12 +52 41 36 6.4 2010-03-10 08:30pm
+A bright double star (Struve 446), which components are roughly E-W, separated by 15", the brighter component being to the E (mag 6.7 and 6.8) is at the heart of this very poor cluster. A line of 4 evenly spaced moderately faint stars starts about 1' NW and ends 1.5' W of the double star aforementioned. 6 additional faint stars can be spotted within an area 5' in diameter. This object is marked as a double star in Uranometria 2nd edition (?)
+
+NGC 2489 OC Pup 07 56 41 -30 05 42 9.3 2010-03-10 08:40pm
+This cluster is composed of about 3 dozen faint to moderately faint stars, fairly evenly scattered within an area 6' in diameter. The bright orange PX Pup is located just 25' S. Also, another cluster, named Haf 20, located about 30' S, was barely detected.
+
+NGC 2567 OC Pup 08 18 58 -30 40 35 8.4 2010-03-10 08:55pm
+Detected in 9x50 finder scope. This cluster is composed of about 3 dozen moderately faint stars scattered within an area 10'x5' WSW-ENE. 6 stars form a 5' long chain almost N-S located in the middle of the cluster.
+
+NGC 2571 OC Pup 08 19 22 -29 47 11 7.4 2010-03-10 09:00pm
+About 20 moderately bright to moderately faint stars scattered within an area 6'x3' WSW-ENE, surrounded by a ring almost devoid of stars about 4' thick.
+
+NGC 2627 OC Pyx 08 37 42 -29 59 42 8.4 2010-03-10 09:05pm
+About 2 dozen moderately faint stars over a milky background that seems to be composed of many faint stars, some of which coming in and out view as I looked around, within 6'. The southern edge of this cluster seems to be delimited by a region almost devoid of stars elongated E-W and 6' wide, with a few more stars just south of it.
+
+NGC 1961 GX Cam 05 43 15 +69 23 17 11.8 2010-03-13 07:30pm
+Moderately faint round core roughly 20" in diameter, surrounded by an extremely faint halo which I estimated to be 2'x1' E-W. Moderately faint (mag 13.9) superimposed star 30" SSE of the core.
+
+NGC 2403 GX Cam 07 37 53 +65 34 57 8.8 2010-03-13 07:45pm
+Easily spotted in 9x50 finder scope. Moderately bright core 1.5'x45" elongated NNE-SSW surrounded by a moderately faint halo 4'x3' elongated WNW-SSE showing some mottling. Very faint extensions seem to extend 6'x3.5' WNW-SSE when observed at low power using averted vision. The HII region NGC 2404 appears as a small round moderately bright knot about 1.5' ENE of the core. Many superimposed stars are visible.
+
+NGC 2251 OC Mon 06 35 12 +08 21 26 8.8 2010-03-13 08:05pm
+About 30 moderately bright to faint stars within an area roughly 10'x4' NNW-SSE. Just north of much larger but sparse open cluster Basel 8.
+
+NGC 2421 OC Pup 07 36 41 -20 38 18 9.0 2010-03-13 08:25pm
+Barely detected in 9x50 finder scope. About 25 moderately bright to faint stars within 6'. A double star (mag 10.8 and 11.7) is isolated near the center of the cluster. A few moderately bright stars to the south. Do they belong to this cluster?
+
+NGC 2440 PN Pup 07 42 24 -18 14 11 11.5 2010-03-13 08:35pm
+Appears very bright, small and slightly blue using direct vision at low power (95x). At high magnification (305x), faint extensions can be seen to extend 50"x30" elongated in the WSW-ENE direction. The core region is very bright, round, featureless, and measures about 25" in diameter.
+
+NGC 2479 OC Pup 07 55 35 -17 44 27 9.6 2010-03-13 08:50pm
+Appears as a very faint smudge in 9x50 finder scope. About 40 moderately bright stars within 10'.
+
+NGC 2482 OC Pup 07 55 39 -24 17 22 8.8 2010-03-13 08:55pm
+Seen in 9x50 finder scope. About 40 moderately bright stars scattered within 10'. Bright (mag 8.0) slightly yellow star about 8' WSW.
+
+NGC 2509 OC Pup 08 01 17 -19 05 02 9.3 2010-03-13 09:00pm
+Compact group of over 2 dozen moderately faint stars over a milky background. Dense V-shaped core. Loose subgroup about 3' E of the core. Best seen at 169x.
+
+NGC 2527 OC Pup 08 05 24 -28 10 49 8.3 2010-03-13 09:10pm
+Best seen at low power (57x) using the Panoptic 27mm. About 2 dozen moderately bright stars failry uniformly spread over an area roughly 8' in diameter.
+
+NGC 2613 GX Pyx 08 33 51 -23 00 44 11.1 2010-03-13 09:15pm
+Moderately faint core 45"x15" WNW-ESE surrounded by a fairly faint halo 4'x1' with the same orientation.
+
+NGC 2506 OC Mon 08 00 31 -10 48 05 8.9 2010-03-13 09:30pm
+Seen in 9x50 finder scope. About 2 dozen moderately bright to moderately faint stars within an area 10' in diameter over a background of faint stars too numerous to count.
+
+NGC 2539 OC Pup 08 11 07 -12 51 08 8.0 2010-03-13 09:35pm
+Seen in 9x50 finder scope. Located 10' NW of bright yellow 19 Pup. About 50 moderately bright stars scattered fairly uniformly within an area 12' in diameter.
+
+NGC 4216 GX Vir 12 16 27 +13 05 20 11.0 2010-03-13 10:50pm
+Small bright core surrounded by a moderately faint halo 7'x1' elongated SSW-NNE. Fairly faint (mag 13.7) superimposed star 45" ESE. Smaller and much dimmer NGC 4222 and 4206 were seen in the same field of view at 95x.
+
+NGC 4371 GX Vir 12 25 28 +11 38 36 11.8 2010-03-13 11:05pm
+Small (about 20") and pretty bright core slightly elongated E-W surrounded by a faint halo 2'x1.5' with the same orientation.
+
+NGC 4429 GX Vir 12 27 59 +11 02 48 11.0 2010-03-13 11:10pm
+Fairly bright core 45"x30" elongated E-W with a stellar nucleus, surrounded by a moderately faint halo 4'x1' with the same orientation. Located less than 2' SSW of a bright (mag 9.1) star.
+
+NGC 4435 GX Vir 12 28 13 +13 01 06 11.5 2010-03-13 11:20pm
+About 1' in diameter, slightly elongated N-S. Moderately bright stellar nucleus. Forms a pair called the "Eyes" with NGC 4438 located 5' SSE.
+
+NGC 4438 GX Vir 12 28 19 +12 56 53 10.9 2010-03-13 11:20pm
+Fairly bright core 45"x15" elongated NNE-SSW with a bright stellar nucleus. Halo is 3'x1' in the same direction. Forms a pair called the "Eyes" with NGC 4435 located 5' NNW.
+
+NGC 4478 GX Vir 12 30 50 +12 16 01 12.2 2010-03-13 11:40pm
+Fairly bright round core 30" in diameter. Slightly fainter halo extends roughly 1' in size. Located near M 87 and NGC 4476.
+
+NGC 4365 GX Vir 12 25 01 +07 15 24 10.5 2010-03-13 11:50pm
+Framed by 2 moderately bright field stars. Small (about 20") bright round core. Faint halo 3'x1' elongated NE-SW. Forms a nice pair with smaller and fainter NGC 436 located 5' NE.
+
+NGC 4261 GX Vir 12 19 56 +05 45 54 11.4 2010-03-14 12:00am
+Bright round core 45" in diameter. Faint halo 2'x1.5' elongated N-S. Nice field of view with NGC 4257, NGC 4264 and MCG 1-31-53.
+
+NGC 2655 GX Cam 08 57 03 +78 11 15 11.0 2010-04-06 09:00pm
+Fairly bright, about 1' in diameter, very slightly elongated E-W, moderately bright almost stellar nucleus.
+
+NGC 4636 GX Vir 12 43 23 +02 37 40 10.4 2010-04-07 12:25am
+Fairly bright round core 45" in diameter, surrounded by a faint diffuse halo slightly elongated N-S extending to about 2'.
+
+NGC 4643 GX Vir 12 43 54 +01 55 02 11.6 2010-04-07 12:30am
+Moderately faint halo 1.5'x45" elongated NW-SE with a prominent fairly bright round core 30" in diameter.
+
+NGC 4845 GX Vir 12 58 34 +01 30 59 12.1 2010-04-07 12:40am
+Moderately faint, 4'x1' elongated ENE-WSW, slightly brighter core 45"x15" with the same orientation. Faint superimposed star 30" E of the core.
+
+NGC 4900 GX Vir 13 01 12 +02 26 29 11.9 2010-04-07 12:50am
+Moderately faint, round, 1.5' in diameter, very slightly brighter stellar core. Bright superimposed star at the SE edge.
+
+NGC 4179 GX Vir 12 13 25 +01 14 19 11.8 2010-04-08 11:30pm
+Moderately bright, 2'x45" elongated NW-SE. Fairly bright round core 30" in diameter. Fairly faint superimposed star 45" NW.
+
+NGC 4303 (M 61) GX Vir 12 22 28 +04 24 50 10.2 2010-04-08 11:40pm
+Fairly bright round halo, 3' in diameter. Bright stellar nucleus. Fairly faint superimposed star 1.5' W of the nucleus. Attentive examination shows that the halo is of uneven brightness. A bar elongated NNE-SSW crosses the halo. The areas on either side of that bar are slightly darker. A spiral arm delimits the eastern edge of the halo, while another spiral arm starts at the southern tip of the bar and extends west toward the aforementioned superimposed star. A small knot is visible at the northern end of the bar as well. NGC 4303A and NGC 4392 appear in the same field of view.
+
+NGC 4273 GX Vir 12 20 29 +05 17 00 12.3 2010-04-08 11:55pm
+Moderately bright, 1.5'x1' elongated N-S, fairly uniform. Faint stellar nucleus. Forms a tight couple with NGC 4277. Part of an interesting group of 6 galaxies visible in the same field of view at medium magnification.
+
+NGC 4281 GX Vir 12 20 55 +05 19 33 12.3 2010-04-09 12:00am
+Fairly bright, 1'x30" elongated E-W, bright prominent core about 30" in diameter, bright stellar nucleus. Part of an interesting group of 6 galaxies visible in the same field of view at medium magnification.
+
+NGC 4527 GX Vir 12 34 42 +02 35 31 11.5 2010-04-09 12:05am
+Moderately faint halo, 4'x1' elongated ENE-WSW. Fairly bright core 45"x30" with the same orientation.
+
+NGC 4536 GX Vir 12 35 00 +02 07 43 11.1 2010-04-09 12:15am
+Fairly faint halow, 2'x1' elongated WNW-ESE. Moderately faint almost stellar nucleus. Two far flung spiral arms are barely visible using averted vision.
+
+NGC 4570 GX Vir 12 37 27 +07 11 09 11.7 2010-04-09 12:30am
+Moderately bright, 3'x1' elongated NNW-SSE. Fairly bright core 45" in diameter, fairly bright stellar nucleus.
+
+NGC 4596 GX Vir 12 40 29 +10 06 56 11.4 2010-04-09 12:35am
+Fairly bright, 2'x1' elongated E-W. The core measures 30". A few field stars are visible in the same field of view.
+
+NGC 4654 GX Vir 12 44 29 +13 03 59 11.5 2010-04-09 12:45am
+Fairly faint halo of uniform brightness, 4'x1.5' elongated WNW-ESE. Very slight broad concentration if the center.
+
+NGC 4660 GX Vir 12 45 05 +11 07 50 12.1 2010-04-09 12:50am
+Bright, compact, 1'x45" elongated E-W. Very bright small core.
+
+NGC 4450 GX Com 12 29 02 +17 01 33 10.8 2010-05-11 10:05pm
+Moderately faint halo, roughly 3'x1.5' elongated NNE-SSW, with a small bright core. The halo gives extremely subtle hints of mottling. Located just 4' ENE of a bright (mag 9.2) star.
+
+NGC 4442 GX Vir 12 28 37 +09 44 38 11.4 2010-05-11 10:20pm
+Faint halo, 3'x45" E-W. Bright core, 45"x30" E-W. Moderately bright (mag 14.9) superimposed star at the eastern tip of the halo. Moderately bright star about 45" SW of the core.
+
+NGC 4526 GX Vir 12 34 36 +07 38 22 10.6 2010-05-11 10:30pm
+Located between two very bright (mag. 6.8 and 7.0) field stars separated by about 15'. Faint halo estimated to be 4'x1' NW-SE using averted vision (photographs show that it extends even further). Bright core, about 1' in diameter, slightly elongated NW-SE. Moderately bright (mag. 13.2) about 1' SSW of the core.
+
+NGC 4535 (Lost Galaxy) GX Vir 12 34 53 +08 08 17 10.5 2010-05-11 10:40pm
+Dim oval glow, roughly 5'x3' NNE-SSW. Appears relatively uniform at low power. A few superimposed stars give the galaxy a "powdery" appearance. A small (< 1' diameter) core is barely visible, with a stellar nucleus. At higher magnification, dark patches in the halo are visible, but with great difficulty.
+
+NGC 4624 GX Vir 12 45 39 +02 59 46 11.5 2010-05-11 11:10pm
+Also known as NGC 4665. Moderately bright round core, 30" in diameter. Faint halo 1.5'x45" N-S. Moderately faint (mag. 15.2) star at the northern tip. Photographs show that what I refer to as the halo is actually a bar, and that this galaxy is a face on spiral.
+
+NGC 4698 GX Vir 12 48 56 +08 25 42 11.6 2010-05-11 11:30pm
+Faint halo, 2.5'x1' N-S, gradually brighter to a small and fairly bright round core and a stellar nucleus. Shares the field of view with several fairly bright field stars.
+
+NGC 4754 GX Vir 12 52 50 +11 15 19 11.5 2010-05-11 11:40pm
+Fairly bright, round, 1' diameter, stellar nucleus. This is just the core. The halo, visible on photographs, was not detected. NGC 4762 is located just 10' ESE.
+
+NGC 4762 GX Vir 12 53 29 +11 10 19 11.1 2010-05-11 11:45pm
+Beautiful edge-on galaxy, moderately bright, 5'x30" NE-SW, with a small bright core. A dust lane is visible on the SE side (Steve Gottlieb notes that the dust lane is along the W side?) This dust lane does not show on photographs I've seen of this object, most of which show the core overexposed. NGC 4754 is located just 10' WNW.
+
+NGC 4866 GX Vir 12 59 59 +14 06 45 12.0 2010-05-11 11:50pm
+Faint halo, 3'x45" E-W. Fairly bright round core, 30" diameter. Bright stellar nucleus. Moderately bright superimposed star about 1' WNW of the nucleus.
+
+NGC 5363 GX Vir 13 56 40 +05 12 05 11.1 2010-05-12 12:10am
+Faint diffuse halo surrounding a bright small core with a stellar nucleus or superimposed star that appears slightly offset to the WSW. Located 4' WSW of a bright field star (HD 121605)
+
+NGC 5364 GX Vir 13 56 45 +04 57 42 11.1 2010-05-12 12:20am
+Faint diffuse glow, about 4'x3' NE-SW. Small (< 1' diameter) round faint core seen at high magnification (217x). Two moderately faint stars delimit the halo's NW boundary. NGC 5360, located 10' WSW, is barely visible in the same field of view.
+
+NGC 5566 GX Vir 14 20 53 +03 53 01 11.4 2010-05-12 12:30am
+Small (30" diameter) round bright core, surrounded by a faint diffuse halo. Located between a moderately bright (mag. 12.0) and a moderately faint (mag. 14.3) field star. Forms a nice trio with NGC 5560 and very faint NGC 5569.
+
+NGC 5576 GX Vir 14 21 37 +03 13 15 11.8 2010-05-12 12:40am
+Fairly bright core, 45"x30" E-W. Faint diffuse halo, maybe 1.5'x1' E-W. Located just 1' SE of a moderately faint (mag. 13.4) field star. Forms a nice pair with NGC 5574, located just 3' SW. NGC 5577 can also be seen further north in the same field of view.
+
+NGC 5746 GX Vir 14 45 29 +01 54 30 11.4 2010-05-12 12:50am
+Beautiful edge-on galaxy, 6'x30" NNW-SSE, with a clearly visible central bulge about 1' diameter. A dust lane is visible along the E edge. A faint (mag. 14.7) superimposed star is visible about 3' SSE of the core.
+
+NGC 5846 GX Vir 15 07 03 +01 33 47 11.1 2010-05-12 01:00am
+Faint round halo, maybe 1.5' in diameter, gradually brighter to a fairly bright round core, 45" in diameter. Faint superimposed star 45" N. NGC 5846A is visible just 45" S, superimposed over the halo of NGC 5846. NGC 5850 is visible just 10' ESE.

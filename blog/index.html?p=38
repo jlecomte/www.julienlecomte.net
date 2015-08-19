@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>The Problem With innerHTML | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; The Problem With innerHTML Comments Feed" href="2007/12/38/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Adding Back Button and Bookmarking Support to Your DHTML Slide Show' href='index.html?p=37' />
+<link rel='next' title='High Performance Ajax Applications &#8211; Video Presentation' href='index.html?p=39' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html?p=38' />
+<link rel='shortlink' href='index.html?p=38' />
+	<link href="wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-38 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html?p=38#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../index.html">Home</a></li><li class="page_item page-item-36"><a href="index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-38" class="post-38 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">The Problem With innerHTML</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The <code>innerHTML</code> property is extremely popular because it provides a simple way to completely replace the contents of an HTML element. Another way to do that is to use the DOM Level 2 API (<code>removeChild</code>, <code>createElement</code>, <code>appendChild</code>) but using <code>innerHTML</code> is by far the easiest and most efficient way to modify the DOM tree. However, <code>innerHTML</code> has few problems of its own that you need to be aware of:</p>
+<ul>
+<li>Improper handling of the <code>innerHTML</code> property can enable script-injection attacks on Internet Explorer when the HTML string contains a script tag marked as deffered: <code>&#60;script defer&#62;...&#60;script&#62;</code></li>
+<li>Setting <code>innerHTML</code> will destroy existing HTML elements that have event handlers attached to them, potentially creating a memory leak on some browsers.</li>
+</ul>
+<p>There are a few other minor drawbacks worth mentioning:</p>
+<ul>
+<li>You don&#8217;t get back a reference to the element(s) you just created, forcing you to add code to retrieve those references manually (using the DOM APIs&hellip;)</li>
+<li>You can&#8217;t set the <code>innerHTML</code> property on all HTML elements on all browsers (for instance, Internet Explorer won&#8217;t let you set the <code>innerHTML</code> property of a table row element)</li>
+</ul>
+<p>I am more concerned with the security and memory issues associated with using the <code>innerHTML</code> property. Obviously, this problem is nothing new, and very bright people have already figured out ways to work around some of these problems.</p>
+<p><a href="http://www.crockford.com/" target="_blank">Douglas Crockford</a> wrote a <a href="http://www.crockford.com/javascript/memory/leak.html" target="_blank"><code>purge</code></a> function that takes care of breaking some circular references caused by attaching event handlers to HTML elements, allowing the garbage collector to release all the memory associated with these HTML elements.</p>
+<p>Removing the script tags from the HTML string is not as easy as it seems. A regular expression should do the trick, although it&#8217;s hard to know whether it covers all possible cases. Here is the one I came up with:</p>
+<pre>
+/&#60;script[^&#62;]*&#62;[\S\s]*?&#60;\/script[^&#62;]*&#62;/ig
+</pre>
+<p>Now, let&#8217;s put these two techniques together in a single <code>setInnerHTML</code> function (<strong>Update:</strong> Thanks to those who commented on this article. I fixed the errors/holes you mentioned, and also decided to bind the <code>setInnerHTML</code> function to <code>YAHOO.util.Dom</code>)</p>
+<pre class="prettyprint">
+YAHOO.util.Dom.setInnerHTML = function (el, html) {
+    el = YAHOO.util.Dom.get(el);
+    if (!el || typeof html !== 'string') {
+        return null;
+    }
+
+    // Break circular references.
+    (function (o) {
+
+        var a = o.attributes, i, l, n, c;
+        if (a) {
+            l = a.length;
+            for (i = 0; i < l; i += 1) {
+                n = a[i].name;
+                if (typeof o[n] === 'function') {
+                    o[n] = null;
+                }
+            }
+        }
+
+        a = o.childNodes;
+
+        if (a) {
+            l = a.length;
+            for (i = 0; i < l; i += 1) {
+                c = o.childNodes[i];
+
+                // Purge child nodes.
+                arguments.callee(c);
+
+                // Removes all listeners attached to the element via YUI's addListener.
+                YAHOO.util.Event.purgeElement(c);
+            }
+        }
+
+    })(el);
+
+    // Remove scripts from HTML string, and set innerHTML property
+    el.innerHTML = html.replace(/&#60;script[^&#62;]*&#62;[\S\s]*?&#60;\/script[^&#62;]*&#62;/ig, "");
+
+    // Return a reference to the first child
+    return el.firstChild;
+};
+</pre>
+<p>Voila! Let me know if there is anything else that should be part of this function, or if I missed anything obvious in the regular expression.</p>
+<p><strong>Update:</strong> There are obviously many more ways to inject malicious code in a web page. The <code>setInnerHTML</code> function barely normalizes the <code>&#60;script&#62;</code> tag execution behavior across all A-grade browsers. If you are going to inject HTML code that cannot be trusted, make sure you sanitize it first on the server side. There are many libraries available for this.</p>
+<p><strong>Update:</strong> IE8 has a new <code>toStaticHTML</code> function attached to the window object that removes any potentially executable content from an HTML string!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="category/web-development/index.html" rel="category tag">Web Development</a> on <a href="index.html?p=38" title="6:24 pm" rel="bookmark"><time class="entry-date" datetime="2007-12-12T18:24:15+00:00">December 12, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="index.html?p=37" rel="prev"><span class="meta-nav">&larr;</span> Adding Back Button and Bookmarking Support to Your DHTML Slide Show</a></span>
+					<span class="nav-next"><a href="index.html?p=39" rel="next">High Performance Ajax Applications &#8211; Video Presentation <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			30 thoughts on &ldquo;<span>The Problem With innerHTML</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-948">
+		<article id="comment-948" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/b19d6aa06d47df54626f27c28ceab095?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b19d6aa06d47df54626f27c28ceab095?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.akmattie.net' rel='external nofollow' class='url'>Andrew Mattie</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-948"><time datetime="2007-12-13T00:41:50+00:00">December 13, 2007 at 12:41 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Forgive me for asking what might seem like a dumb question, but what&#8217;s the point of replacing script tags in the innerHTML? If you had to replace script tags, it would mean that you couldn&#8217;t trust it to be free of XSS attacks (which is certainly a valid concern). However, if the code wasn&#8217;t trustworthy, couldn&#8217;t someone just set the innerHTML to something like &#8221;? Or, better yet, the innerHTML could be something like &#8221;</p>
+<p>Additionally, it seems that your regex may have a slight flaw in it. A (.) in JS&#8217;s regex parser doesn&#8217;t match a \n, so if I throw in at least one of those into my evil script, I can get stuff through the regex. Just as a check, I threw up a quick test page to see what happens w/ that regex and some \n chars: <a href="http://www.akmattie.net/blog/testing/regex-script-replacement.html" rel="nofollow">http://www.akmattie.net/blog/testing/regex-script-replacement.html</a>. I think a better solution might be to use /]*&gt;(.|\n)*/g or /]*&gt;(.|\n)*?/g (depending on your preference for greedy vs lazy in case the evil person tries to throw in a \n//\n into the attempted XSS attack).</p>
+<p>Anyway, am I seeing that correctly?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-956">
+		<article id="comment-956" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Anonymous for the time being</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-956"><time datetime="2007-12-13T04:10:50+00:00">December 13, 2007 at 4:10 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Regarding the regular expression for scripts &#8211; how about ingoring case with «i» modifier and detecting unclosed script tags? And what is «\\?» for? «»?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-957">
+		<article id="comment-957" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Anonymous for the time being</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-957"><time datetime="2007-12-13T04:13:05+00:00">December 13, 2007 at 4:13 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Your blog broke my code :&gt; The last was similar to «»</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-958">
+		<article id="comment-958" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Anonymous for the time being</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-958"><time datetime="2007-12-13T04:14:58+00:00">December 13, 2007 at 4:14 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Argh it even doesn&#8217;t allow me to post ending script tag with zero-width joiners between every letter. I&#8217;ll try with a space: «».</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-959">
+		<article id="comment-959" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Anonymous for the time being</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-959"><time datetime="2007-12-13T04:17:08+00:00">December 13, 2007 at 4:17 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That doesn&#8217;t work either. Well, mayble like that «&lt;\/script&gt;»</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-965">
+		<p>Pingback: <a href='http://www.davidbisset.com/2007/12/13/the-problem-with-innerhtml/' rel='external nofollow' class='url'>The Problem With innerHTML | David Bisset: Web Designer, Coder, Wordpress Guru</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-966">
+		<article id="comment-966" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/00809b14f856d33156329188a5b6ecdc?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/00809b14f856d33156329188a5b6ecdc?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.robertnyman.com' rel='external nofollow' class='url'>Robert Nyman</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-966"><time datetime="2007-12-13T05:20:13+00:00">December 13, 2007 at 5:20 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good to see that you acknowledge that, in real-life scenarios, <code>innerHTML</code> is sometimes the best approach (especially with certain AJAX scenarios). Douglas solution is great, and nice with your addition.</p>
+<p>I can&#8217;t help of being wary of using a variable named html, though. Seems like a perfect scenario where IE would get a messed up reference in certain cases&#8230; :-)</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-987">
+		<article id="comment-987" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/dfa0efb1461fe8dc1faf88a2af553b5d?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/dfa0efb1461fe8dc1faf88a2af553b5d?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">tony</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-987"><time datetime="2007-12-13T08:01:16+00:00">December 13, 2007 at 8:01 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Although a great idea, the code still references Douglas&#8217; purge function (which in your example) is not included.</p>
+<p>I too wonder about the script stuff&#8230;.</p>
+<p>a.) As long as I am not exposing my method to other 3rd parties to use, then I don&#8217;t see the worry.<br />
+b.) as mentioned by others, it should be a case insensitive regex<br />
+c.) since I may want to insert script tags (quite likely), what I would rather have, is a regex to remove the defer attribute!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1014">
+		<article id="comment-1014" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/ea077fdc95c2959ca28b052853b4175e?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ea077fdc95c2959ca28b052853b4175e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.nczonline.net/' rel='external nofollow' class='url'>Nicholas C. Zakas</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1014"><time datetime="2007-12-13T12:12:58+00:00">December 13, 2007 at 12:12 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Doug&#8217;s purge method works only when you&#8217;ve attached event handlers directly to the element, via element.onclick, etc. If you attach events using attachEvent(), the circular references remain and there&#8217;s no way to know that the event handlers are still attached before changing innerHTML.</p>
+<p>Another problem with innerHTML is that it doesn&#8217;t stay true to the string you&#8217;ve used. It will change tag case, add/remove attributes, etc., meaning that you can&#8217;t necessarily test innerHTML to see if it contains the text you had previous set it to.</p>
+<p>Conclusion: innerHTML is nifty but far from perfect. :)</p>
+<p>P.S. Looks like you&#8217;ve got some spam comments.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1017">
+		<article id="comment-1017" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/12/38/comment-page-1/index.html#comment-1017"><time datetime="2007-12-13T12:19:25+00:00">December 13, 2007 at 12:19 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Nicholas</p>
+<p>Indeed, I forgot to mention that important point. I would like to see something similar to setInnerHTML as part of the YUI library. That way, events attached using the DOM Level 2 API could be automatically removed. Your second point is less of an issue for most uses of the innerHTML property.</p>
+<p>I don&#8217;t see any spam comments.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1020">
+		<article id="comment-1020" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/12/38/comment-page-1/index.html#comment-1020"><time datetime="2007-12-13T12:37:55+00:00">December 13, 2007 at 12:37 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Nicholas</p>
+<p>I updated the post to take your remark into account and fix some stupid bugs I had left out.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1135">
+		<article id="comment-1135" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/bb453eedf62f470d274ec24f3c3bf5c7?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/bb453eedf62f470d274ec24f3c3bf5c7?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.p01.org' rel='external nofollow' class='url'>Mathieu 'p01' Henri</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1135"><time datetime="2007-12-14T05:52:47+00:00">December 14, 2007 at 5:52 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Script tags are just one out of many ways to inject malicious code. Stripping only the script tag is sub par. You must also be careful of IFRAMEs, OBJECT, EMBED, IMG … and even some attributes ( some browsers still allow script execution in style=”background:url(javascript:…);”.</p>
+<p>The only way to sanitize properly markup to be injected is to use a whitelist of tags and attributes … or simply don&#8217;t inject markup using innerHTML.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-1146">
+		<p>Pingback: <a href='http://www.javascriptnews.com/javascript/the-problem-with-innerhtml.html' rel='external nofollow' class='url'>Javascript News &raquo; Blog Archive &raquo; The problem with innerHTML</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-1147">
+		<p>Pingback: <a href='http://outatime.wordpress.com/2007/12/14/the-problem-with-innerhtml/' rel='external nofollow' class='url'>The problem with innerHTML &laquo; outaTiME</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-1164">
+		<p>Pingback: <a href='http://www.ajaxgirl.com/2007/12/14/the-problem-with-innerhtml/' rel='external nofollow' class='url'>Ajax Girl &raquo; Blog Archive &raquo; The problem with innerHTML</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1165">
+		<article id="comment-1165" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/12/38/comment-page-1/index.html#comment-1165"><time datetime="2007-12-14T08:43:02+00:00">December 14, 2007 at 8:43 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Mathieu</p>
+<p>I could not agree more. The <code>setInnerHTML</code> function barely normalizes the script tag execution behavior across all A-grade browsers.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-1167">
+		<p>Pingback: <a href='http://www.elwebmaster.com/articulos/el-problema-con-innerhtml' rel='external nofollow' class='url'>Julien Lecomte de Yahoo! nos cuenta los problemas de innerHTML - elWebmaster.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1181">
+		<article id="comment-1181" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/1ab853c1c58bd3582ab2903f28403af8?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ab853c1c58bd3582ab2903f28403af8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Dylan Oudyk</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1181"><time datetime="2007-12-14T11:00:42+00:00">December 14, 2007 at 11:00 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice article, now I won&#8217;t feel so dirty using innerHTML as much as I do.  Regarding Nicholas&#8217; comment couldn&#8217;t you use YUI&#8217;s YAHOO.util.Event.purgeElement method to remove the event handlers set with attachEvent (or would that only be for those set with the Event utility).  Either way it&#8217;s a nice solution but will definitely be a task to forge a silver bullet to solve all scenarios.</p>
+<p>thanks again,</p>
+<p>Dylan</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1270">
+		<article id="comment-1270" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/715cee0cd10e93496c433f7db3e370fc?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/715cee0cd10e93496c433f7db3e370fc?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://skypoetsworld.blogspot.com' rel='external nofollow' class='url'>Oliver Tse</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1270"><time datetime="2007-12-15T00:11:13+00:00">December 15, 2007 at 12:11 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>To Nicholas&#8217; point, you break circular references differently with DOM 0 events ( ex. inline onclick events, etc. ) than with DOM 2 events ( ex. attachEvent, addEventListener ).</p>
+<p>So, to be effective, you need a way to do both.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1287">
+		<article id="comment-1287" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/33c98be4ac63c00c5443125d1220fd93?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/33c98be4ac63c00c5443125d1220fd93?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Kyle Butt</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1287"><time datetime="2007-12-15T19:40:59+00:00">December 15, 2007 at 7:40 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Another Caveat with innerHTML. Internet Explorer normalizes all the space when inserting into innerHTML. Including a pre-tag. I ran into this with an app I wrote that processed xml using xslt, and inserted the results into the tree. The xslt preserved space, and went back and changed \n to &#8216;s after the fact, but that didn&#8217;t work in IE.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1305">
+		<article id="comment-1305" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/16a3d0fd9b0af26bbea094b64a52cea6?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/16a3d0fd9b0af26bbea094b64a52cea6?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Miguel Ventura</b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1305"><time datetime="2007-12-16T15:48:27+00:00">December 16, 2007 at 3:48 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There isn&#8217;t really much use on using regex to filter  tags. Regex aren&#8217;t powerful enough on their own, without grammars (&lt;a title=&#8221;x&#8221;&gt;bbb&lt;a title=&#8221;&#8221;&gt; kind of stuff would filter too much) and therefore you can always get around it. Try filtering something like</p>
+<p>html = &#8220;&lt;scrivoid(0);pt defer=\&#8221;true\&#8221;&gt;alert(&#8216;foo&#8217;);&#8221;</p>
+<p>So there&#8217;s no real security benefit. Filtering scripts before adding them to any DOM structure (even one that doesn&#8217;t belong to the document tree) won&#8217;t be an easy job&#8230;</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-1314">
+		<p>Pingback: <a href='http://blog.mhavila.com.br/2007/12/16/284/' rel='external nofollow' class='url'>Blog do Márcio d&#8217;Ávila</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1369">
+		<article id="comment-1369" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e1ce350b6bceabb10c1a2fbeb887ef2d?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e1ce350b6bceabb10c1a2fbeb887ef2d?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://blog.stevenlevithan.com/' rel='external nofollow' class='url'>Steven Levithan</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1369"><time datetime="2007-12-17T18:53:43+00:00">December 17, 2007 at 6:53 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p><code>/&lt;script[^&gt;]*&gt;((.|[\r\n])*?)&lt;\\?\/script&gt;/ig</code></p>
+<p>&#8230;should be:</p>
+<p><code>/&lt;script[^&gt;]*&gt;[\S\s]*?&lt;\/script&gt;/ig</code></p>
+<p>For one, it&#8217;s more readable, and secondly it&#8217;s much more efficient. If you want to also match self-closed script elements you could use:</p>
+<p><code>/&lt;script[^&gt;]*(?:\/&gt;|&gt;[\S\s]*?&lt;\/script&gt;)/ig</code></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1370">
+		<article id="comment-1370" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e1ce350b6bceabb10c1a2fbeb887ef2d?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e1ce350b6bceabb10c1a2fbeb887ef2d?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://blog.stevenlevithan.com/' rel='external nofollow' class='url'>Steven Levithan</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1370"><time datetime="2007-12-17T18:59:24+00:00">December 17, 2007 at 6:59 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>One more security hole to plug is &lt;/script&gt; tags with whitespace or other attributes, which I believe browsers allow (at least whitespace). So you could modify the last regex to /&lt;script[^&gt;]*(?:\/&gt;|&gt;[\S\s]*?&lt;\/script[^&gt;]*&gt;)/ig</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1372">
+		<article id="comment-1372" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2007/12/38/comment-page-1/index.html#comment-1372"><time datetime="2007-12-17T19:17:48+00:00">December 17, 2007 at 7:17 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Steven</p>
+<p>Thanks. You&#8217;re absolutely right!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1398">
+		<article id="comment-1398" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/0097f17eac1ef4ce26b798418f50f059?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/0097f17eac1ef4ce26b798418f50f059?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://jasu00.awardspace.com' rel='external nofollow' class='url'>Amit Jaiswal</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1398"><time datetime="2007-12-18T04:54:48+00:00">December 18, 2007 at 4:54 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What I have noticed while using innerHTML is that if I create a select box through innerHTML in a DIV which is in a form and then I submit the for the select box is not captured in request(JAVA) in case of Firefox but gets captured in case of IE.<br />
+Is this due to<br />
+&#8220;You don’t get back a reference to the element(s) you just created, forcing you to add code to retrieve those references manually (using the DOM APIs…)&#8221;</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1604">
+		<article id="comment-1604" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/102d792cb76e0ad78cdaf06e2069b969?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/102d792cb76e0ad78cdaf06e2069b969?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.phpcow.com' rel='external nofollow' class='url'>Joseph</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1604"><time datetime="2007-12-21T02:40:10+00:00">December 21, 2007 at 2:40 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Really nice article Julien!</p>
+<p>but, simple using innerHTML is not enough, especially it is problematic with html form elements, &#8220;table&#8221; and &#8220;option&#8221; elements.</p>
+<p>I think your code needs some improvements to fix all noted problems with various tags. see code below:</p>
+<p><code><br />
+wrapper = document.createElement('div');</p>
+<p>if (/^t(body|foot|head)$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '' + html + '';<br />
+	wrapper = wrapper.getElementsByTagName('tbody')[0];<br />
+} else if (/^select$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '' + html + '';<br />
+	wrapper = wrapper.getElementsByTagName('select')[0];<br />
+} else {<br />
+	wrapper.innerHTML = html;<br />
+}</p>
+<p>while(wrapper.firstChild) {<br />
+	el.appendChild(wrapper.firstChild);<br />
+}<br />
+</code></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1606">
+		<article id="comment-1606" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/102d792cb76e0ad78cdaf06e2069b969?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/102d792cb76e0ad78cdaf06e2069b969?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.phpcow.com' rel='external nofollow' class='url'>Joseph</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-1606"><time datetime="2007-12-21T02:43:26+00:00">December 21, 2007 at 2:43 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m sorry, code was posted incorrectly:</p>
+<p><code></p>
+<p>wrapper = document.createElement('div');</p>
+<p>if (/^t(body|foot|head)$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '&lt;table&gt;' + html + '&lt;/table&gt;';<br />
+	wrapper = wrapper.getElementsByTagName('tbody')[0];<br />
+} else if (/^select$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '&lt;select name="tmp"&gt;' + html + '&lt;/select&gt;';<br />
+	wrapper = wrapper.getElementsByTagName('select')[0];<br />
+} else {<br />
+	wrapper.innerHTML = html;<br />
+}</p>
+<p>while(wrapper.firstChild) {<br />
+	el.appendChild(wrapper.firstChild);<br />
+}</p>
+<p></code></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2167">
+		<article id="comment-2167" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/5ff55c2ef7b29ee0acd56c80d79b38c8?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5ff55c2ef7b29ee0acd56c80d79b38c8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://blog.phpbuero.de/' rel='external nofollow' class='url'>Frank Thuerigen</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-2167"><time datetime="2007-12-24T16:21:34+00:00">December 24, 2007 at 4:21 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Joseph,</p>
+<p>if you have too many table or select/option entries &#8211; recreate the whole table or select. If it is still too many, your app has a faulty design anyway, since bloated selects are not user-friendly and max column tables should be replaced by an optimized design as well.</p>
+<p>my $0.02 of course.</p>
+<p>Merry Christmas time everybody,</p>
+<p>Frankie / Berlin / Germany</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2169">
+		<article id="comment-2169" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/5ff55c2ef7b29ee0acd56c80d79b38c8?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5ff55c2ef7b29ee0acd56c80d79b38c8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://blog.phpbuero.de/' rel='external nofollow' class='url'>Frank Thuerigen</a></b> </cite><a href="2007/12/38/comment-page-1/index.html#comment-2169"><time datetime="2007-12-24T16:22:47+00:00">December 24, 2007 at 4:22 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&#8230; max row tables, of course. Sry.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

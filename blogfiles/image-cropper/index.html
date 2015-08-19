@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Image cropper</title>
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="image-cropper.css"/>
+    <style>
+
+body { padding:1em; }
+
+    </style>
+  </head>
+  <body>
+    <img src="image.jpg" id="myImage">
+
+    <script src="yahoo-dom-event.js"></script>
+    <script src="dragdrop-min.js"></script>
+    <script src="image-cropper-min.js"></script>
+    <script>
+
+new YAHOO.widget.ImageCropper( "myImage" );
+
+    </script>
+  </body>
+</html>

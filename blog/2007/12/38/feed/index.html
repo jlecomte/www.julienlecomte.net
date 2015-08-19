@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: The Problem With innerHTML</title>
+	<atom:link href="http://www.julienlecomte.net/blog/2007/12/38/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.julienlecomte.net/blog/2007/12/38/</link>
+	<description>Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</description>
+	<lastBuildDate>Tue, 01 Oct 2013 13:34:59 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.3</generator>
+	<item>
+		<title>By: Frank Thuerigen</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-2169</link>
+		<dc:creator><![CDATA[Frank Thuerigen]]></dc:creator>
+		<pubDate>Mon, 24 Dec 2007 23:22:47 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-2169</guid>
+		<description><![CDATA[... max row tables, of course. Sry.]]></description>
+		<content:encoded><![CDATA[<p>&#8230; max row tables, of course. Sry.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Frank Thuerigen</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-2167</link>
+		<dc:creator><![CDATA[Frank Thuerigen]]></dc:creator>
+		<pubDate>Mon, 24 Dec 2007 23:21:34 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-2167</guid>
+		<description><![CDATA[@Joseph,
+
+if you have too many table or select/option entries - recreate the whole table or select. If it is still too many, your app has a faulty design anyway, since bloated selects are not user-friendly and max column tables should be replaced by an optimized design as well.
+
+my $0.02 of course.
+
+Merry Christmas time everybody,
+
+Frankie / Berlin / Germany]]></description>
+		<content:encoded><![CDATA[<p>@Joseph,</p>
+<p>if you have too many table or select/option entries &#8211; recreate the whole table or select. If it is still too many, your app has a faulty design anyway, since bloated selects are not user-friendly and max column tables should be replaced by an optimized design as well.</p>
+<p>my $0.02 of course.</p>
+<p>Merry Christmas time everybody,</p>
+<p>Frankie / Berlin / Germany</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Joseph</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1606</link>
+		<dc:creator><![CDATA[Joseph]]></dc:creator>
+		<pubDate>Fri, 21 Dec 2007 09:43:26 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1606</guid>
+		<description><![CDATA[I&#039;m sorry, code was posted incorrectly:
+
+&lt;code&gt;
+
+
+wrapper = document.createElement(&#039;div&#039;);
+
+if (/^t(body&#124;foot&#124;head)$/i.test(el.tagName)) {
+	wrapper.innerHTML = &#039;&#060;table&#062;&#039; + html + &#039;&#060;/table&#062;&#039;;
+	wrapper = wrapper.getElementsByTagName(&#039;tbody&#039;)[0];
+} else if (/^select$/i.test(el.tagName)) {
+	wrapper.innerHTML = &#039;&#060;select name=&quot;tmp&quot;&#062;&#039; + html + &#039;&#060;/select&#062;&#039;;
+	wrapper = wrapper.getElementsByTagName(&#039;select&#039;)[0];				
+} else {
+	wrapper.innerHTML = html;
+}
+
+while(wrapper.firstChild) {
+	el.appendChild(wrapper.firstChild);
+}
+
+&lt;/code&gt;]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m sorry, code was posted incorrectly:</p>
+<p><code></p>
+<p>wrapper = document.createElement('div');</p>
+<p>if (/^t(body|foot|head)$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '&lt;table&gt;' + html + '&lt;/table&gt;';<br />
+	wrapper = wrapper.getElementsByTagName('tbody')[0];<br />
+} else if (/^select$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '&lt;select name="tmp"&gt;' + html + '&lt;/select&gt;';<br />
+	wrapper = wrapper.getElementsByTagName('select')[0];<br />
+} else {<br />
+	wrapper.innerHTML = html;<br />
+}</p>
+<p>while(wrapper.firstChild) {<br />
+	el.appendChild(wrapper.firstChild);<br />
+}</p>
+<p></code></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Joseph</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1604</link>
+		<dc:creator><![CDATA[Joseph]]></dc:creator>
+		<pubDate>Fri, 21 Dec 2007 09:40:10 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1604</guid>
+		<description><![CDATA[Really nice article Julien!
+
+but, simple using innerHTML is not enough, especially it is problematic with html form elements, &quot;table&quot; and &quot;option&quot; elements.
+
+I think your code needs some improvements to fix all noted problems with various tags. see code below:
+
+&lt;code&gt;
+wrapper = document.createElement(&#039;div&#039;);
+
+if (/^t(body&#124;foot&#124;head)$/i.test(el.tagName)) {
+	wrapper.innerHTML = &#039;&#039; + html + &#039;&#039;;
+	wrapper = wrapper.getElementsByTagName(&#039;tbody&#039;)[0];
+} else if (/^select$/i.test(el.tagName)) {
+	wrapper.innerHTML = &#039;&#039; + html + &#039;&#039;;
+	wrapper = wrapper.getElementsByTagName(&#039;select&#039;)[0];				
+} else {
+	wrapper.innerHTML = html;
+}
+
+while(wrapper.firstChild) {
+	el.appendChild(wrapper.firstChild);
+}
+&lt;/code&gt;]]></description>
+		<content:encoded><![CDATA[<p>Really nice article Julien!</p>
+<p>but, simple using innerHTML is not enough, especially it is problematic with html form elements, &#8220;table&#8221; and &#8220;option&#8221; elements.</p>
+<p>I think your code needs some improvements to fix all noted problems with various tags. see code below:</p>
+<p><code><br />
+wrapper = document.createElement('div');</p>
+<p>if (/^t(body|foot|head)$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '' + html + '';<br />
+	wrapper = wrapper.getElementsByTagName('tbody')[0];<br />
+} else if (/^select$/i.test(el.tagName)) {<br />
+	wrapper.innerHTML = '' + html + '';<br />
+	wrapper = wrapper.getElementsByTagName('select')[0];<br />
+} else {<br />
+	wrapper.innerHTML = html;<br />
+}</p>
+<p>while(wrapper.firstChild) {<br />
+	el.appendChild(wrapper.firstChild);<br />
+}<br />
+</code></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Amit Jaiswal</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1398</link>
+		<dc:creator><![CDATA[Amit Jaiswal]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2007 11:54:48 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1398</guid>
+		<description><![CDATA[What I have noticed while using innerHTML is that if I create a select box through innerHTML in a DIV which is in a form and then I submit the for the select box is not captured in request(JAVA) in case of Firefox but gets captured in case of IE. 
+Is this due to 
+&quot;You don’t get back a reference to the element(s) you just created, forcing you to add code to retrieve those references manually (using the DOM APIs…)&quot;]]></description>
+		<content:encoded><![CDATA[<p>What I have noticed while using innerHTML is that if I create a select box through innerHTML in a DIV which is in a form and then I submit the for the select box is not captured in request(JAVA) in case of Firefox but gets captured in case of IE.<br />
+Is this due to<br />
+&#8220;You don’t get back a reference to the element(s) you just created, forcing you to add code to retrieve those references manually (using the DOM APIs…)&#8221;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1372</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2007 02:17:48 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1372</guid>
+		<description><![CDATA[@Steven
+
+Thanks. You&#039;re absolutely right!]]></description>
+		<content:encoded><![CDATA[<p>@Steven</p>
+<p>Thanks. You&#8217;re absolutely right!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Steven Levithan</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1370</link>
+		<dc:creator><![CDATA[Steven Levithan]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2007 01:59:24 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1370</guid>
+		<description><![CDATA[One more security hole to plug is &#060;/script&#062; tags with whitespace or other attributes, which I believe browsers allow (at least whitespace). So you could modify the last regex to /&#060;script[^&#062;]*(?:\/&#062;&#124;&#062;[\S\s]*?&#060;\/script[^&#062;]*&#062;)/ig]]></description>
+		<content:encoded><![CDATA[<p>One more security hole to plug is &lt;/script&gt; tags with whitespace or other attributes, which I believe browsers allow (at least whitespace). So you could modify the last regex to /&lt;script[^&gt;]*(?:\/&gt;|&gt;[\S\s]*?&lt;\/script[^&gt;]*&gt;)/ig</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Steven Levithan</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1369</link>
+		<dc:creator><![CDATA[Steven Levithan]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2007 01:53:43 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1369</guid>
+		<description><![CDATA[&lt;code&gt;/&#060;script[^&#062;]*&#062;((.&#124;[\r\n])*?)&#060;\\?\/script&#062;/ig&lt;/code&gt;
+
+...should be:
+
+&lt;code&gt;/&#060;script[^&#062;]*&#062;[\S\s]*?&#060;\/script&#062;/ig&lt;/code&gt;
+
+For one, it&#039;s more readable, and secondly it&#039;s much more efficient. If you want to also match self-closed script elements you could use:
+
+&lt;code&gt;/&#060;script[^&#062;]*(?:\/&#062;&#124;&#062;[\S\s]*?&#060;\/script&#062;)/ig&lt;/code&gt;]]></description>
+		<content:encoded><![CDATA[<p><code>/&lt;script[^&gt;]*&gt;((.|[\r\n])*?)&lt;\\?\/script&gt;/ig</code></p>
+<p>&#8230;should be:</p>
+<p><code>/&lt;script[^&gt;]*&gt;[\S\s]*?&lt;\/script&gt;/ig</code></p>
+<p>For one, it&#8217;s more readable, and secondly it&#8217;s much more efficient. If you want to also match self-closed script elements you could use:</p>
+<p><code>/&lt;script[^&gt;]*(?:\/&gt;|&gt;[\S\s]*?&lt;\/script&gt;)/ig</code></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Blog do Márcio d&#8217;Ávila</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1314</link>
+		<dc:creator><![CDATA[Blog do Márcio d&#8217;Ávila]]></dc:creator>
+		<pubDate>Mon, 17 Dec 2007 02:18:38 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1314</guid>
+		<description><![CDATA[[...] na programação de páginas web, vale a pena The Problem With innerHTML, por Julien Lecomte, [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] na programação de páginas web, vale a pena The Problem With innerHTML, por Julien Lecomte, [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Miguel Ventura</title>
+		<link>http://www.julienlecomte.net/blog/2007/12/38/comment-page-1/#comment-1305</link>
+		<dc:creator><![CDATA[Miguel Ventura]]></dc:creator>
+		<pubDate>Sun, 16 Dec 2007 22:48:27 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/12/38/#comment-1305</guid>
+		<description><![CDATA[There isn&#039;t really much use on using regex to filter  tags. Regex aren&#039;t powerful enough on their own, without grammars (&#060;a title=&quot;x&quot;&#062;bbb&#060;a title=&quot;&quot;&#062; kind of stuff would filter too much) and therefore you can always get around it. Try filtering something like
+
+html = &quot;&#060;scrivoid(0);pt defer=\&quot;true\&quot;&#062;alert(&#039;foo&#039;);&quot;
+
+So there&#039;s no real security benefit. Filtering scripts before adding them to any DOM structure (even one that doesn&#039;t belong to the document tree) won&#039;t be an easy job...]]></description>
+		<content:encoded><![CDATA[<p>There isn&#8217;t really much use on using regex to filter  tags. Regex aren&#8217;t powerful enough on their own, without grammars (&lt;a title=&#8221;x&#8221;&gt;bbb&lt;a title=&#8221;&#8221;&gt; kind of stuff would filter too much) and therefore you can always get around it. Try filtering something like</p>
+<p>html = &#8220;&lt;scrivoid(0);pt defer=\&#8221;true\&#8221;&gt;alert(&#8216;foo&#8217;);&#8221;</p>
+<p>So there&#8217;s no real security benefit. Filtering scripts before adding them to any DOM structure (even one that doesn&#8217;t belong to the document tree) won&#8217;t be an easy job&#8230;</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

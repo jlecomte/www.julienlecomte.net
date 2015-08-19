@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Introducing CrossFrame, a Safe Communication Mechanism Across Documents and Across Domains | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Introducing CrossFrame, a Safe Communication Mechanism Across Documents and Across Domains Comments Feed" href="../feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='../../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../../wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Getting Rid of the Navigation Click Sound on IE' href='../../../../index.html?p=30' />
+<link rel='next' title='Adding Back Button and Bookmarking Support to Your DHTML Slide Show' href='../../../../index.html?p=37' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../../../index.html?p=31' />
+	<link href="../../../../wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../../../../wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-31 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../../../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../../../../../index.html">Home</a></li><li class="page_item page-item-36"><a href="../../../../index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-31" class="post-31 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Introducing CrossFrame, a Safe Communication Mechanism Across Documents and Across Domains</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<h4>The mashup problem</h4>
+<p>According to my coworker <cite><a href="http://www.crockford.com" target="_blank">Douglas Crockford</a></cite>, <q lang="en-us">Mashups are the most interesting advancement in software development in decades. They are also unsafe in the current generation of browsers</q>. Lately, Douglas has been spending some time convincing the main browser vendors that mashups need to be made safe, wrote a <a href="http://www.json.org/module.html" target="_blank">proposal</a>, and even <a href="http://ajaxian.com/archives/gears-and-the-mashup-problem" target="_blank">mentioned</a> <a href="http://gears.google.com" target="_blank">Google Gears</a> as a potential solution to the problem. While fixing the browser <em>is</em> the right thing to do, web developers are confronted with this problem <em>today</em>, and cannot afford to wait 5 years for a definitive solution.</p>
+<h4>Existing solutions to the mashup problem</h4>
+<p>One way mashups (or widgets, badges and gadgets, take your pick&hellip;) can be made safe is by sandboxing them in an IFrame pointing to another domain (Note: another way would be to run the untrusted code through <a href="http://www.adsafe.org/" target="_blank">ADsafe</a>, and provide some safe API to do useful things on the page) The problem is that the <a href="http://en.wikipedia.org/wiki/Same_origin_policy" target="_blank">Same Origin Policy</a> isolates them so completely that they are then unable to cooperate with the page containing them or with each other. Several hacks have been exploited to achieve reasonably secure client-side cross-domain communication. The most popular ones use the <a href="http://tagneto.blogspot.com/2006/06/cross-domain-frame-communication-with.html" target="_blank">URL fragment identifier</a> or the <a href="http://livedocs.adobe.com/flex/2/langref/flash/net/LocalConnection.html" target="_blank">Flash LocalConnection object</a>.</p>
+<h4>Why the need for another technique?</h4>
+<p>CrossFrame is a variant of the URL fragment identifier mechanism. In the original technique, the containing page sets the URL fragment identifier of an embedded IFrame (usually via its <code>src</code> attribute), and the IFrame must poll to detect changes in the value of its <code>location.hash</code> property. This technique can be further built upon to allow for 2-way communications between an IFrame and its containing page, or between two distinct IFrames.</p>
+<p>The original URL fragment identifier technique has many limitations, many of which can be worked around except maybe for the following:</p>
+<ul>
+<li>It unnecessarily consumes CPU cycles by requiring the receiver to poll.</li>
+<li>It creates &#8220;fake&#8221; history entries on Safari and Opera.</li>
+</ul>
+<h4>How does CrossFrame work?</h4>
+<p>While CrossFrame also has limitations of its own, I find it to be a much cleaner and simpler approach. Here is how it works:</p>
+<p><img src="../../../../../blogfiles/cross-frame/diagram.png" width="398" height="316" style="border:0;padding:0;margin:10px 0;"></p>
+<p>In order to communicate with the mashup hosted in domain Y, the page, hosted in domain X, dynamically creates a hidden IFrame and points it to a special proxy file hosted in domain Y, using the URL fragment identifier to convey the message (step 1) When the special proxy file is loaded in the hidden IFrame, it reads its URL fragment identifier and passes it to a globally accessible function defined in the IFrame hosting the mashup (step 2) using <code>parent.frames['mashup']</code> to get to it. The same technique can also be used by the mashup to communicate with the page (the proxy will use <code>parent.parent</code> to get to the page) Finally, when all is said and done, the hidden IFrame is automatically removed from the DOM by the library.</p>
+<p>This however cannot work on Opera, which does not allow us to query any property of a window pointing to a different domain (so getting <code>parent.parent</code> for example will throw an exception) CrossFrame takes care of this by using, on Opera only, <a href="http://www.whatwg.org/specs/web-apps/current-work/#cross-document" target="_blank">the HTML 5 way</a> of sending messages across frames and across domains.</p>
+<h4>How to use CrossFrame?</h4>
+<p>In order to use the CrossFrame library, place the proxy file (proxy.html, included in the <a href="../../../../../blogfiles/cross-frame/cross-frame.zip">downloadable archive</a>) on your web server so you can receive CrossFrame notifications for that domain. Make sure that the proxy file gets cached properly by web browsers, for example using a <code>.htacess</code> file similar to this one:</p>
+<pre>
+&#60;Files proxy.html&#62;
+    ExpiresActive on
+    ExpiresDefault "access plus 1 year"
+&#60;/Files&#62;
+</pre>
+<p>Then, import the necessary code and its dependencies in your page:</p>
+<pre class="prettyprint" style="overflow:auto;">
+&#60;script type="text/javascript" src="http://yui.yahooapis.com/2.3.1/build/yahoo-dom-event/yahoo-dom-event.js"&#62;&#60;/script&#62;
+&#60;script type="text/javascript" src="cross-frame.js"&#62;&#60;/script&#62;
+</pre>
+<p>To receive messages, subscribe to the <code>onMessage</code> event:</p>
+<pre class="prettyprint">
+YAHOO.util.CrossFrame.onMessageEvent.subscribe(
+    function (type, args, obj) {
+        var message = args[0];
+        var domain = args[1];
+        // Do something with the incoming message...
+    }
+);
+</pre>
+<p>To send a message, call <code>YAHOO.util.CrossFrame.send()</code>:</p>
+<pre class="prettyprint">
+YAHOO.util.CrossFrame.send("http://www.y.com/proxy.html",
+                           "frames['mashup']",
+                           "message");
+</pre>
+<p>Here is a <a href="../../../../../blogfiles/cross-frame/index.html" target="_blank">demo</a> showing the CrossFrame library in action.</p>
+<h4>Limitations</h4>
+<p>The CrossFrame library does not support chunking (i.e. the ability to pass a large message in several smaller chunks) so the size of the messages that may be sent is limited by the maximum length of a URL (which varies across browsers&hellip;) However, it is not impossible to implement (for more information on chunking, you may want to look at Dojo&#8217;s XHR IFrame proxy implementation, which I believe supports chunking)</p>
+<p>Also, the user may experience a short delay the first time a message gets sent to a specific domain. This is due to the server round trip necessary to download the proxy file. However, this can easily be mitigated by preloading the proxy file for that specific domain.</p>
+<h4>Conclusion: The dangers of temporary solutions</h4>
+<p>There is a danger associated with this kind of &#8220;hack&#8221;. First of all, browser vendors may decide to change their security policies and mimic Opera&#8217;s behavior for example. If this happens, CrossFrame will stop working for those browsers. Furthermore, I do not recommend using hacks because they slow down the rate of innovation on the web (it makes the task of developing web browsers even more complicated than it already is, and also makes your application less maintainable) Therefore, as paradoxical as it may seem, I do <em>not</em> recommend using CrossFrame (or any of those ugly hacks for that matter)</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../../category/web-development/index.html" rel="category tag">Web Development</a> on <a href="../../../../index.html?p=31" title="3:36 pm" rel="bookmark"><time class="entry-date" datetime="2007-11-26T15:36:12+00:00">November 26, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../../../index.html?p=30" rel="prev"><span class="meta-nav">&larr;</span> Getting Rid of the Navigation Click Sound on IE</a></span>
+					<span class="nav-next"><a href="../../../../index.html?p=37" rel="next">Adding Back Button and Bookmarking Support to Your DHTML Slide Show <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			7 thoughts on &ldquo;<span>Introducing CrossFrame, a Safe Communication Mechanism Across Documents and Across Domains</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="pingback even thread-even depth-1" id="comment-699">
+		<p>Pingback: <a href='http://ajaxian.com/?p=3051' rel='external nofollow' class='url'>Ajaxian &raquo; CrossFrame: a Safe Communication Mechanism Across Documents and Across Domains</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-701">
+		<p>Pingback: <a href='http://www.ajaxgirl.com/2007/11/27/crossframe-a-safe-communication-mechanism-across-documents-and-across-domains/' rel='external nofollow' class='url'>Ajax Girl &raquo; Blog Archive &raquo; CrossFrame: a Safe Communication Mechanism Across Documents and Across Domains</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-703">
+		<article id="comment-703" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/32bf1b8b26e6711c268c9c74998c6965?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/32bf1b8b26e6711c268c9c74998c6965?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://mediq-tech.blogspot.com' rel='external nofollow' class='url'>Didier DURAND</a></b> </cite><a href="index.html#comment-703"><time datetime="2007-11-28T05:18:52+00:00">November 28, 2007 at 5:18 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Bonjour Julien,</p>
+<p>extrÃªmement intÃ©ressant!<br />
+merci<br />
+didier</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-704">
+		<article id="comment-704" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/a14dbbdfb17424cde417521badbe2c14?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/a14dbbdfb17424cde417521badbe2c14?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Patrick Whittingham</b> </cite><a href="index.html#comment-704"><time datetime="2007-11-28T05:44:15+00:00">November 28, 2007 at 5:44 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good idea. How do you do &#8220;proxy.html&#8221; on Microsoft IIS?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-705">
+		<p>Pingback: <a href='http://www.caminews.it/julien-lecomte%e2%80%99s-blog-%c2%bb-introducing-crossframe-a-safe-communication-mechanism-across-documents-and-across-domains/' rel='external nofollow' class='url'>Caminews &raquo; Julien Lecomteâ€™s Blog Â» Introducing CrossFrame, a Safe Communication Mechanism Across Documents and Across Domains</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-706">
+		<p>Pingback: <a href='http://www.javascriptnews.com/javascript/crossframe-a-safe-communication-mechanism-across-documents-and-across-domains.html' rel='external nofollow' class='url'>Javascript News &raquo; Blog Archive &raquo; CrossFrame: a Safe Communication Mechanism Across Documents and Across Domains</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2538">
+		<article id="comment-2538" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e7d8a966550fb7301d816eb2bbca99c9?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e7d8a966550fb7301d816eb2bbca99c9?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">rickycli</b> </cite><a href="index.html#comment-2538"><time datetime="2007-12-29T17:52:06+00:00">December 29, 2007 at 5:52 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>In your js file, is there any reason why you are adding the iframe element twice (line 125 and 148)? </p>
+<p>&#8211; Ricky</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

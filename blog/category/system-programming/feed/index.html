@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Julien Lecomte&#039;s Blog &#187; System Programming</title>
+	<atom:link href="http://www.julienlecomte.net/blog/category/system-programming/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.julienlecomte.net/blog</link>
+	<description>Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</description>
+	<lastBuildDate>Mon, 17 Aug 2015 00:58:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.3</generator>
+	<item>
+		<title>An IDE Device Driver for Simplix</title>
+		<link>http://www.julienlecomte.net/blog/2008/07/51/</link>
+		<comments>http://www.julienlecomte.net/blog/2008/07/51/#comments</comments>
+		<pubDate>Tue, 08 Jul 2008 23:12:42 +0000</pubDate>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+				<category><![CDATA[System Programming]]></category>
+
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/?p=51</guid>
+		<description><![CDATA[Over the past couple of weeks, I have been working on an IDE hard disk driver for my hobby operating system Simplix. This driver probes for existing IDE controllers, identifies the IDE devices connected to these controllers, and allows for reading/writing contiguous sectors from/to these devices. It communicates with IDE devices in PIO mode (no [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Over the past couple of weeks, I have been working on an IDE hard disk driver for my hobby operating system <a href="http://www.julienlecomte.net/blog/2007/09/10/">Simplix</a>. This driver probes for existing IDE controllers, identifies the IDE devices connected to these controllers, and allows for reading/writing contiguous sectors from/to these devices. It communicates with IDE devices in PIO mode (no DMA) and does not support ATAPI devices (i.e. it does not offer any support for CD-ROM or DVD-ROM drives) At the same time, I also wrote a RAM disk driver, a simple block device interface, and a test program in the form of a kernel thread. This test program reads the first sector of the master IDE device connected to the primary IDE controller, and displays the last two bytes of this sector. These are usually 0x55aa (boot record signature)</p>
+<p>Go ahead and take a look at the <a href="http://www.julienlecomte.net/simplix/">source code</a> online. You can also <a href="http://www.julienlecomte.net/simplix/simplix.tar.gz">download</a> the Simplix distribution, compile it and run it either in Bochs/QEMU, or on a real PC. Below is a screen shot of Simplix running inside Bochs. Cheers!</p>
+<p><img src="/blogfiles/images/simplix-20080708-screenshot.png" style="width:560px;height:350px;border:none;"></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.julienlecomte.net/blog/2008/07/51/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Simplix Running on Real Hardware</title>
+		<link>http://www.julienlecomte.net/blog/2008/06/49/</link>
+		<comments>http://www.julienlecomte.net/blog/2008/06/49/#comments</comments>
+		<pubDate>Wed, 18 Jun 2008 16:45:32 +0000</pubDate>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+				<category><![CDATA[System Programming]]></category>
+
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/?p=49</guid>
+		<description><![CDATA[This morning, as I was just finishing up the code responsible for detecting IDE devices (hard disks, CD-ROM drives, etc.) in Simplix, I felt like trying my operating system on real hardware. I have a 4 year old PC with a floppy drive at home, so I decided to give it a shot. The result [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>This morning, as I was just finishing up the code responsible for detecting IDE devices (hard disks, CD-ROM drives, etc.) in Simplix, I felt like trying my operating system on real hardware. I have a 4 year old PC with a floppy drive at home, so I decided to give it a shot. The result is pure geek pleasure. Cheers!</p>
+<p><img src="/blogfiles/simplix/simplix-real-hardware-screenshot.jpg" style="width:500px;height:276px;" alt="Screen shot of Simplix running on real hardware"></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.julienlecomte.net/blog/2008/06/49/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>New Version of Simplix, My Hobby Operating System</title>
+		<link>http://www.julienlecomte.net/blog/2008/05/47/</link>
+		<comments>http://www.julienlecomte.net/blog/2008/05/47/#comments</comments>
+		<pubDate>Tue, 27 May 2008 02:48:42 +0000</pubDate>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+				<category><![CDATA[System Programming]]></category>
+
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/?p=47</guid>
+		<description><![CDATA[Some of you may remember this post about Simplix, my hobby operating system. The first version, published in Sept. 2007, was not able to do much and was really buggy. Over the next 9 months, as I was studying the inner workings of modern operating systems, I also wanted to experiment with some of the [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img src="/blogfiles/images/simplix.welcome-small.png" style="width:130px;height:100px;float:left;border:1px solid #bbb;padding:0;margin-right:10px;"></p>
+<p>Some of you may remember <a href="/blog/2007/09/10/" title="Introducing Simplix, an Operating System Anybody Can Understand">this post</a> about <a href="/simplix/" title="Simplix source code browser">Simplix</a>, my hobby operating system. The first version, published in Sept. 2007, was not able to do much and was really buggy. Over the next 9 months, as I was studying the inner workings of modern operating systems, I also wanted to experiment with some of the concepts and ideas I was learning. I decided to apply my newly acquired knowledge to a new version of Simplix I was secretly working on. This new version contains a lot of improvements:</p>
+<div style="clear:both;"></div>
+<ul>
+<li>Greatly improved the performance of the page allocator.</li>
+<li>New high performance memory allocator (<code>kmalloc</code>/<code>kfree</code>)</li>
+<li>Better handling of software exceptions: Kill the current process and display debug info.</li>
+<li>New system calls. Simplix now supports <code>exit</code>, <code>fork</code>, <code>waitpid</code>, <code>getpid</code>, <code>getppid</code>, <code>time</code>, <code>stime</code>, <code>sleep</code> and <code>brk</code>.</li>
+<li>New scheduling algorithm. This algorithm is ridiculously simple and not particularly efficient or elegant. It should however be fair to interactive jobs, while doing its best to accomodate CPU intensive tasks.</li>
+<li>Implemented a small set of user space libraries, including string manipulations (string.h) and a trivial implementation of <code>malloc</code> and <code>free</code> copied directly from the book &#8220;The C Programming Language&#8221; by Brian W. Kernighan and Dennis M. Ritchie.</li>
+<li>Much cleaner source tree, improved source code documentation, etc.</li>
+</ul>
+<p>As you have probably noticed by now, this new version of Simplix still does not provide any I/O facility for user space tasks. I/O is probably the most complex part of an operating system, so I decided to put it off for a little while longer. In this version however, I decided to write a few sample programs:</p>
+<ul>
+<li>A Unix time counter implemented as a kernel thread.</li>
+<li>Another kernel thread that finds and prints prime numbers.</li>
+<li>A user task that computes the first 10,000 decimals of the number PI.</li>
+<li>A kernel thread that prints live information about the system.</li>
+<li>A program that creates a lot of user space tasks, each of them sleeps for one second before exiting.</li>
+</ul>
+<p>You can already take a look at the <a href="/simplix/">complete and up-to-date source code</a>, and even <a href="/simplix/simplix.tar.gz">download it</a>. Compiling Simplix requires a not-too-ancient version of GCC, make, and a few basic command line tools available on almost all Unix systems (objcopy, dd, etc.) If you don&#8217;t feel like trying it out yourself, I put together a very short Flash video showing the system booting and running inside <a href="http://bochs.sourceforge.net/">Bochs</a>. You can also put the kernel binary on a floppy and try it on a real PC with a floppy drive. Cheers!</p>
+<p><strong>Note:</strong> If you can&#8217;t see the video below, it&#8217;s probably because you are reading this article using a news reader. If that&#8217;s the case, <a href="/blog/2008/05/47/">open this article in a web browser</a> to view the video.</p>
+<p><img src="http://www.julienlecomte.net/blog/wp-content/plugins/flash-video-player/default_video_player.gif" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.julienlecomte.net/blog/2008/05/47/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Introducing Simplix, an Operating System Anybody Can Understand</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/10/</link>
+		<comments>http://www.julienlecomte.net/blog/2007/09/10/#comments</comments>
+		<pubDate>Mon, 03 Sep 2007 16:27:58 +0000</pubDate>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+				<category><![CDATA[System Programming]]></category>
+
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/03/introducing-simplix-an-operating-system-anybody-can-understand/</guid>
+		<description><![CDATA[Back in university, I took a few classes dealing with operating system design. These classes were extremely theoretical and, in some ways, helped me throughout my curriculum and my career, serving as a solid base I could then build upon to gain new knowledge. However, after spending a few years working with high level languages [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img src="/blogfiles/images/simplix.welcome.png" style="width:200px;height:156px;float:left;border:1px solid #bbb;padding:0;margin-right:10px;"></p>
+<p>Back in university, I took a few classes dealing with operating system design. These classes were extremely theoretical and, in some ways, helped me throughout my curriculum and my career, serving as a solid base I could then build upon to gain new knowledge. However, after spending a few years working with high level languages in sandboxed environments, you tend to forget how things work at the lower level, and that sometimes leads to less than optimal higher level code. As a consequence, a few months ago, I decided it was time for me to brush up on my core CS skills. However, I needed a tangible goal. And then I thought: why not write an operating system? OK, not a full blown operating system of course, but the seed of a very basic one (calling Simplix an operating system is a bit of a stretch since it cannot be used for anything actually useful) One that other people could look at and actually understand (Even <a href="http://en.wikipedia.org/wiki/MINIX" target="_blank">MINIX</a>, which was designed to be easy to understand by students, is not that easy to grasp without spending a lot of time hunched over the code) Here are the high level characteristics of Simplix:</p>
+<p><br style="clear:both;line-height:0;"/></p>
+<ul>
+<li>Target architecture: PC with a single Intel 386 or better CPU</li>
+<li>Monolithic, interruptible, non preemptible kernel</li>
+<li>Hardware interrupt handling using the Intel 8259 PIC</li>
+<li>Software interrupt handling</li>
+<li>Basic management of physical memory</li>
+<li>Peripherals: keyboard, video screen</li>
+<li>Support for kernel threads and user space processes</li>
+<li>Support for virtual memory using segmentation</li>
+<li>Support for system calls</li>
+</ul>
+<p>Here is a screenshot showing Simplix running inside the <a href="http://bochs.sourceforge.net/" target="_blank">Bochs emulator</a>:</p>
+<p><img src="/blogfiles/images/simplix.thumbnail.png" style="width:450px;height:297px;border:none;"></p>
+<p>Over the next few months, I will be posting several articles on this blog in an attempt to explain how Simplix works, so please stay tuned! In the meantime, you can already take a look at the <a href="/simplix/" target="_blank">complete up to date source code</a> and even <a href="/simplix/simplix.tar.gz">download it</a>. Also, if you are interested in the topic of operating system development, I warmly recommend reading the bible of system programming: <a href="http://minix1.woodhull.com/osdi2/" target="_blank">Operating Systems: Design and Implementation (Second Edition)</a> by Andrew S. Tanenbaum and Albert S. Woodhull. I got mine used on Amazon.com for $8&#8230; Cheers!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.julienlecomte.net/blog/2007/09/10/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>How to make a Bochs disk image</title>
+		<link>http://www.julienlecomte.net/blog/2007/07/3/</link>
+		<comments>http://www.julienlecomte.net/blog/2007/07/3/#comments</comments>
+		<pubDate>Tue, 24 Jul 2007 03:57:49 +0000</pubDate>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+				<category><![CDATA[System Programming]]></category>
+
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/?p=3</guid>
+		<description><![CDATA[In this article, I try to synthesize several (incomplete or inaccurate) articles I&#8217;ve found on the Internet to guide you through the process of creating a disk image you may use with the Bochs emulator. The steps described below are intended for a GNU/Linux system and some of them require super user privileges. Also, you [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In this article, I try to synthesize several (incomplete or inaccurate) articles I&#8217;ve found on the Internet to guide you through the process of creating a disk image you may use with the <a href="http://bochs.sourceforge.net/" target="_blank">Bochs emulator</a>. The steps described below are intended for a GNU/Linux system and some of them require super user privileges. Also, you need to have GRUB installed on your system.</p>
+<p>1. Create a disk image. Here, I create a file named disk.img, containing 10080 blocks (each block being 512 bytes, this will create a file that&#8217;s about 5MB)</p>
+<pre>$ dd if=/dev/zero of=disk.img count=10080</pre>
+<p>2. Use FDISK to create a partition table on the image file:</p>
+<pre>$ fdisk disk.img
+
+   x     -> Extra functionality
+   c 10  -> 10 cylinders
+   h 16  -> 16 heads
+   s 63  -> 63 sectors per track
+   r     -> Return to main menu
+   n     -> Create a new partition
+   p     -> Primary
+   1     -> Partition #1
+   1     -> First cylinder
+   10    -> Last cylinder
+   a     -> Set bootable flag
+   1     -> Partition number
+   w     -> Write partition to disk</pre>
+<p>Note that you have to tell fdisk about the geometry of your disk, and that geometry has to match the size of the disk you created in step 1 (10 cylinders * 16 heads * 63 sectors per track = 10080 blocks). For an introduction on disk geometry, cylinders, heads and sectors, read this <a href="http://en.wikipedia.org/wiki/Cylinder-head-sector" target="_blank">Wikipedia article</a>.</p>
+<p>Let&#8217;s take a quick look at the Partition Table in the Master Boot Record (See <a href="http://en.wikipedia.org/wiki/Master_Boot_Record" target="_blank">this Wikipedia article</a> for a description of the structure of the partition table)</p>
+<pre>$ hexdump disk.img</pre>
+<p>The 16 bytes at offset 446 (0x1BE) are:</p>
+<pre>0180 0001 0f83 093f 003f 0000 2721 0000</pre>
+<p>Keep in mind that these values are stored using little-endian convention (see this <a href="http://en.wikipedia.org/wiki/Endianness" target="_blank">Wikipedia article</a> to find out more about the meaning of endianness in computer science). Also see <a href="http://thestarman.pcministry.com/asm/mbr/PartTables.htm" target="_blank">this article</a> to find out how the CHS values are computed.</p>
+<table border="1">
+<thead style="background:#ccc">
+<tr>
+<th>Offset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>0x80 means that this partition is bootable</td>
+</tr>
+<tr>
+<td>0x01</td>
+<td>0x000101 is the CHS address of the first sector in the partition:<br />S = 0x01 = 1<br />H = 0x01 = 1<br />C = 0x00 =  0</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x83 is the type of the partition (Linux native here)</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>0x093f0f is the CHS address of the last sector in the partition:<br />S = 0x3F = 63<br />H = 0x0F = 15<br />C = 0x09 =  9</td>
+</tr>
+<tr>
+<td>0x08</td>
+<td>0x0000003f (63) is the logical block address of the first sector in the partition</td>
+</tr>
+<tr>
+<td>0x0C</td>
+<td>0x00002721 (10017 = 10080 &#8211; 63) is the size of the partition, in number of 512 byte blocks</td>
+</tr>
+</tbody>
+</table>
+<p>3. Setup the loopback device. In order to do this, you need to calculate the offset (in bytes) of the first sector of your single partition. Use the following command:</p>
+<pre>$ fdisk -l -u disk.img
+
+  Device Boot      Start         End      Blocks   Id  System
+disk.img1   *          63       10079        5008+  83  Linux</pre>
+<p>This tells us that our single partition starts at the 63rd block. Hence our offset is 63 * 512 = 32256.</p>
+<p>Finally, type:</p>
+<pre>$ losetup -o 32256 /dev/loop0 disk.img</pre>
+<p>4. Format the disk (EXT2FS)</p>
+<pre>$ mkfs.ext2 /dev/loop0</pre>
+<p>5. Mount the disk:</p>
+<pre>$ mount -o loop /dev/loop0 /mnt</pre>
+<p>6. Now, let&#8217;s install GRUB. Start by copying the necessary GRUB files:</p>
+<pre>$ mkdir -p /mnt/boot/grub
+$ cp /boot/grub/stage1 /boot/grub/stage2 /mnt/boot/grub/
+$ vi /mnt/boot/grub/grub.conf
+
+   title=MyKernel
+   root (hd0,0)
+   kernel /mykernel</pre>
+<p>7. Unmount the device:</p>
+<pre>$ umount /mnt</pre>
+<p>8. Detach the loopback device:</p>
+<pre>$ losetup -d /dev/loop0</pre>
+<p>9. Finish up the GRUB installation:</p>
+<pre>$ grub --device-map=/dev/null
+
+   device (hd0) disk.img
+   geometry (hd0) 10 16 63
+   root (hd0,0)
+   setup (hd0)
+   quit</pre>
+<p>10. Setup your .bochsrc file in the same directory as your disk image:</p>
+<pre style="overflow:auto;overflow-y:hidden;">megs: 32
+romimage: file=/usr/local/share/bochs/BIOS-bochs-latest, address=0xf0000
+vgaromimage: file=/usr/local/share/bochs/VGABIOS-elpin-2.40
+ata0-master: type=disk, path="disk.img", mode=flat, cylinders=10, heads=16, spt=63
+cpu: count=1, ips=15000000
+mouse: enabled=0
+log: out.bochs
+boot: disk</pre>
+<p>That&#8217;s it. Start Bochs and the GRUB interface should appear:</p>
+<p><a href='http://www.julienlecomte.net/blogfiles/images/grub.png' title='Bochs emulator showing GRUB'><img src='http://www.julienlecomte.net/blogfiles/images/grub.thumbnail.png' alt='Bochs emulator showing GRUB' /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.julienlecomte.net/blog/2007/07/3/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

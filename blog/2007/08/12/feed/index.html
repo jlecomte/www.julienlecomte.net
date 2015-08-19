@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: YUI Compressor Version 1.1 Now Available</title>
+	<atom:link href="http://www.julienlecomte.net/blog/2007/08/12/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.julienlecomte.net/blog/2007/08/12/</link>
+	<description>Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</description>
+	<lastBuildDate>Tue, 01 Oct 2013 13:34:59 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.3</generator>
+	<item>
+		<title>By: KevinH</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-110</link>
+		<dc:creator><![CDATA[KevinH]]></dc:creator>
+		<pubDate>Sat, 25 Aug 2007 02:06:30 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-110</guid>
+		<description><![CDATA[Great! Yes it appears the example got truncated. If you need the full example I can email it to you.]]></description>
+		<content:encoded><![CDATA[<p>Great! Yes it appears the example got truncated. If you need the full example I can email it to you.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-109</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Sat, 25 Aug 2007 00:57:12 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-109</guid>
+		<description><![CDATA[@kevin
+
+Thanks a lot for reporting this (btw, your snippet apparently got truncated) I will fix this in the upcoming version of the compressor (should be available within the next few weeks)]]></description>
+		<content:encoded><![CDATA[<p>@kevin</p>
+<p>Thanks a lot for reporting this (btw, your snippet apparently got truncated) I will fix this in the upcoming version of the compressor (should be available within the next few weeks)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: KevinH</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-108</link>
+		<dc:creator><![CDATA[KevinH]]></dc:creator>
+		<pubDate>Sat, 25 Aug 2007 00:17:36 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-108</guid>
+		<description><![CDATA[We found a bug today with the safety of the compression.  YUI Compressor doesn&#039;t understand/respect &quot;break LABEL;&quot;  Here&#039;s an example from our code that gets compressed into an incorrect result.
+
+Raw Code:
+
+AjxTimezone.getRule = function(clientId, tz) {
+    var rule = AjxTimezone._CLIENT2RULE[clientId];
+    if (!rule) {
+        // try to find the rule treating the clientId as the serverId
+        clientId = AjxTimezone._SERVER2CLIENT[clientId];
+        rule = AjxTimezone._CLIENT2RULE[clientId];
+    }
+    if (!rule &#038;&#038; tz) {
+        var names = [ &quot;standard&quot;, &quot;daylight&quot; ];
+        var rules = tz.daylight ? AjxTimezone.DAYLIGHT_RULES : AjxTimezone.STANDARD_RULES;
+        for (var i = 0; i ]]></description>
+		<content:encoded><![CDATA[<p>We found a bug today with the safety of the compression.  YUI Compressor doesn&#8217;t understand/respect &#8220;break LABEL;&#8221;  Here&#8217;s an example from our code that gets compressed into an incorrect result.</p>
+<p>Raw Code:</p>
+<p>AjxTimezone.getRule = function(clientId, tz) {<br />
+    var rule = AjxTimezone._CLIENT2RULE[clientId];<br />
+    if (!rule) {<br />
+        // try to find the rule treating the clientId as the serverId<br />
+        clientId = AjxTimezone._SERVER2CLIENT[clientId];<br />
+        rule = AjxTimezone._CLIENT2RULE[clientId];<br />
+    }<br />
+    if (!rule &amp;&amp; tz) {<br />
+        var names = [ &#8220;standard&#8221;, &#8220;daylight&#8221; ];<br />
+        var rules = tz.daylight ? AjxTimezone.DAYLIGHT_RULES : AjxTimezone.STANDARD_RULES;<br />
+        for (var i = 0; i </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-107</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Fri, 24 Aug 2007 18:19:04 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-107</guid>
+		<description><![CDATA[@Stephan
+
+Will do. Thanks for the kind words.]]></description>
+		<content:encoded><![CDATA[<p>@Stephan</p>
+<p>Will do. Thanks for the kind words.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Stephan Beal</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-106</link>
+		<dc:creator><![CDATA[Stephan Beal]]></dc:creator>
+		<pubDate>Fri, 24 Aug 2007 18:11:04 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-106</guid>
+		<description><![CDATA[Hiya!
+
+Since YUIMin 1.0 came out i&#039;ve been using it for my jQuery plugins:
+
+http://wanderinghorse.net/computing/javascript/jquery/
+
+On those pages i release all code as unpacked/packed/min&#039;d/yuimin&#039;d, so it may be interesting for you to see the size differences.
+
+Would it be possible for you to set up a page specifically for YUImin, instead of in the blog? The reason is so that i know where to check for updates without having to back-track through all of your blog posts and so i can link to yuimin on my web pages (i hate linking to an out-of-date blog post).
+
+If you set up such a page, please send me an email and let me know the URL.
+
+:)
+
+PS: yuimin kicks butt. Great stuff. :)]]></description>
+		<content:encoded><![CDATA[<p>Hiya!</p>
+<p>Since YUIMin 1.0 came out i&#8217;ve been using it for my jQuery plugins:</p>
+<p><a href="http://wanderinghorse.net/computing/javascript/jquery/" rel="nofollow">http://wanderinghorse.net/computing/javascript/jquery/</a></p>
+<p>On those pages i release all code as unpacked/packed/min&#8217;d/yuimin&#8217;d, so it may be interesting for you to see the size differences.</p>
+<p>Would it be possible for you to set up a page specifically for YUImin, instead of in the blog? The reason is so that i know where to check for updates without having to back-track through all of your blog posts and so i can link to yuimin on my web pages (i hate linking to an out-of-date blog post).</p>
+<p>If you set up such a page, please send me an email and let me know the URL.</p>
+<p>:)</p>
+<p>PS: yuimin kicks butt. Great stuff. :)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-99</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Tue, 21 Aug 2007 17:07:33 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-99</guid>
+		<description><![CDATA[@Kevin,
+
+I will consider this feature request for a future version.]]></description>
+		<content:encoded><![CDATA[<p>@Kevin,</p>
+<p>I will consider this feature request for a future version.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: KevinH</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-98</link>
+		<dc:creator><![CDATA[KevinH]]></dc:creator>
+		<pubDate>Tue, 21 Aug 2007 17:02:57 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-98</guid>
+		<description><![CDATA[Ideally we don&#039;t want to change the source.  We can make the changes on our side for my issues above and have found an easy way to work around this in our build.  We did hit another issue integrating with a few servlets we have.
+
+We used to call ShrinkSafe directly like:
+
+Context context = Context.enter();
+context.setOptimizationLevel(-1);
+Scriptable scriptable = context.initStandardObjects();
+Reader reader = new StringReader(text);
+String script = null;
+int lineNum = 0;
+Object securityDomain = null;
+
+String mintext = org.mozilla.javascript.tools.shell.Main.compressScript(
+    context, scriptable, reader,
+    script, uri, lineNum, securityDomain
+);
+
+
+This is a bit ugly but it worked.  Looking at the constructor for YUICompressor there is no way to do this without writing out a File (that I can see).
+
+Would it be possible to add a new constructor option that took an InputStream or a String?  This way for those Java programs that already have the input data it would be a very clean two line call to compress/minify source content.
+
+YUICompressor compressor = new YUICompressor(input, output, charset, munge, warn, linebreak);
+compressor.compress();
+
+
+BTW: From initial tests on our source YUICompressor 1.1 is about 9% smaller vs ShrinkSafe after gzipping.  Pretty impressive!]]></description>
+		<content:encoded><![CDATA[<p>Ideally we don&#8217;t want to change the source.  We can make the changes on our side for my issues above and have found an easy way to work around this in our build.  We did hit another issue integrating with a few servlets we have.</p>
+<p>We used to call ShrinkSafe directly like:</p>
+<p>Context context = Context.enter();<br />
+context.setOptimizationLevel(-1);<br />
+Scriptable scriptable = context.initStandardObjects();<br />
+Reader reader = new StringReader(text);<br />
+String script = null;<br />
+int lineNum = 0;<br />
+Object securityDomain = null;</p>
+<p>String mintext = org.mozilla.javascript.tools.shell.Main.compressScript(<br />
+    context, scriptable, reader,<br />
+    script, uri, lineNum, securityDomain<br />
+);</p>
+<p>This is a bit ugly but it worked.  Looking at the constructor for YUICompressor there is no way to do this without writing out a File (that I can see).</p>
+<p>Would it be possible to add a new constructor option that took an InputStream or a String?  This way for those Java programs that already have the input data it would be a very clean two line call to compress/minify source content.</p>
+<p>YUICompressor compressor = new YUICompressor(input, output, charset, munge, warn, linebreak);<br />
+compressor.compress();</p>
+<p>BTW: From initial tests on our source YUICompressor 1.1 is about 9% smaller vs ShrinkSafe after gzipping.  Pretty impressive!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: CodeClimber</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-97</link>
+		<dc:creator><![CDATA[CodeClimber]]></dc:creator>
+		<pubDate>Tue, 21 Aug 2007 11:43:33 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-97</guid>
+		<description><![CDATA[[...] Following the release of YSlow, there has been a lot buzz around the rules it evaluates. And even if not all the 13 rules are issues for normal websites, some of them, like gzipping all the static text files (CSS and JS) and minifying JavaScript are good advices [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Following the release of YSlow, there has been a lot buzz around the rules it evaluates. And even if not all the 13 rules are issues for normal websites, some of them, like gzipping all the static text files (CSS and JS) and minifying JavaScript are good advices [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-96</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Tue, 21 Aug 2007 03:36:46 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-96</guid>
+		<description><![CDATA[@Kevin
+
+Since the YUI Compressor is open source, and under a very permissive license, feel free to make the necessary changes to fit your specific needs.
+
+Regards]]></description>
+		<content:encoded><![CDATA[<p>@Kevin</p>
+<p>Since the YUI Compressor is open source, and under a very permissive license, feel free to make the necessary changes to fit your specific needs.</p>
+<p>Regards</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: KevinH</title>
+		<link>http://www.julienlecomte.net/blog/2007/08/12/comment-page-1/#comment-95</link>
+		<dc:creator><![CDATA[KevinH]]></dc:creator>
+		<pubDate>Tue, 21 Aug 2007 01:31:58 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/08/20/yui-compressor-version-11-now-available/#comment-95</guid>
+		<description><![CDATA[Hi there - Experimenting with moving from Dojo&#039;s ShrinkSafe to the YUI Compressor.  We started with JSMin and moved to Dojo&#039;s a year or two ago as it provided better compression. Since we include this in our build it would be cleaner to have to output to stderr or stdout.  Today it prints the charset.    Also it would help if there was an option that is -o was used but no file was given it would write the output to stdout.  This way we can capture the output and write it to the file we want rather than having it to name a file in the args or use the hardcoded -min file.]]></description>
+		<content:encoded><![CDATA[<p>Hi there &#8211; Experimenting with moving from Dojo&#8217;s ShrinkSafe to the YUI Compressor.  We started with JSMin and moved to Dojo&#8217;s a year or two ago as it provided better compression. Since we include this in our build it would be cleaner to have to output to stderr or stdout.  Today it prints the charset.    Also it would help if there was an option that is -o was used but no file was given it would write the output to stdout.  This way we can capture the output and write it to the file we want rather than having it to name a file in the args or use the hardcoded -min file.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

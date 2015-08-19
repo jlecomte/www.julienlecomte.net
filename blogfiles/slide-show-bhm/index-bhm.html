@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>YUI Browser History Manager Workshop - Slideshow</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.0/build/reset/reset-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.0/build/fonts/fonts-min.css">
+    <style type="text/css">
+
+body { padding:10px; }
+#doc { width:750px; margin:auto; }
+#hd { text-align:center; }
+h1 { font-size:1.5em; font-weight:bold; margin-bottom:10px; }
+#slideshow { border:1px solid #ccc; padding:5px; width:640px; margin:auto; }
+body.js #slideshow .bd li { display:none; font-size:0; }
+body.js #slideshow .bd li.current { display:block; }
+#slideshow .ft { margin-top:5px; position:relative; }
+#slideshow .ft li.last { position:absolute; right:0; top:0; }
+#slideshow .ft li a { color:#999; font-weight:bold; text-decoration:none; }
+#yui-history-iframe { position:absolute; top:0; left:0; width:1px; height:1px; visibility:hidden; }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Markup required by the YUI Browser History Manager -->
+    <iframe id="yui-history-iframe" src="img/aston-martin.jpg"></iframe>
+    <input id="yui-history-field" type="hidden">
+
+    <div id="doc">
+      <div id="hd">
+        <h1>YUI Browser History Manager Workshop - Slideshow</h1>
+      </div>
+      <div id="bd">
+        <div id="slideshow">
+          <div class="bd">
+            <ul id="slides">
+              <li class="first"><img src="img/aston-martin.jpg" alt="Aston Martin"></li>
+              <li id="li-2"><img src="img/ferrari.jpg" alt="Ferrari"></li>
+              <li id="li-3"><img src="img/jaguar.jpg" alt="Jaguar"></li>
+              <li id="li-4"><img src="img/lamborghini.jpg" alt="Lamborghini"></li>
+              <li id="li-5" class="last"><img src="img/porsche.jpg" alt="Porsche"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="ft"></div>
+    </div>
+
+    <script type="text/javascript" src="http://yui.yahooapis.com/2.4.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+
+    <!-- YUI Browser History Manager Source File -->
+    <script type="text/javascript" src="http://yui.yahooapis.com/2.4.0/build/history/history-min.js"></script>
+
+    <script>
+
+(function () {
+
+    var footer, slides, currentSlideIndex, initialState;
+
+    function showSlide(index) {
+        YAHOO.util.Dom.removeClass(slides[currentSlideIndex], "current");
+        YAHOO.util.Dom.addClass(slides[index], "current");
+        currentSlideIndex = index;
+    }
+
+    function initSlideShow () {
+        currentSlideIndex = parseInt(YAHOO.util.History.getCurrentState("slideshow"));
+        slides = YAHOO.util.Dom.get("slides").getElementsByTagName("li");
+        YAHOO.util.Dom.addClass(slides[currentSlideIndex], "current");
+        YAHOO.util.Event.addListener(["prev", "next"], "click", function (evt) {
+            YAHOO.util.Event.stopEvent(evt);
+            var newSlideIndex = this.id === "next" ?
+                currentSlideIndex + 1 :
+                currentSlideIndex - 1;
+            if (newSlideIndex >= slides.length) {
+                newSlideIndex = 0;
+            } else if (newSlideIndex < 0) {
+                newSlideIndex = slides.length - 1;
+            }
+            // Call YAHOO.util.History.navigate instead of calling
+            // showSlide() directly, except in the catch block...
+            try {
+                YAHOO.util.History.navigate("slideshow", newSlideIndex.toString());
+            } catch (e) {
+                showSlide(newSlideIndex);
+            }
+        });
+    }
+
+    YAHOO.util.Dom.addClass(document.body, "js");
+
+    footer = document.createElement("div");
+    footer.className = "ft";
+    YAHOO.util.Dom.get("slideshow").appendChild(footer);
+    footer.innerHTML =
+        '<ul>' +
+        '  <li class="first"><a href="index-bhm.html#" id="prev">Previous</a></li>' +
+        '  <li class="last"><a href="index-bhm.html#" id="next">Next</a></li>' +
+        '</ul>';
+
+    // Get the initial state of the "slideshow" module:
+    initialState = YAHOO.util.History.getBookmarkedState("slideshow") || "0";
+
+    // Register the "slideshow" module:
+    YAHOO.util.History.register("slideshow", initialState, function (state) {
+        showSlide(parseInt(state));
+    });
+
+    // When the YUI Browser History Manager, initialize the slide show:
+    YAHOO.util.History.onReady(function () {
+        initSlideShow();
+    });
+
+    // Initialize the YUI Browser History Manager instead of calling
+    // initSlideShow() directly, except in the catch block...
+    try {
+        YAHOO.util.History.initialize("yui-history-field", "yui-history-iframe");
+    } catch (e) {
+        initSlideShow();
+    }
+
+})();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Cross-Domain Communication Between IFrames</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/fonts/fonts-min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style type="text/css">
+
+body {
+  padding:10px;
+}
+
+iframe {
+  width:440px; height:320px;
+  margin-right:10px; margin-bottom:10px;
+  border:1px solid black;
+  float:left;
+}
+
+/* See http://www.positioniseverything.net/easyclearing.html */
+
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+.clearfix { display:inline-block; }
+
+/* Hides from IE-mac \*/
+* html .clearfix { height:1%; }
+.clearfix { display:block; }
+/* End hide from IE-mac */
+
+    </style>
+  </head>
+  <body>
+
+    <div><iframe name="foo" id="foo" src="http://subdomain1.julienlecomte.net/cross-frame/iframe.html" frameborder="0"></iframe></div>
+    <div class="clearfix"><iframe name="bar" id="bar" src="http://subdomain2.julienlecomte.net/cross-frame/iframe.html" frameborder="0"></iframe></div>
+
+    <script type="text/javascript">
+document.write('<p>The top level document is hosted on domain <em>' + document.domain + '</em></p>');
+    </script>
+
+    <form id="send-form">
+      <fieldset>
+        <legend>Send a Message</legend>
+        <ol>
+          <li>
+            <label for="destination">Destination</label>
+            <select id="destination">
+              <option value="foo">frames['foo']</option>
+              <option value="bar">frames['bar']</option>
+            </select>
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <input type="text" id="message" autocomplete="off" value="message">
+          </li>
+        </ol>
+        <button id="sendBtn">Send</button>
+      </fieldset>
+    </form>
+
+    <textarea id="received-messages" readonly>Received messages:</textarea>
+
+    <script type="text/javascript" src="http://yui.yahooapis.com/2.3.1/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="cross-frame.js"></script>
+    <script type="text/javascript">
+
+(function () {
+
+    var proxyurl = {
+        "foo": "http://subdomain1.julienlecomte.net/cross-frame/proxy.html",
+        "bar": "http://subdomain2.julienlecomte.net/cross-frame/proxy.html"
+    };
+
+    var target = {
+        "foo": "frames['foo']",
+        "bar": "frames['bar']"
+    };
+
+    YAHOO.util.Event.addListener("sendBtn", "click", function (evt) {
+        // Prevent the form from being submitted...
+        YAHOO.util.Event.stopEvent(evt);
+        // Get the destination and message
+        var dst = YAHOO.util.Dom.get("destination").value;
+        var msg = YAHOO.util.Dom.get("message").value;
+        YAHOO.util.CrossFrame.send(proxyurl[dst], target[dst], msg);
+    });
+
+    YAHOO.util.CrossFrame.onMessageEvent.subscribe(function (type, args, obj) {
+        var message = args[0];
+        var domain = args[1];
+        YAHOO.util.Dom.get("received-messages").value += "\n" + message + " (from domain " + domain + ")";
+    });
+
+})();
+
+    </script>
+  </body>
+</html>

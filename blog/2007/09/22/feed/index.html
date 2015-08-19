@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: YUI Compressor Version 2.2 Now Available</title>
+	<atom:link href="http://www.julienlecomte.net/blog/2007/09/22/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.julienlecomte.net/blog/2007/09/22/</link>
+	<description>Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</description>
+	<lastBuildDate>Tue, 01 Oct 2013 13:34:59 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.3</generator>
+	<item>
+		<title>By: Gerard</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-3190</link>
+		<dc:creator><![CDATA[Gerard]]></dc:creator>
+		<pubDate>Thu, 22 Jan 2009 01:29:46 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-3190</guid>
+		<description><![CDATA[David - &quot;Suggestion for CSS compress / optimizer :
+* add an option to replace @import by real import/inclusion of css.&quot;
+
++1]]></description>
+		<content:encoded><![CDATA[<p>David &#8211; &#8220;Suggestion for CSS compress / optimizer :<br />
+* add an option to replace @import by real import/inclusion of css.&#8221;</p>
+<p>+1</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-342</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Tue, 25 Sep 2007 18:14:06 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-342</guid>
+		<description><![CDATA[@Mike
+
+Thanks for the bug report. I just fixed it in version 2.2.1 now available for download.
+
+Regards]]></description>
+		<content:encoded><![CDATA[<p>@Mike</p>
+<p>Thanks for the bug report. I just fixed it in version 2.2.1 now available for download.</p>
+<p>Regards</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Mike de Boer</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-337</link>
+		<dc:creator><![CDATA[Mike de Boer]]></dc:creator>
+		<pubDate>Tue, 25 Sep 2007 10:30:23 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-337</guid>
+		<description><![CDATA[Dear Julien,
+
+First, I&#039;d like to thank you for this fantastic piece of work! Very solid piece of software.
+
+I encountered an issue, however, in the CSS compressor:
+
+filter: chroma(color=&quot;#FFFFFF&quot;);
+
+...is compressed to...
+
+filter: chroma(color=&quot;#FFF&quot;);
+
+...which makes the filter break in IE. Lovely browser, ain&#039;t it? It cannot handle hex values with less then six characters! There&#039;s always an exception to the rule :)
+
+Regards]]></description>
+		<content:encoded><![CDATA[<p>Dear Julien,</p>
+<p>First, I&#8217;d like to thank you for this fantastic piece of work! Very solid piece of software.</p>
+<p>I encountered an issue, however, in the CSS compressor:</p>
+<p>filter: chroma(color=&#8221;#FFFFFF&#8221;);</p>
+<p>&#8230;is compressed to&#8230;</p>
+<p>filter: chroma(color=&#8221;#FFF&#8221;);</p>
+<p>&#8230;which makes the filter break in IE. Lovely browser, ain&#8217;t it? It cannot handle hex values with less then six characters! There&#8217;s always an exception to the rule :)</p>
+<p>Regards</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-296</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 18:30:07 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-296</guid>
+		<description><![CDATA[@Sonny
+
+That informational message you are mentioning actually appears in the standard error. You can get rid of these messages by using something like the following (all on one line):
+
+&lt;pre&gt;
+java -jar yuicompressor-2.2.jar --type js
+    &lt; input.js &gt; output.js 2 &gt; /dev/null
+&lt;/pre&gt;
+
+Regards]]></description>
+		<content:encoded><![CDATA[<p>@Sonny</p>
+<p>That informational message you are mentioning actually appears in the standard error. You can get rid of these messages by using something like the following (all on one line):</p>
+<pre>
+java -jar yuicompressor-2.2.jar --type js
+    < input.js > output.js 2 > /dev/null
+</pre>
+<p>Regards</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sonny Gill</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-295</link>
+		<dc:creator><![CDATA[Sonny Gill]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 18:21:57 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-295</guid>
+		<description><![CDATA[Grrr..silly me.
+I am quite used to using redirecting input OR output, but seeing them used together like that made me think that input.js is an optional argument. My bad.
+
+I did use the -o option in the end.
+
+Incidentally, when using redirect, I get the following on std out or the output file -
+
+[INFO] Using charset MacRoman
+
+Looks like java.util logging output.
+I am using the terminal app in Mac OS with the default install of Java (1.5.0_07). 
+Not a problem for me though.
+
+Thanks Julien.]]></description>
+		<content:encoded><![CDATA[<p>Grrr..silly me.<br />
+I am quite used to using redirecting input OR output, but seeing them used together like that made me think that input.js is an optional argument. My bad.</p>
+<p>I did use the -o option in the end.</p>
+<p>Incidentally, when using redirect, I get the following on std out or the output file &#8211;</p>
+<p>[INFO] Using charset MacRoman</p>
+<p>Looks like java.util logging output.<br />
+I am using the terminal app in Mac OS with the default install of Java (1.5.0_07).<br />
+Not a problem for me though.</p>
+<p>Thanks Julien.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-294</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 15:28:51 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-294</guid>
+		<description><![CDATA[@Sonny
+
+If you want to send the output to a file without using a redirection (which is what you seem to do), then you need to use the &lt;code&gt;-o&lt;/code&gt; option.]]></description>
+		<content:encoded><![CDATA[<p>@Sonny</p>
+<p>If you want to send the output to a file without using a redirection (which is what you seem to do), then you need to use the <code>-o</code> option.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sonny Gill</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-293</link>
+		<dc:creator><![CDATA[Sonny Gill]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 15:09:57 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-293</guid>
+		<description><![CDATA[Hi Julien,
+
+Very cool!
+I just started writing a build file for a webapp, and this is going to be incredibly handy.
+
+BTW, I don&#039;t know if it is just me, but I can&#039;t get the new syntax for invoking the compresser to work.
+
+On using -
+java -jar yuicompressor-2.2.jar --type js  output.js
+the output is still sent to the std. out
+
+Regards,
+Sonny]]></description>
+		<content:encoded><![CDATA[<p>Hi Julien,</p>
+<p>Very cool!<br />
+I just started writing a build file for a webapp, and this is going to be incredibly handy.</p>
+<p>BTW, I don&#8217;t know if it is just me, but I can&#8217;t get the new syntax for invoking the compresser to work.</p>
+<p>On using &#8211;<br />
+java -jar yuicompressor-2.2.jar &#8211;type js  output.js<br />
+the output is still sent to the std. out</p>
+<p>Regards,<br />
+Sonny</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julien Lecomte</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-290</link>
+		<dc:creator><![CDATA[Julien Lecomte]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 13:52:16 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-290</guid>
+		<description><![CDATA[@Alexander
+
+Thanks for reporting this, I already fixed it.
+
+Regards]]></description>
+		<content:encoded><![CDATA[<p>@Alexander</p>
+<p>Thanks for reporting this, I already fixed it.</p>
+<p>Regards</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: YUI Compressor 2.2 Released &#187; Chris Norton</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-289</link>
+		<dc:creator><![CDATA[YUI Compressor 2.2 Released &#187; Chris Norton]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 13:44:02 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-289</guid>
+		<description><![CDATA[[...] is a new 2.2 release of Julien Lecomte&#8217;s fantastic YUI Compressor for minifying JavaScript. This version has some [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] is a new 2.2 release of Julien Lecomte&#8217;s fantastic YUI Compressor for minifying JavaScript. This version has some [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Alexander</title>
+		<link>http://www.julienlecomte.net/blog/2007/09/22/comment-page-1/#comment-288</link>
+		<dc:creator><![CDATA[Alexander]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2007 11:49:32 +0000</pubDate>
+		<guid isPermaLink="false">http://www.julienlecomte.net/blog/2007/09/18/yui-compressor-version-22-now-available/#comment-288</guid>
+		<description><![CDATA[There is a bug. Rule &quot;opacity: 0.2&quot; transformed into &quot;opacity.2&quot; (without colon).]]></description>
+		<content:encoded><![CDATA[<p>There is a bug. Rule &#8220;opacity: 0.2&#8221; transformed into &#8220;opacity.2&#8221; (without colon).</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

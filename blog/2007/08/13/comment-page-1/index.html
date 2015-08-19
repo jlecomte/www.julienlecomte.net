@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Gzip Your Minified JavaScript Files | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Gzip Your Minified JavaScript Files Comments Feed" href="../feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='../../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../../wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='YUI Compressor Version 1.1 Now Available' href='../../../../index.html?p=12' />
+<link rel='next' title='YUI Compressor Version 2.0 Now Available' href='../../../../index.html?p=14' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../../../index.html?p=13' />
+	<link href="../../../../wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../../../../wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-13 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../../../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../../../../../index.html">Home</a></li><li class="page_item page-item-36"><a href="../../../../index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-13" class="post-13 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Gzip Your Minified JavaScript Files</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Today, I found out that the good folks behind <a href="http://jquery.com/" target="_blank">jQuery</a> were using <a href="http://dean.edwards.name/packer/" target="_blank">Packer</a>, another great JavaScript compression utility by Dean Edwards, to distribute their compressed version of the library. The result: an amazingly small 21KB download! My first thought was: Wow, that is small! I then tried the <a href="../introducing-the-yui-compressor/index.html" target="_blank">YUI Compressor</a> on the uncompressed version of the jQuery library and obtained a 31KB file. Not bad, but not nearly as good as Packer&#8230; I then decided to compare the gzipped version of these files. Here are my findings:</p>
+<table border="1">
+<thead>
+<tr>
+<th>File</th>
+<th>File size</th>
+<th>Gzipped file size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original jQuery library</td>
+<td>62,885 bytes</td>
+<td>19,758 bytes</td>
+</tr>
+<tr>
+<td>jQuery minified with JSMin</td>
+<td>36,391 bytes</td>
+<td>11,541 bytes</td>
+</tr>
+<tr>
+<td>jQuery minified with Packer</td>
+<td>21,557 bytes</td>
+<td>11,119 bytes</td>
+</tr>
+<tr>
+<td>jQuery minified with the YUI Compressor</td>
+<td>31,822 bytes</td>
+<td>10,818 bytes</td>
+</tr>
+</tbody>
+</table>
+<p>These results are amazing! The smallest file is the file obtained by minifying jQuery using the YUI Compressor and  then gzipping. I would have thought that using Packer would have yielded the smallest file. In fact, it appears that Packer&#8217;s redundancy reduction algorithm is detrimental to gzip compression.</p>
+<p>In addition to that, using Packer&#8217;s redundancy reduction algorithm adds a delay at the time the script gets executed (because the script needs to be unpacked and then eval&#8217;ed) On my laptop, this delay is about 200 msec. The conclusion is clear: for optimal performance, gzip your JavaScript code, and stay away from &#8220;advanced&#8221; JavaScript compression schemes that look attractive on paper, but end up degrading the performance of your site.</p>
+<p>If your web hosting company does not offer HTTP compression, but gives you access to PHP (that&#8217;s the case of Yahoo! Web Hosting), I wrote a <a href="../../../../../blogfiles/gz.phps" target="_blank">simple PHP script</a> that will compress files and set the cache control headers so that the requested files actually get cached by the browser. I used this script with great success for a web site I worked on recently: <a href="http://www.okomis.com/" target="_blank">http://www.okomis.com/</a></p>
+<p>Note: yahoo-dom-event.js, minified with the YUI Compressor and gzipped only weighs 9,476 bytes. Not bad!</p>
+<p><strong>Update: </strong> Read this <a href="http://ejohn.org/blog/library-loading-speed/" target="_blank">article</a> by John Resig on JavaScript library Loading Speed.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../../category/web-development/index.html" rel="category tag">Web Development</a> on <a href="../../../../index.html?p=13" title="3:11 pm" rel="bookmark"><time class="entry-date" datetime="2007-08-21T15:11:26+00:00">August 21, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../../../index.html?p=12" rel="prev"><span class="meta-nav">&larr;</span> YUI Compressor Version 1.1 Now Available</a></span>
+					<span class="nav-next"><a href="../../../../index.html?p=14" rel="next">YUI Compressor Version 2.0 Now Available <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			51 thoughts on &ldquo;<span>Gzip Your Minified JavaScript Files</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-100">
+		<article id="comment-100" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/efc4766a385e74544579c9061ef4b08c?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/efc4766a385e74544579c9061ef4b08c?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Kevin Le</b> </cite><a href="index.html#comment-100"><time datetime="2007-08-22T06:19:57+00:00">August 22, 2007 at 6:19 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Julien,</p>
+<p>I found out about your YUI Compressor a week ago on ajaxian, and found it to be a useful neat tool.  A week ago, it was still only a command line tool, so over the weekend I started to turn it into a web tool.  I&#8217;m close to deploying, but today, just found out you released 1.1 which has a web front to it.  Have not looked, but do see a need for me to even continue.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-101">
+		<article id="comment-101" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/cb77ff802d180ca2634d888e027ba6db?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/cb77ff802d180ca2634d888e027ba6db?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://developer.yahoo.com/performance' rel='external nofollow' class='url'>Steve Souders</a></b> </cite><a href="index.html#comment-101"><time datetime="2007-08-22T21:35:17+00:00">August 22, 2007 at 9:35 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>YUI Compressor is looking better every day! Julien has reviewed this in his other study, but we see it here, too. Gzipping is great, typically reducing file size by 70%. In this example it cut 69%. But using minification in combination with gzipping has even more savings, and is definitely worthwhile. Minifying the file with YUI Compressor and then gzipping it reduced the file by another 14%, for a total reduction of 83%!! It&#8217;s worthwhile to note that 90%+ of today&#8217;s browsers support gzip, so combining minification with gzipping is the way to go. </p>
+<p>Steve Souders<br />
+Chief Performance Yahoo! and YSlow author</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-103">
+		<article id="comment-103" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/b0765e35b9759af3a07de5af4bc479df?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b0765e35b9759af3a07de5af4bc479df?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://arthur.blake.name' rel='external nofollow' class='url'>Arthur Blake</a></b> </cite><a href="index.html#comment-103"><time datetime="2007-08-23T09:24:09+00:00">August 23, 2007 at 9:24 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I am finding that using deflate gives an even slightly better compression that gzip.  I think that most browsers support that as well, but I&#8217;m wondering why nobody talks about it too much&#8230; any ideas?</p>
+<p>I agree YUI compressor is looking really good.  I&#8217;ve also found in my own tests that the extra compression gained by base62 in Packer is erased because gzip can&#8217;t compress it too well.</p>
+<p>I&#8217;m going to publish some comprehensive stats hopefully within the week.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-104">
+		<article id="comment-104" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/ea58a269388b5407a38f83801eb17852?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ea58a269388b5407a38f83801eb17852?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://wanderinghorse.net' rel='external nofollow' class='url'>Stephan Beal</a></b> </cite><a href="index.html#comment-104"><time datetime="2007-08-24T11:00:13+00:00">August 24, 2007 at 11:00 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hiya! There&#8217;s a thread on the jQuery mailing list which covers exactly this topic:</p>
+<p><a href="http://groups.google.com/group/jquery-en/browse_thread/thread/3d54b9c96f97d324/69b3972335566b69" rel="nofollow">http://groups.google.com/group/jquery-en/browse_thread/thread/3d54b9c96f97d324/69b3972335566b69</a></p>
+<p>Regarding your gzip PHP script: note that caching the compressed results on the server can be a bad idea. On hosting services where the web server is run as a different user than the account for which the server is hosted, the files/dirs will normally be created with access rights which disallow the account owner to delete/modify them. This happens, e.g., on the SourceForge servers. When it comes to general-purpose solutions, writing to the filesystem is ALWAYS a bad idea, as it does not port easily to all environments.</p>
+<p>You can avoid toying with the filesystem by using PHP&#8217;s built-in support which functions similarly to mod_deflate. See the above link for a trivial script which does this. If you apache has mod_deflate/mod_gzip activated then you don&#8217;t need any of this because the server will do it transparently.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-105">
+		<article id="comment-105" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-105"><time datetime="2007-08-24T11:09:15+00:00">August 24, 2007 at 11:09 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Stephan</p>
+<p>You&#8217;re absolutely right, and I never claimed the PHP script I provide in this article was the ultimate solution (my experience with PHP is rather limited) It however performed very well for me at both compressing AND setting the cache control headers (the latter being more important to me) and I thought I&#8217;d share it for people to play with.</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-111">
+		<article id="comment-111" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/b0765e35b9759af3a07de5af4bc479df?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b0765e35b9759af3a07de5af4bc479df?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://arthur.blake.name' rel='external nofollow' class='url'>Arthur Blake</a></b> </cite><a href="index.html#comment-111"><time datetime="2007-08-24T23:57:13+00:00">August 24, 2007 at 11:57 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Arthur<br />
+Just to answer my own question about DEFLATE compression:</p>
+<p>I read over the Wikipedia articles on gzip and deflate in some depth.  Really deflate and gzip are the same.  gzip just adds an extra header, and a crc plus a count at the end.  So gzip will always add some extra overhead (I find it&#8217;s always 12 bytes with the Java implementation) and maybe give you some peace of mind about the integrity of the stream.  </p>
+<p>However, TCP already has that built in, so I&#8217;m not so sure it is necessary in this context.  So, using deflate instead of gzip is an option for those who might want to obtain that last extra ounce of compression.</p>
+<p>With this knowledge in mind, I think I&#8217;ll take the deflate stat out of the CompressorRater, as it just adds more noise to the mix (since it&#8217;s essentially the same number as gzip, minus a few bytes.)</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-112">
+		<article id="comment-112" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/2305321a497ada25867a0986572382e5?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2305321a497ada25867a0986572382e5?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Daniel James</b> </cite><a href="index.html#comment-112"><time datetime="2007-08-27T04:28:22+00:00">August 27, 2007 at 4:28 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Seeing this prompted me to dig up something similar I wrote a while ago, using a fork of the Narcissus JavaScript engine. It&#8217;s a bit more aggressive than yours so it&#8217;ll save a little more space. If you&#8217;re interested you can try it at: </p>
+<p><a href="http://crunchy.nfshost.com/" rel="nofollow">http://crunchy.nfshost.com/</a></p>
+<p>To run it you paste the code in the top box, and then click &#8216;crunch&#8217;. It probably only works on firefox.</p>
+<p>Although, I&#8217;m not pushing it, as it&#8217;s not finished or supported and probably has some horrible bug somewhere.</p>
+<p>But what you might be interested in are the test cases:</p>
+<p><a href="http://js-crunchy.googlecode.com/svn/trunk/crunchy/tests.js" rel="nofollow">http://js-crunchy.googlecode.com/svn/trunk/crunchy/tests.js</a></p>
+<p>It&#8217;s not a very comprehensive test suite &#8211; but it does test for some subtle problems with this kind of compression. I&#8217;d always meant to test it against the mozilla test suite, but running it at the command line was pretty painful. Yours should be better at that.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-139">
+		<article id="comment-139" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/b33181b8e12bd10dfa373acc8af37cbb?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b33181b8e12bd10dfa373acc8af37cbb?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://dean.edwards.name/' rel='external nofollow' class='url'>Dean Edwards</a></b> </cite><a href="index.html#comment-139"><time datetime="2007-08-28T15:12:09+00:00">August 28, 2007 at 3:12 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&gt; The conclusion is clear: for optimal performance, gzip your JavaScript code, and stay away from â€œadvancedâ€ JavaScript compression schemes</p>
+<p>I agree. :-)</p>
+<p><a href="http://dean.edwards.name/weblog/2007/08/js-compression/" rel="nofollow">http://dean.edwards.name/weblog/2007/08/js-compression/</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-143">
+		<article id="comment-143" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d9a3a649a91b71397411f54504a1be85?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d9a3a649a91b71397411f54504a1be85?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://batist.dosimple.ch/blog/' rel='external nofollow' class='url'>batiste</a></b> </cite><a href="index.html#comment-143"><time datetime="2007-08-29T03:09:13+00:00">August 29, 2007 at 3:09 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&gt; The conclusion is clear: for optimal performance, gzip your JavaScript code, and stay away from â€œadvancedâ€ JavaScript compression schemes</p>
+<p>I agree too. My personnal experiments learn me that the browser spend more time in the javacript decompression process that in the download process.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-189">
+		<p>Pingback: <a href='http://jquery.com/blog/2007/09/10/jquery-12-jqueryextendawesome/' rel='external nofollow' class='url'>jQuery: &raquo; jQuery 1.2: jQuery.extend(&#8221;Awesome&#8221;)</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-190">
+		<p>Pingback: <a href='http://www.javascriptnews.com/javascript/jquery-12-jqueryextend%e2%80%9dawesome%e2%80%9d.html' rel='external nofollow' class='url'>Javascript News &raquo; Blog Archive &raquo; jQuery 1.2: jQuery.extend(â€Awesomeâ€)</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-191">
+		<p>Pingback: <a href='http://mrwlwan.wordpress.com/2007/09/11/jquery-12-%e9%9c%87%e6%92%bc%e5%8f%91%e5%b8%83/' rel='external nofollow' class='url'>jQuery 1.2 éœ‡æ’¼å‘å¸ƒ &laquo; Ross Wan&#8217;s World!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-193">
+		<article id="comment-193" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/665e9126b82869595219d83a5cfdaa0e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/665e9126b82869595219d83a5cfdaa0e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">dimpared</b> </cite><a href="index.html#comment-193"><time datetime="2007-09-11T09:37:57+00:00">September 11, 2007 at 9:37 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have mod_gzip enabled on my server, but it&#8217;s only gzipping my php/html file. Is it possible to add support for other file-types, like .js files, via an .htaccess file? Also, here&#8217;s a great site to test if mod_gzip is enabled on your server.</p>
+<p><a href="http://www.gidnetwork.com/tools/gzip-test.php" rel="nofollow">http://www.gidnetwork.com/tools/gzip-test.php</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-196">
+		<article id="comment-196" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/063ab0433fc8df25d77223366b628631?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/063ab0433fc8df25d77223366b628631?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.rodrigodiniz.qsh.eu' rel='external nofollow' class='url'>Rodrigo</a></b> </cite><a href="index.html#comment-196"><time datetime="2007-09-11T09:53:55+00:00">September 11, 2007 at 9:53 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If you want to gzip your files using asp.net<br />
+here is a script<br />
+<a href="http://www.rodrigodiniz.qsh.eu/testgzip.aspx" rel="nofollow">http://www.rodrigodiniz.qsh.eu/testgzip.aspx</a><br />
+You can see the script in action and also download it.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-197">
+		<p>Pingback: <a href='http://javam.org/jquery-12-ohhhh-beeeeee/' rel='external nofollow' class='url'>jQuery 1.2 Ohhhh beeeeee</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-198">
+		<p>Pingback: <a href='http://outatime.wordpress.com/2007/09/11/jquery-12-jqueryextendawesome/' rel='external nofollow' class='url'>jQuery 1.2: jQuery.extend(&rdquo;Awesome&rdquo;) &laquo; outaTiME</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-202">
+		<p>Pingback: <a href='http://ablasco.wordpress.com/2007/09/12/jquery-12-jqueryextend%e2%80%9dawesome%e2%80%9d/' rel='external nofollow' class='url'>jQuery 1.2: jQuery.extend(â€Awesomeâ€) &laquo; Resistance is futile</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-225">
+		<p>Pingback: <a href='http://david.low.me.uk/2007/09/15/links-for-2007-09-14/' rel='external nofollow' class='url'>links for 2007-09-14</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-229">
+		<article id="comment-229" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/9a837b0827116ec6dc4bbf3c3141042b?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9a837b0827116ec6dc4bbf3c3141042b?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">alankila</b> </cite><a href="index.html#comment-229"><time datetime="2007-09-15T02:18:22+00:00">September 15, 2007 at 2:18 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>GZip is absolutely the correct way to compress javascript.</p>
+<p>No eval-based compression scheme should be used because it simply takes too long to decompress the javascript file in the browser.</p>
+<p>Don&#8217;t believe me? Consider the savings. If you save 40 kB by compression from 60 kB to 20 kB, it only takes 40 ms longer to download the full file the first time using a 8M ADSL connection.</p>
+<p>Afterwards, you pay for the compression every time when the page is being reloaded. If it only takes 10 ms to decompress (and my measurements indicate that for my hardware it&#8217;s more like 20 ms), then after 8 page refreshes the advantage is gone.</p>
+<p>So say yes to minimification schemes that make it possible to cache and reuse the javasciprt file without a &#8220;decompression&#8221; step.</p>
+<p>Size isn&#8217;t everything.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-237">
+		<p>Pingback: <a href='http://www.netvtm.com/archives/57' rel='external nofollow' class='url'>jQuery 1.2å‘å¸ƒ | NetVTM.COM :: ç½‘ç»œç»´ä»–å‘½</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-244">
+		<article id="comment-244" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/009c35d575e2e2ca376c94e2508e1efc?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/009c35d575e2e2ca376c94e2508e1efc?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Jan van Diemen</b> </cite><a href="index.html#comment-244"><time datetime="2007-09-16T13:59:32+00:00">September 16, 2007 at 1:59 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That&#8217;s all nice, but IE6&#8217;s gzip uncompression is unreliable, not only with CSS also with js, and this is not covered while it&#8217;s still the most popular browser.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-245">
+		<article id="comment-245" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-245"><time datetime="2007-09-16T14:04:44+00:00">September 16, 2007 at 2:04 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Jan</p>
+<p>I heard that rumor a long time ago. It seems to come back every so often, but nobody has ever been able to present me with hard evidence. All big Internet companies (Google and Yahoo! to cite only two) do gzip their assets if the browser requests it (accept-encoding header) and nobody seems to have any problem&#8230;</p>
+<p>IE6 is not the most popular browser anymore. IE7 recently surpassed it.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-247">
+		<article id="comment-247" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/009c35d575e2e2ca376c94e2508e1efc?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/009c35d575e2e2ca376c94e2508e1efc?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Jan van Diemen</b> </cite><a href="index.html#comment-247"><time datetime="2007-09-16T14:58:15+00:00">September 16, 2007 at 2:58 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s no rumour because I had to disable it for IE6 just because of this. Mysteriously, sometimes the javascript would not load, and I traced it back to this. Part of it (but I&#8217;m not sure of this) might be that I run one of those &#8220;Multiple IE&#8221; packages. This means, I think, I&#8217;m running an &#8220;out-of-the-box&#8221; IE6, without any patches or service packs. In that version, any gzipped file, be it CSS or JS which is loaded from a page fails 1 in 5 times or so. Using MS script debugger, the script is 0 bytes in those cases. After I patched httpd.conf to disable gzip compression for IE6, it worked fine again.</p>
+<p>This is my output filter in httpd.conf:</p>
+<p># Insert filter<br />
+SetOutputFilter DEFLATE</p>
+<p># Netscape 4.x has some problems&#8230;<br />
+BrowserMatch ^Mozilla/4 gzip-only-text/html</p>
+<p># Netscape 4.06-4.08 have some more problems<br />
+BrowserMatch ^Mozilla/4\.0[678] no-gzip</p>
+<p>BrowserMatch \bMSIE no-gzip</p>
+<p># NOTE: Due to a bug in mod_setenvif up to Apache 2.0.48<br />
+# the above regex won&#8217;t work. You can use the following<br />
+# workaround to get the desired effect:<br />
+BrowserMatch \bMSIE\s7 !no-gzip !gzip-only-text/html</p>
+<p># Don&#8217;t compress images<br />
+SetEnvIfNoCase Request_URI \<br />
+\.(?:gif|jpe?g|png|zip|gz)$ no-gzip dont-vary</p>
+<p># Make sure proxies don&#8217;t deliver the wrong content<br />
+Header append Vary User-Agent env=!dont-vary</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-248">
+		<article id="comment-248" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-248"><time datetime="2007-09-16T15:03:01+00:00">September 16, 2007 at 3:03 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Jan</p>
+<p>You&#8217;re using an unsupported environment. I am aware of many bugs that appear with those &#8220;multiple IEs&#8221; installs that do not exist with a normal environment. Again, if Google and Yahoo! use gzip compression, you can be sure that it&#8217;s safe (or they wouldn&#8217;t do it&#8230;) If I were you, I would test multiple IE versions using VMWare or Parallel.</p>
+<p>If an expert in Apache configuration is reading this blog, please go over Jan&#8217;s config. Thanks.</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-253">
+		<p>Pingback: <a href='http://jquery.com/blog/2007/09/16/jquery-121-quick-fixes-for-12/' rel='external nofollow' class='url'>jQuery: &raquo; jQuery 1.2.1: Quick Fixes for 1.2</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-255">
+		<p>Pingback: <a href='http://www.javascriptnews.com/javascript/jquery-121-quick-fixes-for-12.html' rel='external nofollow' class='url'>Javascript News &raquo; Blog Archive &raquo; jQuery 1.2.1: Quick Fixes for 1.2</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-256">
+		<p>Pingback: <a href='http://mrwlwan.wordpress.com/2007/09/17/jquery-121-%e5%8f%91%e5%b8%83/' rel='external nofollow' class='url'>jQuery 1.2.1 å‘å¸ƒ &laquo; Ross Wan&#8217;s World!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-258">
+		<article id="comment-258" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/16ceb28d7e6867f78e92c3b82ac01b48?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/16ceb28d7e6867f78e92c3b82ac01b48?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">DinoBoff</b> </cite><a href="index.html#comment-258"><time datetime="2007-09-17T03:25:39+00:00">September 17, 2007 at 3:25 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There is some bugs in some versions of IE (and Netscape 4.0):<br />
+<a href="http://support.microsoft.com/kb/321722/EN-US/" rel="nofollow">http://support.microsoft.com/kb/321722/EN-US/</a> (IE5.5, IE6 and IE6SP1 always cache gzip encoded content)<br />
+<a href="http://support.microsoft.com/default.aspx?scid=kb;LN;Q312496" rel="nofollow">http://support.microsoft.com/default.aspx?scid=kb;LN;Q312496</a> (IE6&lt;sp1 could lose the first 2ko of the gzip document)<br />
+<a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;823386&#038;Product=ie600" rel="nofollow">http://support.microsoft.com/default.aspx?scid=kb;en-us;823386&#038;Product=ie600</a> (IE6sp1, compressed HTML pages only partially appear)<br />
+IE6 on XP SP2 should be safe even if I could not check the fix for the last bug is in SP2. Can someone check with Microsoft or on a fresh installation of Windows XP SP2?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-260">
+		<p>Pingback: <a href='http://outatime.wordpress.com/2007/09/17/jquery-121-quick-fixes-for-12/' rel='external nofollow' class='url'>jQuery 1.2.1: Quick Fixes for 1.2 &laquo; outaTiME</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-262">
+		<article id="comment-262" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/009c35d575e2e2ca376c94e2508e1efc?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/009c35d575e2e2ca376c94e2508e1efc?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Jan van Diemen</b> </cite><a href="index.html#comment-262"><time datetime="2007-09-17T09:52:53+00:00">September 17, 2007 at 9:52 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@DinoBoff</p>
+<p>Interesting, thanks for that.<br />
+If we presume that this problem no longer occurs at Service Pack 2, then this means all IE6 version with &#8216;SV1&#8217; in the user agent string should be OK:<br />
+<a href="http://support.microsoft.com/kb/884323/" rel="nofollow">http://support.microsoft.com/kb/884323/</a></p>
+<p>Looking at these browser stats:<br />
+<a href="http://www.ews.uiuc.edu/bstats/latest-month.html" rel="nofollow">http://www.ews.uiuc.edu/bstats/latest-month.html</a></p>
+<p>..that means over 5% still have a problem with gzip compression? Hmm&#8230;</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-264">
+		<p>Pingback: <a href='http://www.awflasher.com/blog/archives/956' rel='external nofollow' class='url'>jQueryå‡çº§åˆ°1.2.1 - 9æœˆçš„æƒŠå–œ</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-267">
+		<p>Pingback: <a href='http://jpsykes.com/41/compression-the-web' rel='external nofollow' class='url'>Compression &#38; the Web by jpsykes</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-269">
+		<article id="comment-269" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-269"><time datetime="2007-09-17T13:33:41+00:00">September 17, 2007 at 1:33 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Update: Yahoo! uses a user agent white list in order to figure out whether content should be served compressed. I plan to make changes to my PHP script to include this.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-280">
+		<p>Pingback: <a href='http://paxoblog.wordpress.com/2007/09/18/links-for-2007-09-18/' rel='external nofollow' class='url'>links for 2007-09-18 &laquo; PaxoBlog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-297">
+		<article id="comment-297" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-297"><time datetime="2007-09-19T13:57:18+00:00">September 19, 2007 at 1:57 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Update: Traditional Yahoo! web servers serve compressed content to only &#8216;good&#8217; browsers, and always with &#8220;Cache-Control: private&#8221;. Newer Yahoo! web servers serve compressed content if the incoming request asks for it.  No check is performed on the UA.</p>
+<p>As the number of browsers that ask for compressed content but don&#8217;t handle it well has severely dwindled, we&#8217;re beginning to shift our default behavior towards believing the browser when it says it can handle compression.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-369">
+		<p>Pingback: <a href='http://lovedjohnysmith.wordpress.com/2007/09/27/best-practices-in-javascript-library-design/' rel='external nofollow' class='url'>Best Practices in Javascript Library Design &laquo; Blog for .NET Hunter</a> </p>
+	</li><!-- #comment-## -->
+	<li class="trackback even thread-even depth-1" id="comment-370">
+		<p>Pingback: <a href='http://www.sharepointblogs.com/lovedjohnysmith/archive/2007/09/26/best-practices-in-javascript-library-design.aspx' rel='external nofollow' class='url'>Blog for Sharepoint Hunter</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-373">
+		<p>Pingback: <a href='http://www.bloggerloser.com/best-practices-in-javascript-library-design/' rel='external nofollow' class='url'>Blogger Loser &raquo; Best Practices in Javascript Library Design</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-406">
+		<article id="comment-406" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d9b2f7a5c04d1d0fb8d3de0dea81d1bf?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d9b2f7a5c04d1d0fb8d3de0dea81d1bf?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://www.xidea.org' rel='external nofollow' class='url'>jindw</a></b> </cite><a href="index.html#comment-406"><time datetime="2007-09-28T22:53:38+00:00">September 28, 2007 at 10:53 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>ç›®å‰ä¸ºæ­¢ï¼ŒJSAä¾ç„¶æ˜¯æœ€å¼ºå¤§çš„è„šæœ¬åŽ‹ç¼©å·¥å…·ã€‚<br />
+As i know,JSA is the most powerfull compressor for javascript.</p>
+<p>for jquery1.2.1 (80,469 byte;)<br />
+compressor		beforegzip	aftergzip<br />
+source:			80,469;		24,975;<br />
+jquery default:		46,437;		14,641;<br />
+yuicomressor:		46,210;		14,452;<br />
+JSA(without eval):	40,704;		13,604;<br />
+JSA(with eval):		26,157;		13,549;</p>
+<p>JSA(webstart): <a href="http://www.xidea.org/webstart/JSA.jnlp" rel="nofollow">http://www.xidea.org/webstart/JSA.jnlp</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-409">
+		<article id="comment-409" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/888a1f867f3af944825b584370e321c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/888a1f867f3af944825b584370e321c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">ali</b> </cite><a href="index.html#comment-409"><time datetime="2007-09-29T04:15:05+00:00">September 29, 2007 at 4:15 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi guys,<br />
+yet another minifying and gzipping solution is available at:<br />
+<a href="http://farhadi.ir/jsmart.html" rel="nofollow">http://farhadi.ir/jsmart.html</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-491">
+		<p>Pingback: <a href='http://carlosrobertolima.wordpress.com/2007/10/06/jquery/' rel='external nofollow' class='url'>Jquery &laquo; Carlos R. Lima</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-534">
+		<p>Pingback: <a href='http://www.nmwebservices.nl/blog/2007/10/11/speed-optimization/' rel='external nofollow' class='url'>NM-blog &raquo; Speed optimization</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-564">
+		<article id="comment-564" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/6fb50bbd6a9a3d7d101387b10d2fd6e8?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6fb50bbd6a9a3d7d101387b10d2fd6e8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">eduardo</b> </cite><a href="index.html#comment-564"><time datetime="2007-10-22T19:51:41+00:00">October 22, 2007 at 7:51 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>When i try to use your script this returns:</p>
+<p>&#8220;The HTTP extensions to PHP does not seem to be installed.&#8221;</p>
+<p>how can i install the http extension do my php?<br />
+i googled it but i was not sucessiful!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-566">
+		<article id="comment-566" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/cc1b574406402333af845bfcefa90e98?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/cc1b574406402333af845bfcefa90e98?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://blogs.bwerp.net/' rel='external nofollow' class='url'>Adam Backstrom</a></b> </cite><a href="index.html#comment-566"><time datetime="2007-10-25T10:45:33+00:00">October 25, 2007 at 10:45 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There&#8217;s a bug on line 169 of gz.php: $uri should be $src_uri. Without that change, the file only shows up on the initial load (as uncompressed).</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-567">
+		<article id="comment-567" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/cc1b574406402333af845bfcefa90e98?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/cc1b574406402333af845bfcefa90e98?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://blogs.bwerp.net/' rel='external nofollow' class='url'>Adam Backstrom</a></b> </cite><a href="index.html#comment-567"><time datetime="2007-10-25T10:47:22+00:00">October 25, 2007 at 10:47 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>(Actually, you wouldn&#8217;t notice this bug if register_globals is on.)</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-577">
+		<p>Pingback: <a href='http://atomgiant.com/2007/10/29/bundle-fu-for-combining-javascript-and-css/' rel='external nofollow' class='url'>atom thoughts &raquo; Blog Archive &raquo; Bundle-Fu for combining Javascript and CSS</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-594">
+		<article id="comment-594" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/0e1de2579a491fbea6de4c36c48f17f9?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/0e1de2579a491fbea6de4c36c48f17f9?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://daniel.hahler.de/' rel='external nofollow' class='url'>dAniel hAhler</a></b> </cite><a href="index.html#comment-594"><time datetime="2007-11-10T21:10:27+00:00">November 10, 2007 at 9:10 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It would be nice if the script would not rely on the PECL http extension.</p>
+<p>I&#8217;ve created a patch, but it&#8217;s untested.<br />
+It uses the HTTP_IF_MODIFIED_SINCE and HTTP_IF_NONE_MATCH $_SERVER keys instead.</p>
+<p>You can get it from <a href="http://codeprobe.de/patches/gz.php-do-not-depend-on-pecl-http.diff" rel="nofollow">http://codeprobe.de/patches/gz.php-do-not-depend-on-pecl-http.diff</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-798">
+		<p>Pingback: <a href='http://heliologue.com/blog/2007/12/08/various-and-sundry-technology-stuff-pertaining-to-work/' rel='external nofollow' class='url'>A Modest Construct &raquo; Various and sundry technology stuff pertaining to work</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1659">
+		<article id="comment-1659" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e14f5f58da3d754a91d354abddb0d2ec?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e14f5f58da3d754a91d354abddb0d2ec?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Cherry</b> </cite><a href="index.html#comment-1659"><time datetime="2007-12-21T08:55:24+00:00">December 21, 2007 at 8:55 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Could anybody tell me, where can i get the Gzipped version of jquery. If any body has it, please do share it.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1661">
+		<article id="comment-1661" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e14f5f58da3d754a91d354abddb0d2ec?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e14f5f58da3d754a91d354abddb0d2ec?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Cherry</b> </cite><a href="index.html#comment-1661"><time datetime="2007-12-21T08:56:30+00:00">December 21, 2007 at 8:56 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Could anybody share the GZipped version of JQUERY.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../../../../index.html?p=13#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

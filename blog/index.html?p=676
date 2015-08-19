@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>OR: DARC Observatory, 4/20/2012 | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='OR: DARC Observatory, 4/14/2012' href='index.html?p=672' />
+<link rel='next' title='Woodworking Safety Week 2012' href='index.html?p=680' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html?p=676' />
+<link rel='shortlink' href='index.html?p=676' />
+	<link href="wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-676 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html?p=676#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../index.html">Home</a></li><li class="page_item page-item-36"><a href="index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-676" class="post-676 post type-post status-publish format-standard hentry category-astronomy">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">OR: DARC Observatory, 4/20/2012</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>If you know what 4/20 refers to, you know we must have had a good time! A few of us, including Mark Johnston, Rogelio Bernal Andreo, Jeff Weiss, Al Howard, Al Smith and I, met up at a private property located in the Little Panoche Valley, roughly 15 miles south of the San Luis reservoir. The temperatures remained in the 60s, which is good for observers, but not so much for imagers who have to worry about cooling their camera sensor&#8230; The seeing was good (4/5), not quite excellent though. The air was fairly dry. I estimate the NELM was around 6.7 (same as last week.) I re-observed a lot of Herschel 400 objects that I had marked as favorites, and observed a few Herschel II objects that were new to me. Among the highlights were observing Leo I for the first time, an incredible (and I do mean *incredible*) high power image of the Ghost of Jupiter (see description below), countless galaxies showing spiral structure, Mars and Saturn with nice crisp details. Below is my log for the night (mostly Herschel II objects.)</p>
+<p>Log format: [designation(s)] [type] [constellation] [RA] [Dec]<br />
+[magnitude] [date and local time (PDT)]</p>
+<p>Location: D.A.R.C. Observatory [Elevation 1400ft]<br />
+Telescope: 16&#8243; F/4 homemade dobsonian with Paracorr<br />
+Eyepieces used:<br />
+&#8211; Televue Panoptic 27mm (69x – 1° TFOV)<br />
+&#8211; Televue Nagler 16mm type 5 (117x – 42&#8242; TFOV)<br />
+&#8211; Televue Nagler 9mm type 6 (208x – 24&#8242; TFOV)<br />
+&#8211; Televue Nagler 7mm type 6 (267x – 18&#8242; TFOV)<br />
+&#8211; Televue Nagler 5mm type 6 (374x – 13&#8242; TFOV)<br />
+(All times are PDT)</p>
+<p><b>NGC 2784</b> GX Hya 09 12 53 -24 13 45 11.2 2012-04-20 09:10pm<br />
+At first glance, all you see is a moderately bright core roughly 1&#8217;x45&#8243; E-W, gradually brighter towards the center. Upon closer examination, a very faint halo starts to appear around the core. I estimated it was 3&#8217;x1&#8242; E-W.</p>
+<p><b>NGC 2986</b> GX Hya 09 44 51 -21 20 26 11.7 2012-04-20 09:15pm<br />
+Round core, roughly 45&#8243; in diameter, moderately faint on the outside, moderately bright in the center, stellar nucleus. A very faint halo seems to extend as far as 1.2&#8242;. MCG-3-25-18 (mag 14.5) was easily spotted 2&#8242; WSW. A moderately faint (mag 16.3) star is 45&#8243; SW, another (mag 16.9) 50&#8243; NW and 2 stars (mag 15.7) 1&#8242; ESE.</p>
+<p><b>NGC 3078</b> GX Hya 09 58 59 -26 59 27 12.1 2012-04-20 09:30pm<br />
+40&#8243;x30&#8243; NNE-SSW, moderately faint in the center, faint in the outer region, smooth gradient. Moderately faint (mag 15.6) star 45&#8243; W.</p>
+<p><b>NGC 3242</b> (Ghost of Jupiter) PN Hya 10 25 23 -18 42 36 8.6 2012-04-20 09:45pm<br />
+The central star was spotted easily, along with a slight darkening around it, inside the &#8220;eye&#8221;. Also, the rim of the outer shell seemed very well defined. Finally, a very faint halo, visible using averted vision, was seen around the outer shell, especially immediately to the E. Beautiful sight!</p>
+<p><b>MCG 2-26-27</b> (Leo I) GX Leo 10 09 09 +12 14 35 11.2 2012-04-20 09:50pm<br />
+Seen with difficulty and confirmed by Mark Johnston as a very pale glow, maybe 3&#8217;x1&#8242; E-W. Better keep Regulus out of the FOV!</p>
+<p><b>NGC 4880</b> GX Vir 13 00 49 +12 24 52 13.1 2012-04-21 12:10am<br />
+Faint, relatively uniform glow 1&#8217;x45&#8243; NNW-SSE.</p>
+<p><b>NGC 4647</b> GX Vir 12 44 11 +11 30 44 12.1 2012-04-21 12:20am<br />
+Located just 2&#8242; NW of M60. Round, diffuse, about 1.2&#8242; in diameter, fairly uniform, moderately faint, slightly and gradually brighter towards the center.</p>
+<p><b>NGC 4639</b> GX Vir 12 43 31 +13 11 11 12.2 2012-04-21 12:25am<br />
+Moderately faint halo, 1.2&#8217;x50&#8243; N-S. Moderately bright, small, almost stellar core. Moderately bright (mag 15.2) star 45&#8243; SE.</p>
+<p><b>NGC 4608</b> GX Vir 12 41 52 +10 05 07 12.1 2012-04-21 12:30am<br />
+1&#8217;x40&#8243; faint &#8220;halo&#8221; (this is actually the bar of this barred spiral galaxy&#8230;) elongated NE-SW. Round, 20&#8243; in diameter, moderately bright core. Located right near Rho Vir (mag 4.9!)</p>
+<p><b>NGC 4612</b> GX Vir 12 42 12 +07 14 40 12.1 2012-04-21 12:35am<br />
+Moderately faint to moderately bright in its center, round, 45&#8243; in diameter. Uninteresting, except for the fact that it is located at the SE end of a chain of 6 fairly bright stars spanning 9&#8242;.</p>
+<p><b>NGC 4571</b> GX Com 12 37 35 +14 08 49 11.9 2012-04-21 12:40am<br />
+Round, about 2&#8242; in diameter, very faint and uniform. Small, round, only slightly brighter core. Located 2&#8242; SSW of a bright (mag 8.9) star (SAO 100177). Moderately faint (mag 15.1) superimposed star at the western end.</p>
+<p><b>NGC 5020</b> GX Vir 13 13 18 +12 31 54 13.0 2012-04-21 12:55am<br />
+Moderately bright round core 15&#8243; in diameter surrounded by a halo 1.5&#8217;x1.2&#8242; elongated N-S showing signs of spiral arms. In particular, the northern tip of the halo bends to the W while the southern tip bends to the E. A moderately faint (mag 14.0) star can be seen 2&#8242; NW.</p>
+<p><b>NGC 5129</b> GX Vir 13 24 48 +13 54 35 13.0 2012-04-21 01:00am<br />
+Located right next to 2 bright field stars (mag 9.7 and 10.3). Roundish, about 30&#8243; in diameter, slightly elongated N-S, moderately faint and uniform.</p>
+<p><b>NGC 5806</b> GX Vir 15 00 40 +01 50 25 12.4 2012-04-21 01:20am<br />
+Fairly faint halo 1.5&#8217;x1&#8242; NNW-SSE. Moderately bright, small (10&#8243; in diameter?) core.</p>
+<p><b>NGC 5813</b> GX Vir 15 01 50 +01 39 03 11.5 2012-04-21 01:35am<br />
+Round, about 1&#8242; in diameter, moderately faint on the outside, moderately bright in the center, smooth gradient. Located right near NGC 5814 and NGC 5811.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="category/astronomy/index.html" rel="category tag">Astronomy</a> on <a href="index.html?p=676" title="8:57 am" rel="bookmark"><time class="entry-date" datetime="2012-04-22T08:57:38+00:00">April 22, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="index.html?p=672" rel="prev"><span class="meta-nav">&larr;</span> OR: DARC Observatory, 4/14/2012</a></span>
+					<span class="nav-next"><a href="index.html?p=680" rel="next">Woodworking Safety Week 2012 <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

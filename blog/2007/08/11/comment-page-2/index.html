@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Introducing the YUI Compressor | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Introducing the YUI Compressor Comments Feed" href="../feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='../../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../../wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='YUI-based Image Magnifier Widget' href='../../../../index.html?p=9' />
+<link rel='next' title='YUI Compressor Version 1.1 Now Available' href='../../../../index.html?p=12' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../../../index.html?p=11' />
+	<link href="../../../../wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../../../../wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-11 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../../../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../../../../../index.html">Home</a></li><li class="page_item page-item-36"><a href="../../../../index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-11" class="post-11 post type-post status-publish format-standard hentry category-web-development">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Introducing the YUI Compressor</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<h4>Is there a need for a new JavaScript minifier?</h4>
+<p><img src="../../../../../blogfiles/images/yuicompressor.png" style="width:100px;height:90px;border:none;float:left;margin-right:10px;" alt="Yahoo's YUI Compressor"></p>
+<p>According to <a href="http://developer.yahoo.com/performance/" target="_blank">Yahoo!&#8217;s Exceptional Performance Team</a>, 40% to 60% of Yahoo!â€™s users have an empty cache experience and about 20% of all page views are done with an empty cache (see this <a href="http://yuiblog.com/blog/2007/01/04/performance-research-part-2/" target="_blank">article</a> for more information on browser cache usage) This fact outlines the importance of keeping web pages as lightweight as possible. Improving the engineering design of a page or a web application usually yields the biggest savings. After that come many different techniques such as minification of the code, <a href="http://en.wikipedia.org/wiki/Http_compression" target="_blank">HTTP compression</a>, etc. In terms of code minification, the most widely used tools to minify JavaScript code are Douglas Crockford&#8217;s <a href="http://crockford.com/javascript/jsmin" target="_blank">JSMin</a> and <a href="http://dojotoolkit.org/docs/shrinksafe" target="_blank">the Dojo compressor.</a> Both tools however have pitfalls. JSMin, for example, does not yield optimal savings (due to its simple algorithm, it must leave many line feed characters in the code in order not to introduce any new bugs) The Dojo compressor, on the other hand, does a better job at compacting code (it obfuscates local variables) but is unsafe and potentially introduces bugs if you are unaware of its limitations.</p>
+<p><br style="clear:both;line-height:0;"/></p>
+<h4>What is the YUI Compressor?</h4>
+<p>The YUI Compressor is a new JavaScript minifier. Its level of compaction is higher than the Dojo compressor, and it is as safe as JSMin. Tests on the <a href="http://developer.yahoo.com/yui/" target="_blank">YUI library</a> have shown savings of about 18% compared to JSMin and 10% compared to the Dojo compressor (these respectively become 10% and 5% after HTTP compression)</p>
+<h4>How does it work?</h4>
+<p>The YUI Compressor is written in <a href="http://java.sun.com/" target="_blank">Java</a> (requires Java >= 1.4) and relies on <a href="http://www.mozilla.org/rhino/" target="_blank">Rhino</a> to tokenize the source JavaScript file. It starts by analyzing the source JavaScript file to understand how it is structured. It then prints out the token stream, replacing all local symbols by a 1 (or 2, or 3) letter symbol wherever such a substitution is appropriate (in the face of <a href="http://www.jslint.com/lint.html" target="_blank">evil features</a> such as <code>eval</code> or <code>with</code>, the YUI Compressor takes a defensive approach by not obfuscating any of the scopes containing the evil statement). The YUI Compressor is open-source, so don&#8217;t hesitate to look at the code to understand exactly how it works.</p>
+<h4>Where can I get it?</h4>
+<p>An archive containing both source and binary is available for <a href="http://www.julienlecomte.net/yuicompressor/" target="_blank">download</a> on this site.</p>
+<h4>How do I run it?</h4>
+<pre>
+java -jar yuicompressor-1.0.jar
+    [-h, --help] [--warn] [--nomunge]
+    [--charset character-set] [-o outfile] infile
+</pre>
+<p>The following command line for example:</p>
+<pre>java -jar yuicompressor-1.0.jar myfile.js</pre>
+<p>will minify the file <code>myfile.js</code> and output the file <code>myfile-min.js</code>. For more information on how to use the YUI Compressor, please refer to the documentation included in the archive.</p>
+<h4>Limitations</h4>
+<p>Unlike JSMin, the YUI Compressor is slow and cannot be used for on-the-fly code minification (see <a href="http://code.google.com/p/minify/" target="_blank">minify</a> for a PHP implementation of JSMin by <a href="http://wonko.com/" target="_blank">Ryan Grove</a>, another Yahoo! engineer, that does on-the-fly JavaScript minification among other things)</p>
+<h4>Has Yahoo!&#8217;s official position on obfuscation changed?</h4>
+<p>Douglas Crockford wrote <a href="http://yuiblog.com/blog/2006/03/06/minification-v-obfuscation/" target="_blank">an interesting article</a> last year on minification vs. obfuscation. While that article still holds true, the YUI Compressor actually represents a 3rd way, in which code compaction does not carry the risk of introducing new bugs. The YUI Compressor is currently considered as a replacement for JSMin to compact the entire YUI library.</p>
+<h4>Feedback appreciated</h4>
+<p>The YUI Compressor is still a fairly new tool, so your feedback is well appreciated. Don&#8217;t hesitate to drop me a line if you find a bug, or think an important feature is missing. I will make updates available on this site, so watch for posts related to the YUI Compressor on this blog. This software belongs to the community, so it&#8217;s up to the community to make it better!</p>
+<h4>Additional notes</h4>
+<ul>
+<li>Do not hesitate to use the <code>--warn</code> option. The YUI Compressor will warn you if it finds anything that seems abnormal with your code, or that might reduce the level of compression.</li>
+<li>Keep as little of your code as possible in the global scope. This has 2 benefits:
+<ol>
+<li>You&#8217;ll get a better level of compression since the YUI Compressor does not obfuscate global symbols (which would make it unsafe)</li>
+<li>You won&#8217;t pollute the global object (see this <a href="http://yuiblog.com/blog/2006/06/01/global-domination/" target="_blank">article</a>)</li>
+</ol>
+</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../../category/web-development/index.html" rel="category tag">Web Development</a> on <a href="../../../../index.html?p=11" title="12:27 pm" rel="bookmark"><time class="entry-date" datetime="2007-08-13T12:27:17+00:00">August 13, 2007</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../../author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../../../index.html?p=9" rel="prev"><span class="meta-nav">&larr;</span> YUI-based Image Magnifier Widget</a></span>
+					<span class="nav-next"><a href="../../../../index.html?p=12" rel="next">YUI Compressor Version 1.1 Now Available <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			69 thoughts on &ldquo;<span>Introducing the YUI Compressor</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-366">
+		<article id="comment-366" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-366"><time datetime="2007-09-26T15:16:15+00:00">September 26, 2007 at 3:16 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Alex</p>
+<p>Good question. I guess it should, although I haven&#8217;t tried it. Please let us know!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-383">
+		<article id="comment-383" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>The Doctor What</a></b> </cite><a href="index.html#comment-383"><time datetime="2007-09-27T09:09:37+00:00">September 27, 2007 at 9:09 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have tried it by accident.  I didn&#8217;t realize I didn&#8217;t have sun&#8217;s jre on an Ubuntu box.  So it&#8217;s been running (without a hitch) with gij 4.1.2 from Ubuntu Feisty.</p>
+<p>I haven&#8217;t tried compiling it, though.  I was just using the compiled jars.  The other classes work fine too.</p>
+<p>BTW: Is the version # needed in the jar names?</p>
+<p>Ciao!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-384">
+		<article id="comment-384" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-384"><time datetime="2007-09-27T09:31:03+00:00">September 27, 2007 at 9:31 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yes, the version number is required in the jar name.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-387">
+		<article id="comment-387" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>The Doctor What</a></b> </cite><a href="index.html#comment-387"><time datetime="2007-09-27T12:00:05+00:00">September 27, 2007 at 12:00 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>BUG:</p>
+<p>The following CSS:</p>
+<p>  background-image: url(&#8216;grad_white.png&#8217;);<br />
+  _background-image: none;  /* ie sucks */</p>
+<p>Is incorrectly turned into:</p>
+<p>background-image:url(&#8216;grad_<b>#fff</b>.png&#8217;);_background-image:none;</p>
+<p>Ciao!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-391">
+		<article id="comment-391" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f3d31ba13300127b5d461db20652bd1e?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>The Doctor What</a></b> </cite><a href="index.html#comment-391"><time datetime="2007-09-27T12:43:40+00:00">September 27, 2007 at 12:43 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>BTW: I assume that this means that the CSS compression isn&#8217;t using the same technique as the JavaScript compression: building a parse tree and then unparsing it?</p>
+<p>How hard would it be to do that?  The CSS standard seems pretty straight forward as far as parsing.</p>
+<p>Ciao!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-392">
+		<article id="comment-392" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-392"><time datetime="2007-09-27T12:54:50+00:00">September 27, 2007 at 12:54 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The main problem is the use of CSS hacks, which are (unfortunately) widely used (and abused) These hacks rely on parsing errors, so building a CSS parser that can parse hacks correctly is no easy task. The CSS compressor uses a set of regular expressions. By the way, unlike the JavaScript compressor, the CSS compressor is NOT 100% safe (although it tries to be as safe as possible and should work in most cases)</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-398">
+		<article id="comment-398" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/85532969566b811200b4257800c660f8?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/85532969566b811200b4257800c660f8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Aki HiisilÃ¤</b> </cite><a href="index.html#comment-398"><time datetime="2007-09-28T01:59:04+00:00">September 28, 2007 at 1:59 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Input:<br />
+.a {border: 1px solid #cccccc;}<br />
+Output:<br />
+.a{border:1px solid#ccc;}</p>
+<p>I&#8217;m not quite sure what css standard says, but at least IE6 doesn&#8217;t seem to understand this compressed version where there is no space between solid and #ccc.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-467">
+		<article id="comment-467" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/3c6753e1e589735a0a3a6d417d9553cd?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3c6753e1e589735a0a3a6d417d9553cd?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://modulesjs.com' rel='external nofollow' class='url'>Kris Kowal</a></b> </cite><a href="index.html#comment-467"><time datetime="2007-10-04T16:10:46+00:00">October 4, 2007 at 4:10 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Could you post information on licensing?  Do you have a publicly readable Subversion repository?  Want one?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-468">
+		<article id="comment-468" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-468"><time datetime="2007-10-04T16:17:47+00:00">October 4, 2007 at 4:17 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Kris</p>
+<p>The YUI Compressor, like the rest of the YUI library, is released under the BSD license (see README file at the very bottom) There is no public svn repository at this time, and I don&#8217;t wish to have one. Ultimately, the YUI Compressor will be shipped as part of the YUI library (along with other tools) and will follow the same development guidelines.</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-471">
+		<article id="comment-471" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d7dfb91dbca752b183e8923f83da6d65?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d7dfb91dbca752b183e8923f83da6d65?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Sumeet Anand</b> </cite><a href="index.html#comment-471"><time datetime="2007-10-04T17:45:32+00:00">October 4, 2007 at 5:45 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Sorry for the  silly question&#8230; but<br />
+Can i run your YUI  compressor in Windows?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-472">
+		<article id="comment-472" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-472"><time datetime="2007-10-04T18:12:50+00:00">October 4, 2007 at 6:12 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Sumeet</p>
+<p>Sure. You can run the YUI Compressor on all the platforms that Java supports, and that includes Windows.</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-478">
+		<article id="comment-478" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/85532969566b811200b4257800c660f8?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/85532969566b811200b4257800c660f8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Aki HiisilÃ¤</b> </cite><a href="index.html#comment-478"><time datetime="2007-10-05T02:35:08+00:00">October 5, 2007 at 2:35 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>One idea about CSS compression. Currently (2.2.4) YUI Compressor packs </p>
+<p>.a {<br />
+width: 10px;<br />
+height: 20px;<br />
+}</p>
+<p>to</p>
+<p>.a{width:10px;height:20px;}</p>
+<p>I think that the last semicolon &#8216;;&#8217; can be also quite easily removed, so the output should be</p>
+<p>.a{width:10px;height:20px}</p>
+<p>Maybe it requires only replacing all &#8216;;}&#8217; sequences with &#8216;}&#8217; at the end of the process. Or could it cause errors in some situation(s)?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-482">
+		<article id="comment-482" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../../../../../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="index.html#comment-482"><time datetime="2007-10-05T08:28:11+00:00">October 5, 2007 at 8:28 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Aki</p>
+<p>Unfortunately, removing the last semi-colon will break some older browsers (safari)</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-486">
+		<article id="comment-486" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d7272058db769a6805c7e5f9c2cb8fa0?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d7272058db769a6805c7e5f9c2cb8fa0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Severin Heiniger</b> </cite><a href="index.html#comment-486"><time datetime="2007-10-05T13:54:19+00:00">October 5, 2007 at 1:54 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks a lot for fixing the Prototype $super &#8220;bug&#8221;. Removing the &#8211;nomunge option made it possible to squeeze another 35 KB out of my code.</p>
+<p>Keep the good work up!</p>
+<p>Regards</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-511">
+		<article id="comment-511" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d249ac17b8c630b249063d3b03146b35?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d249ac17b8c630b249063d3b03146b35?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>docwhat</a></b> </cite><a href="index.html#comment-511"><time datetime="2007-10-06T11:50:09+00:00">October 6, 2007 at 11:50 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>BUG:<br />
+Version 2.2.4</p>
+<p>pre {white-space: pre;}</p>
+<p>becomes:</p>
+<p>pre {#fff-space: pre;}</p>
+<p>Ciao!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-512">
+		<article id="comment-512" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d249ac17b8c630b249063d3b03146b35?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d249ac17b8c630b249063d3b03146b35?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://docwhat.gerf.org/' rel='external nofollow' class='url'>docwhat</a></b> </cite><a href="index.html#comment-512"><time datetime="2007-10-06T11:52:40+00:00">October 6, 2007 at 11:52 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>My mistake, this was fixed in 2.2.4&#8230;sorry.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-548">
+		<article id="comment-548" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/96b810109f077dc2440c827de9b38f03?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/96b810109f077dc2440c827de9b38f03?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">ryan</b> </cite><a href="index.html#comment-548"><time datetime="2007-10-17T02:42:32+00:00">October 17, 2007 at 2:42 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello,</p>
+<p>Can you distribute the Ant buildfile for those of use who want to experiment with modifications ourselves?</p>
+<p>thanks</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-557">
+		<p>Pingback: <a href='http://elephanthunter.us/blog/?p=4' rel='external nofollow' class='url'>Elephant Hunter &raquo; Blog Archive &raquo; Code Compression</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2817">
+		<article id="comment-2817" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d729f991687a0aba0dfe1d6cfef9b567?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d729f991687a0aba0dfe1d6cfef9b567?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://kupolov.com' rel='external nofollow' class='url'>ejboy</a></b> </cite><a href="index.html#comment-2817"><time datetime="2008-01-24T14:16:23+00:00">January 24, 2008 at 2:16 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello,</p>
+<p>Is it possible to pass several file names as arguments of YUI compressor? It would also be great to pass a wildcard expression to compress all JS/CSS files.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="../comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>

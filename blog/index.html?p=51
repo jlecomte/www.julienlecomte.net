@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>An IDE Device Driver for Simplix | Julien Lecomte&#039;s Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.julienlecomte.net/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Julien Lecomte&#039;s Blog &raquo; An IDE Device Driver for Simplix Comments Feed" href="2008/07/51/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.julienlecomte.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='colorbox-theme1-css'  href='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='wp-content/themes/twentytwelve/style.css?ver=4.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.julienlecomte.net/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Velocity Conference 2008' href='index.html?p=50' />
+<link rel='next' title='Observing the Heavens at Lick Observatory' href='index.html?p=52' />
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='index.html?p=51' />
+<link rel='shortlink' href='index.html?p=51' />
+	<link href="wp-content/plugins/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="wp-content/plugins/google-code-prettify/prettify.js"></script>
+	<!-- jQuery Lightbox For Native Galleries v3.2.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+</head>
+
+<body class="single single-post postid-51 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="../index.html" title="Julien Lecomte&#039;s Blog" rel="home">Julien Lecomte&#039;s Blog</a></h1>
+			<h2 class="site-description">Woodworking, Amateur Astronomy, Web Development and Operating System Programming.</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html?p=51#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li ><a href="../index.html">Home</a></li><li class="page_item page-item-36"><a href="index.html?p=36">About The Author</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-51" class="post-51 post type-post status-publish format-standard hentry category-system-programming">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">An IDE Device Driver for Simplix</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Over the past couple of weeks, I have been working on an IDE hard disk driver for my hobby operating system <a href="index.html?p=10">Simplix</a>. This driver probes for existing IDE controllers, identifies the IDE devices connected to these controllers, and allows for reading/writing contiguous sectors from/to these devices. It communicates with IDE devices in PIO mode (no DMA) and does not support ATAPI devices (i.e. it does not offer any support for CD-ROM or DVD-ROM drives) At the same time, I also wrote a RAM disk driver, a simple block device interface, and a test program in the form of a kernel thread. This test program reads the first sector of the master IDE device connected to the primary IDE controller, and displays the last two bytes of this sector. These are usually 0x55aa (boot record signature)</p>
+<p>Go ahead and take a look at the <a href="../simplix/index.html">source code</a> online. You can also <a href="../simplix/simplix.tar.gz">download</a> the Simplix distribution, compile it and run it either in Bochs/QEMU, or on a real PC. Below is a screen shot of Simplix running inside Bochs. Cheers!</p>
+<p><img src="../blogfiles/images/simplix-20080708-screenshot.png" style="width:560px;height:350px;border:none;"></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="category/system-programming/index.html" rel="category tag">System Programming</a> on <a href="index.html?p=51" title="4:12 pm" rel="bookmark"><time class="entry-date" datetime="2008-07-08T16:12:42+00:00">July 8, 2008</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="author/admin/index.html" title="View all posts by Julien Lecomte" rel="author">Julien Lecomte</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="index.html?p=50" rel="prev"><span class="meta-nav">&larr;</span> Velocity Conference 2008</a></span>
+					<span class="nav-next"><a href="index.html?p=52" rel="next">Observing the Heavens at Lick Observatory <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			5 thoughts on &ldquo;<span>An IDE Device Driver for Simplix</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-3176">
+		<article id="comment-3176" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7159025e080cdd0915aeb830f3e5e9c5?s=44&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7159025e080cdd0915aeb830f3e5e9c5?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://technophiliac.wordpress.com' rel='external nofollow' class='url'>Dave Kuhn</a></b> </cite><a href="2008/07/51/comment-page-1/index.html#comment-3176"><time datetime="2009-01-06T02:37:10+00:00">January 6, 2009 at 2:37 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey Julien,</p>
+<p>I&#8217;ve been an avid reader of your blog for over a year now and I just wanted to tell you that I think you&#8217;re doing a fantastic job. Your work has really encouraged me as a developer, from your time at Yahoo working with the YUI team (compressor is great), to what you&#8217;re doing now writing an OS for a hobby. I really appreciate you having taken to time to write about what you do, it&#8217;s interesting stuff. I can only hope my own blog will one day be of the same caliber as yours.</p>
+<p>I&#8217;ve been keen to get into some systems programming for ages now. Your source code is exactly what I&#8217;ve been looking for in terms of gaining a simple understanding of how it all fits together. By day I&#8217;m a web developer working mostly with Java but I&#8217;m always wanting to cut some lower level code. I&#8217;ve been fiddling around with Linux for a while but it&#8217;s just so massive it&#8217;s hard to know where to start. Simplix looks a great place to start. Anyway you&#8217;ve convinced me to go out and place an order on Amazon  for the &#8220;C Programming Language&#8221; and &#8220;Operating Systems Design and Implementation&#8221; so I can have a bit of a play with the Simplix source code and hopefully understand what&#8217;s going on a little better.</p>
+<p>Keep up the good work mate,</p>
+<p>Dave</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3229">
+		<article id="comment-3229" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/f8abf810709331462041c65d0eb3a1a8?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f8abf810709331462041c65d0eb3a1a8?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">Peter</b> </cite><a href="2008/07/51/comment-page-1/index.html#comment-3229"><time datetime="2009-02-27T08:39:15+00:00">February 27, 2009 at 8:39 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Julien,</p>
+<p>First, I want to echo Dave&#8217;s comments &#8211; great job on Simplix! The code is an excellent learning tool for anyone interested in OS development on the IA32 architecture. Really nice stuff. It gives me something to aspire to.</p>
+<p>The source code viewing pages are also very nice. How did you get things to display so nicely, with the source tree on the left and the numbered code file on the right? Are there some tools that are available in the YUI toolkit for this?</p>
+<p>Thanks for sharing Simplix with us. I eagerly await your next post.</p>
+<p>Peter</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-3230">
+		<article id="comment-3230" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8233cc93c34d23ce58c0096fb07375c0?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Julien Lecomte</a></b> <span>Post author</span></cite><a href="2008/07/51/comment-page-1/index.html#comment-3230"><time datetime="2009-02-27T09:54:07+00:00">February 27, 2009 at 9:54 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Peter,</p>
+<p>For the source tree, it&#8217;s nothing more than a little bit of PHP magic and some good ol&#8217; markup and CSS. For the syntax highlighted source code, I use an open source syntax highlighter.</p>
+<p><a href="http://code.google.com/p/syntaxhighlighter/" rel="nofollow">http://code.google.com/p/syntaxhighlighter/</a></p>
+<p>Cheers!<br />
+Julien</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3232">
+		<article id="comment-3232" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/366ef5a588f210666bd5914f55402ced?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/366ef5a588f210666bd5914f55402ced?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://sangorrin.blogspot.com' rel='external nofollow' class='url'>Sangorrin</a></b> </cite><a href="2008/07/51/comment-page-1/index.html#comment-3232"><time datetime="2009-02-28T08:46:31+00:00">February 28, 2009 at 8:46 am</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>I have read your IDE code and I have one doubt. When you are reading or writing several contiguous sectors, unless you use the MULTIPLE commands, I think that you receive an IRQ for each sector.</p>
+<p>In that case I think the code is not taking this into account (but maybe im wrong) because after the first interrupt it starts reading ALL the sectors from the data port.</p>
+<p>Thanks,<br />
+Dani</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3233">
+		<article id="comment-3233" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/56190dbb823e69cd94af2e3d89b14711?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/56190dbb823e69cd94af2e3d89b14711?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn">sudheera</b> </cite><a href="2008/07/51/comment-page-1/index.html#comment-3233"><time datetime="2009-03-01T22:35:57+00:00">March 1, 2009 at 10:35 pm</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Dear Juliean,</p>
+<p>I love to try simplix on my windows machine.<br />
+But I am new to this subject.<br />
+So could you be kindenough to sent me a guidence to how to compile and run simplix .<br />
+And I want to thank you to share your konwlage with others.</p>
+<p>Regards,<br />
+Sudheera</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type='text/javascript' src='wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+</body>
+</html>
