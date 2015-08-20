@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Please Log In"
+AuthUserFile /home/jlecomte/.htpasswd
+require user garrison-trust

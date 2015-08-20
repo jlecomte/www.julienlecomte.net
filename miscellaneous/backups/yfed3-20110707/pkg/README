@@ -1,0 +1,35 @@
+YFed3 dispatch library for php 5.2 and 5.3
+
+In order to build this extension, simply create a fresh RHEL 4.x yroot
+(Do not install a RHEL 5.x yroot because yinst_create will complain)
+
+$ yroot --create build 4.8-20090518 --yinst_version yinst7current
+
+Enter the yroot:
+
+$ yroot build
+
+And install the following packages:
+
+$ yinst install -br current \
+    yahoo_cfg_yphp_dev \
+    yapache_dev yphp_headers_52 \
+    yphp_headers_53 \
+    log4cpp_y_dev \
+    ports/curl-devel
+
+Then install libst-devel separately:
+
+$ yinst install ports/libst-devel -br current
+
+Then go to the src directory and type:
+
+$ make
+
+Finally, go to the pkg directory and create the package:
+
+$ yinst_create --clean --buildtype release yfed3.yicf
+
+Version 0.1 [07/08/2011]
+--------------------------
+  First (experimental) version.

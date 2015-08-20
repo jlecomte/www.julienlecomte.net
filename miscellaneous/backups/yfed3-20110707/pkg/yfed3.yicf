@@ -1,0 +1,28 @@
+PRODUCT_NAME = yfed3
+CUSTODIAN = search-fe-core@yahoo-inc.com http://twiki.corp.yahoo.com/view/Searchfe/WebHome
+VERSION = `awk '/^Version/{print $2; exit;}' ./README;`
+SHORT_DESC = `head -1 ./README`
+LONG_DESC = `cat ./README`
+PERM = 444
+OWNER = root
+GROUP = wheel
+#SRCDIRS = ../src
+
+YINST started-by yapache
+
+YINST bug-product Search
+YINST bug-component Infrastructure
+
+YINST requires pkg yphp 5.2.6 *
+YINST requires pkg ports/curl 7.19.5-12 *
+YINST requires pkg log4cpp_y 1.9.2 1.9999.9999
+YINST requires pkg ports/libst 1.9-1 *
+
+# php extension
+file - - - lib/php/20060613/yahoo_yfed3.so ../src/i386-rhel4-gcc3-yapache-1.3-yphp-5.2/yahoo_yfed3.so
+file - - - lib/php/20090626/yahoo_yfed3.so ../src/i386-rhel4-gcc3-yapache-1.3-yphp-5.3/yahoo_yfed3.so
+file - - - etc/php/yahoo_yfed3.ini ../etc/yahoo_yfed3.ini
+file - - - share/yfed3/Logger.conf ../share/Logger.conf
+
+# GSP2 data model factory backwards compat
+file - - - share/pear/Yahoo/GSP2/DataModel/ ../gsp2/YFedWorkflowFactory.php

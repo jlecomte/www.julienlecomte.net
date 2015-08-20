@@ -1,0 +1,101 @@
+HERSCHEL 400 Observing Conditions (required for the Astronomical League Herschel 400 Award)
+
+2009 Jan 17 - Dinosaur Point
+(from memory) Good seeing, poor transparency (haze)
+
+2009 Feb 19 - Henry Coe State Park
+Exact conditions unknown.
+
+2009 Mar 17 - Dinosaur Point
+NELM: 6.3 (using Finnish triangles)
+From Albert Highe: The temperature at Dino was in the mid-60's when I arrived. The sky was mostly clear except for the unusually long and persistent contrails. Jets traveling northwards left contrails stretching from horizon-to-horizon. The contrails from jets traveling southward were about 1/3rd as long. The contrails dissipated slowly while wafting eastward. Wind at ground level was calm. After sunset, the contrails virtually disappeared as did the air traffic. Skies were dark and transparent. Seeing was very good. Temperatures dropped into the low 40's. Humidity finally climbed to the mid-90's by Midnight. Dew formed on some surfaces: windshields, tables, and some scope surfaces. Notes and atlas pages were clammy. But all optics, including finders, remained dry.
+
+2009 Mar 24 - Dinosaur Point
+Exact conditions unknown.
+
+2009 Mar 28 - D.A.R.C. Observatory
+Exact conditions unknown.
+From Peter Natscher: Wispy clouds dissipated early on. Good seeing. Mild winds.
+
+2009 Apr 18 - D.A.R.C. Observatory
+SQM reading of 21.84 (per Albert Smith), excellent seeing.
+
+2009 Apr 25 - D.A.R.C. Observatory
+Average seeing, average transparency, windy!
+
+2009 May 16 - D.A.R.C. Observatory
+Exact conditions unknown. No wind, excellent seeing, temps in the low 70s.
+
+2009 May 19 - Lake San Antonio
+Early on, the seeing was a little soft, but the transparency was good. The light domes from King City and Paso Robles were barely visible, and the sky was truly dark. I had brought with me a chart of the big dipper labelled with star magnitudes. I was able to see, using averted vision, a star of 7th magnitude. Unfortunately, my chart was not showing stars fainter than 7th magnitude, so I cannot tell for sure what the naked eye limiting magnitude was, but the sky felt a little bit darker than at the D.A.R.C. observatory (not much darker though, maybe one or two tenth of a magnitude…) The seeing improved a bit as the night went on, and became quite good, although not excellent, after 1am. The temperature dropped surprisingly low, down to 38F at 3:30am.
+
+2009 Jun 21 - Adin (GSSP)
+NELM: 6.7 - average seeing.
+
+2009 Jun 22 - Adin (GSSP)
+NELM: 6.9 - average seeing.
+
+2009 Jun 23 - Adin (GSSP)
+NELM: 7.0 - average or better seeing.
+
+2009 Jul 20 - Henry Coe State Park
+The transparency was above average and we got some very decent skies. I did a zenithal NELM test in Lyra, and reached mag 6.2, which is not too bad given the amount of light pollution... The seeing was very soft early on, but slightly improved as the night went on. Temps were in the 60s. There was a fairly strong breeze all night long, which was a bit of a problem for my very lightweight dobsonian telescope. However, by using my car as a shield, I was able to somewhat mitigate the impact of wind gusts.
+
+2009 Jul 25 - D.A.R.C. Observatory
+* Wind died down shortly after sunset
+* Temperature in the low 70s
+* Good seeing (6 to 7 on the Pickering scale)
+* Average transparency (the light dome from Los Banos, which I use as an indication of the moisture content in the atmosphere, was fairly conspicuous)
+* NELM 6.7 in Lyra
+* Thin clouds started showing up around 1am from the east
+
+2009 Aug 15 - Henry Coe State Park
+* Light winds coming from the north west
+* Temperature in the high to mid 60s
+* Good seeing
+* Average transparency
+
+2009 Sep 17 - Lake San Antonio (CalStar)
+Average seeing. The transparency was mediocre (when I called it a night, around 2am, Jupiter was surrounded by a bright halo…)
+
+2009 Sep 18 - Lake San Antonio (CalStar)
+Average seeing. The transparency was average with an NELM of 6.7 in UMi.
+
+2009 Oct 10 - Henry Coe State Park
+* Average seeing.
+* Mild (but annoying) westerly wind.
+* Surprisingly cold (I had to really bundle up, and almost needed gloves by 11pm)
+
+2009 Oct 16 - Deep Sky Ranch
+* No wind.
+* Temperatures in the low 50s.
+* Average seeing.
+* Average transparency.
+* Very high humidity: my table top and paper charts were soaked, and my eyepieces were covered in dew.
+
+2009 Nov 14 - Dinosaur Point
+The wind was non-existant. The temperature dropped from the low 60s to the mid to low 40s, which is not a huge difference. This always helps with the seeing, especially in large newtonians. The transparency was about average until about 9pm, when it got slightly better. At 9:30pm, I did a NELM test in Triangulum and obtained 6.3, which is pretty good for the site.
+
+2009 Nov 21 - D.A.R.C. Observatory
+Thin clouds were passing overhead. Thankfully, they remained to the north, and never really interfered with my plans to observe Herschel II objects in Cetus. By 10pm, the sky was completely clear, and the transparency was actually very decent. The NELM was 6.6 in Aries. After midnight, the air became slightly drier and the transparency slightly better, bumping the NELM to 6.7. The wind was non-existant. The temperature was hovering between the mid and the low 30s. The humidity was high, but the optics remained mostly dew free for the entire night.
+
+2010 Jan 13 - Henry Coe State Park
+The wind was a bit strong early on, but died down around 8pm. The temperature stabilized in the low 40s. Transparency and seeing were both slightly below average. At times, clouds covered almost the entire sky, only to retreat a few minutes later. High humidity caused dew problems.
+
+2010 Feb 13 - Dinosaur Point
+SQM reading of 21.28 (per Greg LaFlamme), average seeing.
+
+2010 Mar 10 - Dinosaur Point
+The transparency was just about average as predicted by the Clear Sky Clock. The seeing was quite soft early on, but it improved a bit to just about average as the night went on. The entire sky was clear and usable, except maybe for a few wispy clouds to the north. The wind was nonexistent. I did not think of getting a temperature reading during the night, but it was rather cold, causing me to bail out early.
+
+2010 Mar 13 - Deep Sky Ranch
+By sunset, the wind had subsided. The transparency was about average. Seeing was a bit soft early on, but it improved to just about average later in the evening.
+
+2010 Apr 6 - Dinosaur Point
+Conditions were decent with fairly calm winds, average transparency and seeing, temps in the mid to low 40s and low humidity. Dew was not a problem at all, and my paper charts remained mostly dry.
+
+2010 Apr 8 - Lake San Antonio
+Conditions were pretty good, with an estimated NELM around 6.7 and average seeing. Humidity was rather high, and my paper charts and log paper were pretty soaked (although interestingly enough, it seemed to come in waves…).
+
+2010 May 11  - Lake San Antonio
+The conditions were pretty decent. The sky was perfectly clear and the transparency was good. It was a little windy early on, but it turned calm by 10pm. The seeing was average or slightly below average. The temperature dropped to 38F by 2am. There was very little humidity, and my paper charts and log paper remained pretty dry all night.
